@@ -13,7 +13,7 @@
 	    	<span class="glyphicon glyphicon-filter wht">필터버튼영역</span><span class="glyphicon glyphicon-th-large wht"></span>
 </div>
 
-<div ng-click="click()" ><button ng-class="{' ': active == true , 'active': active == false}" class="btn btn-default col-xs-12">두줄보기</button></div>
+<div ng-click="click()" ><button ng-class="{' ': active == true , 'active': active == false}" class="btn btn-default col-xs-12" id="jqTest">두줄보기</button></div>
 <div ng-repeat="x in myData" ng-switch on="x.conType">
 	<div ng-class="{'col-xs-12': active == true , 'col-xs-6': active == false}"  class="col-sm-6" ng-switch-when='item'>
 		<table style="width: 100%">

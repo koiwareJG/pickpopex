@@ -14,7 +14,7 @@ define([], function () {
 	console.log("cmn_item_detail.js / define() : start");
 	
 	//컨트롤러 선언
-	function _controller($scope, $http, content, $routeParams) {
+	function _controller($scope, $http, $routeParams) {
 		console.log("cmn_item_detail.js / define() / _contoller() : start");
 		//CSS 설정
 		$scope.$emit('updateCSS', ['resources/css/partials-css/cmn/cmn_item_detail.css']);
@@ -24,8 +24,15 @@ define([], function () {
 		//최초 뿌려질 데이터 받아오기
 		$http.get("http://localhost:8090/controller/sample/sendVO/"+":"+$routeParams.productName).then(function(response) {
 		        $scope.myData = response.data;
-		        alert(response.data.productName)
 		});
+		
+		
+		
+		$scope.clickEvent = function (){
+			alert("클릭이벤트 : productName을 ClickEvent!라는 값으로 바꿈")
+			alert(response.data.productName)
+	        $scope.myData.productName="sadasd";
+		}
 		
 		console.log("cmn_item_detail.js / define() / _contoller() : end");
 	}

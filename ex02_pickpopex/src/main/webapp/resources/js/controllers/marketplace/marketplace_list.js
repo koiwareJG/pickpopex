@@ -34,8 +34,9 @@ define([], function () {
 				console.log($scope.active);
 				$scope.active = true;
 			}
-		    
 		}
+		
+		alert($("#jqTest").attr("ng-class"));
 		
 		console.log("marketpalce.js / define() / _contoller() : end");
 	}

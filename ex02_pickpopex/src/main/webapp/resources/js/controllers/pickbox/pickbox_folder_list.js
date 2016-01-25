@@ -9,7 +9,7 @@
 'use strict';
 
 define([], function () {
-	function _controller($scope, tester) {
+	function _controller($scope, $http) {
 		console.log("sample_list contorller loaded"); //파일명과 동일하게 맞출것
 		
 		//CSS 로딩 설정 S
@@ -19,6 +19,7 @@ define([], function () {
 		//데이터 세팅 S (받아올 데이터 없으면 삭제)
 		$http.get("http://localhost:8090/controller/sample/sendList").then(function(response) {
 		        $scope.myData = response.data.records;
+		        alert()
 		});
 		//데이터 세팅 E
 		
