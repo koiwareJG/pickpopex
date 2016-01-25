@@ -1,0 +1,85 @@
+<!--
+/* ==============================================================================
+ * 파일명 : marketplace_list.html
+ * 화면명 : 마켓플레이스 > 목록 (View)
+ * 작성자 : 김종길
+ * 작성일 : 2016.01.25
+ * ==============================================================================
+ */
+ -->
+ 
+<div class="marketplace">
+<div class="col-xs-12 filterBtnBg navbar-fixed-top filter-area">
+	    	<span class="glyphicon glyphicon-filter wht">필터버튼영역</span><span class="glyphicon glyphicon-th-large wht"></span>
+</div>
+
+<div ng-click="click()" ><button ng-class="{' ': active == true , 'active': active == false}" class="btn btn-default col-xs-12">두줄보기</button></div>
+<div ng-repeat="x in myData" ng-switch on="x.conType">
+	<div ng-class="{'col-xs-12': active == true , 'col-xs-6': active == false}"  class="col-sm-6" ng-switch-when='item'>
+		<table style="width: 100%">
+			<colgroup>
+				<col width="20%">
+				<col width="20%">
+				<col width="20%">
+				<col width="20%">
+				<col width="20%">
+			</colgroup>
+			<tbody>
+				<tr>
+					<td rowspan="2"><img ng-src="resources/images/shop.png" alt="..."
+						class="img-rounded"></td>
+					<td colspan="2">{{x.id}}</td>
+					<td colspan="2" class="xx-small">차단아이콘</td>
+				</tr>
+				<tr>
+					<td colspan="4">{{x.comment}}</td>
+				</tr>
+				<tr>
+					<td colspan="5"><a ng-href="#/itemDetail/{{x.productName}}"><img ng-src="{{x.imgPath}}" alt="..." style="width: 100%"></a></td>
+				</tr>
+				<tr>
+					<td>픽아이콘</td>
+					<td colspan="2">{{x.productName}}</td>
+					<td>{{x.price}}</td>
+					<td>{{x.point}}</td>
+				</tr>
+			</tbody>
+		</table>
+		<br>
+		<br>
+	</div>
+	<div ng-class="{'col-xs-12': active == true , 'col-xs-6': active == false}"  class="col-sm-6"  ng-switch-when='style'>
+		<table style="width: 100%">
+			<colgroup>
+				<col width="20%">
+				<col width="20%">
+				<col width="20%">
+				<col width="20%">
+				<col width="20%">
+			</colgroup>
+			<tbody>
+				<tr>
+					<td rowspan="2"><img ng-src="resources/images/image1.jpg" alt="..."
+						class="img-circle" style="height: 50px; width: 50px;"></td>
+					<td colspan="2">{{x.id}}</td>
+					<td colspan="2">차단아이콘</td>
+				</tr>
+				<tr>
+					<td colspan="4">{{x.comment}}</td>
+				</tr>
+				<tr>
+					<td colspan="5"><a ng-href="#/itemDetail/{{x.productName}}"><img ng-src="{{x.imgPath}}" alt="..." style="width: 100%"></a></td>
+				</tr>
+				<tr>
+					<td>픽아이콘</td>
+					<td colspan="2">{{x.productName}}</td>
+					<td>{{x.price}}</td>
+					<td>{{x.point}}</td>
+				</tr>
+			</tbody>
+		</table>
+		<br>
+		<br>
+	</div>
+</div>
+</div>
