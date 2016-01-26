@@ -9,21 +9,30 @@
 'use strict';
 
 define([], function () {
+	//컨트롤러 선언
 	function _controller($scope, tester) {
-		console.log("sample_list contorller loaded"); //파일명과 동일하게 맞출것
+		console.log("sample_controller loaded"); //파일명과 동일하게 맞출것
+		//CSS 설정
+		$scope.$emit('updateCSS', ['resources/css/partials-css/marketplace/marketplace_list.css']);
 		
-		//CSS 로딩 설정 S
-		$scope.$emit('updateCSS', ['resources/css/partials-css/sample/sample.css']);//로드할 css파일 경로 설정(없으면 삭제)
-		//CSS 로딩 설정 E
-		
-		//데이터 세팅 S (받아올 데이터 없으면 삭제)
+		//최초 뿌려질 데이터 받아오기
 		$http.get("http://localhost:8090/controller/sample/sendList").then(function(response) {
 		        $scope.myData = response.data.records;
 		});
-		//데이터 세팅 E
 		
 		//화면 별 기능 구현 S
 
+		//클래스 변경
+		$scope.active = true;
+		$scope.click = function(){
+			if($scope.active == true){
+				console.log($scope.active);
+				$scope.active = false;
+			}else{
+				console.log($scope.active);
+				$scope.active = true;
+			}
+		}
 		
 		//화면 별 기능 구현 E
 	}

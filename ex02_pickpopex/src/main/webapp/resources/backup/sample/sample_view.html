@@ -9,15 +9,74 @@
  -->
 
 <!-- 이 부분은 삭제하고 쓰세요(가이드용). -->
-<!-- 오브젝트 데이터 표시법 -->
-<div >
-    <span>id : {{myData.id}}<br></span>
-    <span>상품명 : {{myData.productName}}<br></span>
-</div>
 <!-- 리스트 데이터 표시법 -->
-<div ng-repeat="x in myData" >
-	<span>{{x.id}}</span>
-	<span>{{x.name}}</span>
-	<span>{{x.comment}}</span>
+<div ng-click="click()" ><button ng-class="{' ': active == true , 'active': active == false}" class="btn btn-default col-xs-12" id="jqTest">두줄보기</button></div>
+<div ng-repeat="x in myData" ng-switch on="x.conType">
+	<div ng-class="{'col-xs-12': active == true , 'col-xs-6': active == false}"  class="col-sm-6" ng-switch-when='item'>
+		<table style="width: 100%">
+			<colgroup>
+				<col width="20%">
+				<col width="20%">
+				<col width="20%">
+				<col width="20%">
+				<col width="20%">
+			</colgroup>
+			<tbody>
+				<tr>
+					<td rowspan="2"><img ng-src="resources/images/shop.png" alt="..."
+						class="img-rounded"></td>
+					<td colspan="2">{{x.id}}</td>
+					<td colspan="2" class="xx-small">차단아이콘</td>
+				</tr>
+				<tr>
+					<td colspan="4">{{x.comment}}</td>
+				</tr>
+				<tr>
+					<td colspan="5"><a ng-href="#/itemDetail/{{x.productName}}"><img ng-src="{{x.imgPath}}" alt="..." style="width: 100%"></a></td>
+				</tr>
+				<tr>
+					<td>픽아이콘</td>
+					<td colspan="2">{{x.productName}}</td>
+					<td>{{x.price}}</td>
+					<td>{{x.point}}</td>
+				</tr>
+			</tbody>
+		</table>
+		<br>
+		<br>
+	</div>
+	<div ng-class="{'col-xs-12': active == true , 'col-xs-6': active == false}"  class="col-sm-6"  ng-switch-when='style'>
+		<table style="width: 100%">
+			<colgroup>
+				<col width="20%">
+				<col width="20%">
+				<col width="20%">
+				<col width="20%">
+				<col width="20%">
+			</colgroup>
+			<tbody>
+				<tr>
+					<td rowspan="2"><img ng-src="resources/images/image1.jpg" alt="..."
+						class="img-circle" style="height: 50px; width: 50px;"></td>
+					<td colspan="2">{{x.id}}</td>
+					<td colspan="2">차단아이콘</td>
+				</tr>
+				<tr>
+					<td colspan="4">{{x.comment}}</td>
+				</tr>
+				<tr>
+					<td colspan="5"><a ng-href="#/itemDetail/{{x.productName}}"><img ng-src="{{x.imgPath}}" alt="..." style="width: 100%"></a></td>
+				</tr>
+				<tr>
+					<td>픽아이콘</td>
+					<td colspan="2">{{x.productName}}</td>
+					<td>{{x.price}}</td>
+					<td>{{x.point}}</td>
+				</tr>
+			</tbody>
+		</table>
+		<br>
+		<br>
+	</div>
 </div>
  <!-- 이 부분은 삭제하고 쓰세요. -->
