@@ -36,8 +36,6 @@ define([], function () {
 			}
 		}
 		
-		alert($("#jqTest").attr("ng-class"));
-		
 		console.log("marketpalce.js / define() / _contoller() : end");
 	}
 	

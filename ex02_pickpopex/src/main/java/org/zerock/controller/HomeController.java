@@ -12,8 +12,10 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.zerock.domain.SampleVO;
 
 /**
@@ -63,4 +65,19 @@ public class HomeController {
 	    return map;
 
   }*/
+  
+
+  @RequestMapping(value = "/jsonObj/{productName}", method = RequestMethod.GET)
+  public @ResponseBody SampleVO springJson(@PathVariable("productName") String productName) {
+		
+	    SampleVO vo = new SampleVO();
+	    vo.setFirstName("길동");
+	    vo.setLastName("홍");
+	    vo.setMno(123);
+	    
+	    vo.setId("testId");
+	    vo.setProductName(productName);
+	    
+	    return vo;
+  }
 }

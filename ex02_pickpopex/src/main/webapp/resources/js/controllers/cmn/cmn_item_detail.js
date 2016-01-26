@@ -22,7 +22,7 @@ define([], function () {
 //		alert($routeParams.productName);
 		
 		//최초 뿌려질 데이터 받아오기
-		$http.get("http://localhost:8090/controller/sample/sendVO/"+":"+$routeParams.productName).then(function(response) {
+		$http.get("http://localhost:8090/controller/jsonObj/"+":"+$routeParams.productName).then(function(response) {
 		        $scope.myData = response.data;
 		});
 		
