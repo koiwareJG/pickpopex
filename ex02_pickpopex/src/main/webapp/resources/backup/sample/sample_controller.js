@@ -10,7 +10,7 @@
 
 define([], function () {
 	//컨트롤러 선언
-	function _controller($scope, tester) {
+	function _controller($scope) {
 		console.log("sample_controller loaded"); //파일명과 동일하게 맞출것
 		//CSS 설정
 		$scope.$emit('updateCSS', ['resources/css/partials-css/marketplace/marketplace_list.css']);
