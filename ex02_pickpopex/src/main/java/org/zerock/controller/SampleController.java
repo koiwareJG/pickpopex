@@ -57,8 +57,18 @@ public class SampleController {
       list.add(vo);
     }
     
+    List<SampleVO> listFolder = new ArrayList<>();
+    for(int i = 0; i<4 ; i++){
+    	 SampleVO vo = new SampleVO();
+    	 vo.setImgPath("resources/images/pickBox/w_box.png");
+    	 
+    	 listFolder.add(vo);
+    }
+    
     Map<String, List<SampleVO>> map = new HashMap<>();
     map.put("records", list);
+    map.put("folder", listFolder);
+    
     
     return map;
   }

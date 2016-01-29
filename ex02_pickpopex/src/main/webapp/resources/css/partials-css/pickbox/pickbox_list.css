@@ -1,0 +1,47 @@
+/* ==============================================================================
+ * 파일명 : pickbox_ist.css
+ * 화면명 : 메뉴명 > 목록 (View)
+ * 작성자 : 안자훈
+ * 작성일 : 2016.01.29
+ * ==============================================================================
+ */
+
+@CHARSET "utf-8";
+<!-- 상단 유저 정보 표시-->
+.pickBox{}
+.userInfor{height: 140px;}
+.blur1{width: 100%; height: 100%; background-color: rgba(255,255,255,0.5); z-index: 100; position: absolute;}
+.blur2{width: 100%; height: 59%; background-color: rgba(255,255,255,0.7); z-index: 150; position: absolute; top: 40%;}
+.userId{z-index: 160; top: 70%; text-align: right; padding-right: 5px;}
+.userF{z-index: 160; top: 70%;}
+.userMessage{z-index: 160; top: 70%; text-align: center;}
+.userInfor .bgImg{height: 100%; top:-37px;}
+.userInfor .circleImg{position:absolute; height: 50%; top: 15%; left: 40%;  z-index: 999;}
+
+<!-- pickBox top nav-->
+.pickBoxNav{position: absolute;}
+.pickBoxNav div{height:50px; background-color: #3a4942; text-align: center; padding-top: 5px;}
+
+.userFolder{background-image: url('../../../images/gridBg.jpg'); }
+.userFolder div{height: 140px; margin: 10px 0 0 0;}
+/* .userFolder div:last-child{margin: 15px 0 50px 0;} */
+.userFolder .fixed .folderContents{position: absolute; top: 5%; left: 17%; height: 55%;}
+.userFolder .fixed .folderContents div{height: 50%; margin-top: 0;}
+.userFolder .fixed .itemCnt{position: absolute; width:12%; height: 10%; top: -5%; left: 8%; text-align: center;}
+.userFolder .folderTitle{position: absolute; height: 15%; width:70%; bottom: 20%; left: 16%; text-align: center; padding-top: 5%;}
+.userFolder .total img{width: 95%; height: 95%; padding-left: 5px;}
+.userFolder .unDefine img{width: 95%; height: 95%; padding-left: 5px;}
+.userFolder .newBox img{width: 95%; height: 95%; padding-left: 5px;}
+
+<!-- 유동적 영역 -->
+.folder{display: inline;}
+.folder img{width: 95%; height: 95%; padding-left: 5px;}
+
+.folder .itemCnt{position: absolute; width:12%; height: 10%; top: -5%; left: 8%; text-align: center;}
+.folder .folderContents{position: absolute; top: 5%; left: 17%; height: 55%;}
+.folder .folderContents div{height: 50%; margin-top: 0;}
+.folder .folderTitle{position: absolute; height: 15%; width:70%; bottom: 20%; left: 16%; text-align: center;}
+
+.b{border: thin black solid;}
+
+
