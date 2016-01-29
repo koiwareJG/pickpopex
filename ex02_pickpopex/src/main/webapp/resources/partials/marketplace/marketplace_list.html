@@ -10,30 +10,59 @@
  
 <div class="marketplace">
 <div class="col-xs-12 filterBtnBg navbar-fixed-top filter-area">
+<div ng-click="click()" ><button ng-class="{' ': active == true , 'active': active == false}" class="btn btn-default col-xs-2" id="jqTest">두줄보기</button></div>
 	    	<span class="glyphicon glyphicon-filter wht">필터버튼영역</span><span class="glyphicon glyphicon-th-large wht"></span>
 </div>
-<div ng-click="click()" ><button ng-class="{' ': active == true , 'active': active == false}" class="btn btn-default col-xs-12" id="jqTest">두줄보기</button></div>
-		
-		<div class="wdthPer10 hghtPer10">
-			<div class="shopProfileArea">
-				<div class="shopProfileImgArea fL">
-					<img class="shopProfileImg" src="resources/images/sample/sample_profile_user_woman_01_512x512.jpg" alt="...">
-				</div>
-				<div class="fL txC vaM wdthPer8">
-					<div class="wdthPer10">
-						<div class="fL wdthPer8 txL vaM">id</div>
-						<div class="fR wdthPer2 txL vaM">차단</div>
+	<!-- Section -->
+	<section>
+		<div ng-class="{'col-xs-12': active == true , 'col-xs-6': active == false}">
+			<!-- Row1 -->
+			<div class="wrapper H15">
+				<div class="wrap">
+					<!-- 프로필이미지 영역 -->
+					<div class="wdP15 htP100 fL">
+						<div class="shopProfileArea">
+							<img class="shopProfile" src="resources/images/sample/sample_profile_user_woman_01_512x512.jpg" alt="...">
+							<span class="shopProfileTxt">SHOP</span>
+						</div>
 					</div>
-					<div class="wdthPer10 txL vaM">여기는 코멘트 영역입니다.</div>
+					
+					<div class="wdP85 htP100 fL">
+						<div class="wdP100 htP50">
+							<div class="wdP80 fL txL"><span class="shopId small">코이샵</span></div>
+							<div class="wdP20 fR txR"><span class="banIcon glyphicon glyphicon-ban-circle medium gray"></span></div>
+						</div>
+						<div class="wdP100 htP50">
+							<div class="commentArea">
+								<div class="commentBg">
+									<span class="comment x-small">여기는 코멘트 영역입니다.여기는 코멘트 영역입니다.여기는 코멘트 영역입니다.여기는 코멘트 영역입니다.</span>
+								</div>
+							</div>
+						</div>
+					</div>
 				</div>
 			</div>
-			<div class=" txC vaM wdthPer10">
-				<div class="txC vaM wdthPer10">
-				<img class="itemImg" src="resources/images/sample/sample_product_woman_top_01_512x512.jpg" alt="...">
+			<!-- Row2 -->
+			<div class="wrapper H100">
+				<div class="wrap">
+						<img class="itemImg" src="resources/images/sample/sample_product_woman_top_01_512x512.jpg" alt="...">
+				</div>
+			</div>
+			<!-- Row3 -->
+			<div class="wrapper H20">
+				<div class="wrap">
+					<div class="wdP20 htP100 fL">
+						<div class="wdP100 txC"><span class="icon-pickicon xxxx-large txCM"></span></div>
+					</div>
+					<div class="wdP80 htP50 fL">고급진 빨강 자켓</div>
+					<div class="wdP40 htP50 fL"><span>9,999</span></div>
+					<div class="wdP20 htP50 fL">sd</div>
+					<div class="wdP20 htP50 fL">sd</div>
 				</div>
 			</div>
 		</div>
-		
+	</section>
+	<!-- Section -->
 <div ng-repeat="x in myData" ng-switch on="x.conType">
 	<div ng-class="{'col-xs-12': active == true , 'col-xs-6': active == false}"  class="col-sm-6" ng-switch-when='item'>
 		

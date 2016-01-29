@@ -25,30 +25,13 @@
 /* 	collapse;border-spacing: 0; */
 /* } */
 
-
-span {
-	color: #2b2b2b;
+/* [공통]기본글자색 */
+div {
+	color: #333333;
+	font-size: 5vw
 }
 
-/* [공통]폰트사이즈 */
-.xx-small{font-size: 7pt;}
-.x-small{font-size: 8pt;}
-.small{font-size: 9pt;}
-.medium{font-size: 10pt;}
-.large{font-size: 12pt;}
-.x-large{font-size: 14pt;}
-.xx-large{font-size: 16pt;}
-.xxx-large{font-size: 20pt;}
-.xxxx-large{font-size: 24pt;}
-
-/* [공통]폰트컬러 */
-.wht{color: white;}
-.blk{color: black;}
-.green{color: #408080;}
-
-/* [공통]기타 */
-.noPad{padding: 0; margin: 0;}
-
+/* homp.jsp 용 Start*/
 /* [공통]상단고정영역 > 팝모드버튼영역 */
 .popModeBtnBg {
     height:40px; 
@@ -64,6 +47,47 @@ span {
 	height: 50px;
 	background-color: #3a4942;
 }
+/* homp.jsp End*/
+
+
+/* [공통]폰트사이즈 */
+.xx-small{font-size: 2vw;}
+.x-small{font-size: 3vw;}
+.small{font-size: 4vw;}
+.medium{font-size: 5vw;}
+.large{font-size: 7vw;}
+.x-large{font-size: 9vw;}
+.xx-large{font-size: 11vw;}
+.xxx-large{font-size: 13vw;}
+.xxxx-large{font-size: 15vw;}
+
+.pt6{font-size: 6pt}
+.pt7{font-size: 7pt}
+.pt8{font-size: 8pt}
+.pt9{font-size: 9pt}
+.pt10{font-size: 10pt}
+.pt11{font-size: 11pt}
+.pt12{font-size: 12pt}
+.pt13{font-size: 13pt}
+.pt14{font-size: 14pt}
+.pt15{font-size: 15pt}
+.pt16{font-size: 16pt}
+.pt17{font-size: 17pt}
+.pt18{font-size: 18pt}
+.pt19{font-size: 19pt}
+.pt20{font-size: 20pt}
+.pt21{font-size: 21pt}
+.pt22{font-size: 22pt}
+.pt23{font-size: 23pt}
+.pt24{font-size: 24pt}
+.pt25{font-size: 25pt}
+
+
+/* [공통]폰트컬러 */
+.wht{color: white;}
+.blk{color: black;}
+.green{color: #408080;}
+.gray{color: gray;}
 
 
 /* [공통]div테이블 */
@@ -80,6 +104,10 @@ span {
 	display: table-cell;
 }
 
+/* [공통]레이아웃용 */
+
+.iL-B{display: inline-block;}
+
 .fL{float: left;}
 .fR{float: right;}
 
@@ -87,72 +115,140 @@ span {
 .txC{text-align: center;}
 .txR{text-align: right;}
 
-.vaT{vertical-align: top;}
-.vaM{vertical-align: middle;}
-.vaB{vertical-align: bottom;}
+.txTop{vertical-align: top;}
+.txMid{vertical-align: middle;}
+.txBot{vertical-align: bottom;}
 
-.wdthPer10{
-	width: 100%
-}
-.wdthPer9{
-	width: 90%
-}
-.wdthPer8{
-	width: 80%
-}
-.wdthPer7{
-	width: 70%
-}
-.wdthPer6{
-	width: 60%
-}
-.wdthPer5{
-	width: 50%
-}
-.wdthPer4{
-	width: 40%
-}
-.wdthPer3{
-	width: 30%
-}
-.wdthPer2{
-	width: 20%
-}
-.wdthPer1{
-	width: 10%
+.txLT{text-align: left;vertical-align: top;}
+.txLM{text-align: left;vertical-align: middle;}
+.txLB{text-align: left;vertical-align: bottom;}
+.txCT{text-align: center;vertical-align: top;}
+.txCM{text-align: center;vertical-align: middle;}
+.txCB{text-align: center;vertical-align: bottom;}
+.txRT{text-align: right;vertical-align: top;}
+.txRM{text-align: right;vertical-align: middle;}
+.txRB{text-align: right;vertical-align: bottom;}
+
+/* .txLft,.txCnt,.txRgt,.txTop,.txMid,.txBot,.txLT,.txLM,.txLB, */
+/* .txCT,.txCM,.txCB,.txRT,.txRM,.txRB{ */
+/* 	display: table-cell; */
+/* } */
+
+
+.wrapper{
+	position: relative;
+	height: 0;
+	overflow: hidden;
+/* 	기본값 잡아 놓은거 */
+	width: 100%;
+	padding-bottom: 50%
 }
 
-.hghtPer10{
-	height: 100%
-}
-.hghtPer9{
-	height: 90%
-}
-.hghtPer8{
-	height: 80%
-}
-.hghtPer7{
-	height: 70%
-}
-.hghtPer6{
-	height: 60%
-}
-.hghtPer5{
-	height: 50%
-}
-.hghtPer4{
-	height: 40%
-}
-.hghtPer3{
-	height: 30%
-}
-.hghtPer2{
-	height: 20%
-}
-.hghtPer1{
-	height: 10%
+/* .h5,.h10,.h15,.h20,.h25,.h30,.h35,.h40,.h45,.h50,.h55, */
+/* .h60,.h65,.h70,.h75,.h80,.h85,.h90,.h95,,.h100,.h105, */
+/* .h110,.h115,.h120,.h125,.h130,.h135,.h140,.h145,.h150, */
+/* .h155,.h160,.h165,.h170,.h175,.h180,.h185,.h190,.h195, */
+/* .h200{ */
+/* 	position: relative; */
+/* 	height: 0; */
+/* 	overflow: hidden; */
+/* } */
+
+.H5{width: 100%;padding-bottom: 5%}
+.H10{width: 100%;padding-bottom: 10%}
+.H15{width: 100%;padding-bottom: 15%}
+.H20{width: 100%;padding-bottom: 20%}
+.H25{width: 100%;padding-bottom: 25%}
+.H30{width: 100%;padding-bottom: 30%}
+.H35{width: 100%;padding-bottom: 35%}
+.H40{width: 100%;padding-bottom: 40%}
+.H45{width: 100%;padding-bottom: 45%}
+.H50{width: 100%;padding-bottom: 50%}
+.H55{width: 100%;padding-bottom: 55%}
+.H60{width: 100%;padding-bottom: 60%}
+.H65{width: 100%;padding-bottom: 65%}
+.H70{width: 100%;padding-bottom: 70%}
+.H75{width: 100%;padding-bottom: 75%}
+.H80{width: 100%;padding-bottom: 80%}
+.H85{width: 100%;padding-bottom: 85%}
+.H90{width: 100%;padding-bottom: 90%}
+.H95{width: 100%;padding-bottom: 95%}
+.H100{width: 100%;padding-bottom: 100%}
+.H105{width: 100%;padding-bottom: 105%}
+.H110{width: 100%;padding-bottom: 110%}
+.H115{width: 100%;padding-bottom: 115%}
+.H120{width: 100%;padding-bottom: 120%}
+.H125{width: 100%;padding-bottom: 125%}
+.H130{width: 100%;padding-bottom: 130%}
+.H135{width: 100%;padding-bottom: 135%}
+.H140{width: 100%;padding-bottom: 140%}
+.H145{width: 100%;padding-bottom: 145%}
+.H150{width: 100%;padding-bottom: 150%}
+.H155{width: 100%;padding-bottom: 155%}
+.H160{width: 100%;padding-bottom: 160%}
+.H165{width: 100%;padding-bottom: 165%}
+.H170{width: 100%;padding-bottom: 170%}
+.H175{width: 100%;padding-bottom: 175%}
+.H180{width: 100%;padding-bottom: 180%}
+.H185{width: 100%;padding-bottom: 185%}
+.H190{width: 100%;padding-bottom: 190%}
+.H195{width: 100%;padding-bottom: 195%}
+.H200{width: 100%;padding-bottom: 200%}
+
+.wrap{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
 }
 
+
+.wdP100{width: 100%}
+.wdP95{width: 95%}
+.wdP90{width: 90%}
+.wdP85{width: 85%}
+.wdP80{width: 80%}
+.wdP75{width: 75%}
+.wdP70{width: 70%}
+.wdP65{width: 65%}
+.wdP60{width: 60%}
+.wdP55{width: 55%}
+.wdP50{width: 50%}
+.wdP45{width: 45%}
+.wdP40{width: 40%}
+.wdP35{width: 35%}
+.wdP30{width: 30%}
+.wdP25{width: 25%}
+.wdP20{width: 20%}
+.wdP15{width: 15%}
+.wdP10{width: 10%}
+.wdP5{width: 5%}
+.wdPempty{width: 0%}
+
+.htP100{height: 100%}
+.htP95{height: 95%}
+.htP90{height: 90%}
+.htP85{height: 85%}
+.htP80{height: 80%}
+.htP75{height: 75%}
+.htP70{height: 70%}
+.htP65{height: 65%}
+.htP60{height: 60%}
+.htP55{height: 55%}
+.htP50{height: 50%}
+.htP45{height: 45%}
+.htP40{height: 40%}
+.htP35{height: 35%}
+.htP30{height: 30%}
+.htP25{height: 25%}
+.htP20{height: 20%}
+.htP15{height: 15%}
+.htP10{height: 10%}
+.htP5{height: 5%}
+.htPempty{height: 0%}
+
+.fit{padding: 0; margin: 0;}
 
 
 /* [공통]커스텀아이콘 */
