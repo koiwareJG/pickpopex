@@ -13,8 +13,31 @@
 	    	<span class="glyphicon glyphicon-filter wht">필터버튼영역</span><span class="glyphicon glyphicon-th-large wht"></span>
 </div>
 <div ng-click="click()" ><button ng-class="{' ': active == true , 'active': active == false}" class="btn btn-default col-xs-12" id="jqTest">두줄보기</button></div>
+		
+		<div class="wdthPer10 hghtPer10">
+			<div class="shopProfileArea">
+				<div class="shopProfileImgArea fL">
+					<img class="shopProfileImg" src="resources/images/sample/sample_profile_user_woman_01_512x512.jpg" alt="...">
+				</div>
+				<div class="fL txC vaM wdthPer8">
+					<div class="wdthPer10">
+						<div class="fL wdthPer8 txL vaM">id</div>
+						<div class="fR wdthPer2 txL vaM">차단</div>
+					</div>
+					<div class="wdthPer10 txL vaM">여기는 코멘트 영역입니다.</div>
+				</div>
+			</div>
+			<div class=" txC vaM wdthPer10">
+				<div class="txC vaM wdthPer10">
+				<img class="itemImg" src="resources/images/sample/sample_product_woman_top_01_512x512.jpg" alt="...">
+				</div>
+			</div>
+		</div>
+		
 <div ng-repeat="x in myData" ng-switch on="x.conType">
 	<div ng-class="{'col-xs-12': active == true , 'col-xs-6': active == false}"  class="col-sm-6" ng-switch-when='item'>
+		
+		
 		<table style="width: 100%">
 			<colgroup>
 				<col width="20%">
@@ -25,7 +48,7 @@
 			</colgroup>
 			<tbody>
 				<tr>
-					<td rowspan="2"><img ng-src="resources/images/shop.png" alt="..."
+					<td rowspan="2"><img ng-src="resources/images/sample/shop.png" alt="..."
 						class="img-rounded"></td>
 					<td colspan="2">{{x.id}}</td>
 					<td colspan="2" class="xx-small">차단아이콘</td>
@@ -58,7 +81,7 @@
 			</colgroup>
 			<tbody>
 				<tr>
-					<td rowspan="2"><img ng-src="resources/images/image1.jpg" alt="..."
+					<td rowspan="2"><img ng-src="resources/images/sample/image1.jpg" alt="..."
 						class="img-circle" style="height: 50px; width: 50px;"></td>
 					<td colspan="2">{{x.id}}</td>
 					<td colspan="2">차단아이콘</td>

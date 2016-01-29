@@ -24,12 +24,13 @@
 	<div class="container-fluid">
 		
 		<!-- 상단 고정 영역 START -->
-		<!-- 상단 고정 영역 START -->
-		<div class="navbar navbar-default navbar-fixed-top topFixBg" role="navigation">
+		<div class="navbar navbar-default navbar-fixed-top" role="navigation">
 			<div class="col-xs-12 popModeBtnBg">
 				<div class="tbl">
-					<div class="tbl-td " style="vertical-align: middle;">
-						<div class="tbl-td icon-popmodeicon xxx-large wht"></div>
+					<div class="tbl-tr">
+						<div class="tbl-td txC vaM">
+							<span class="icon-popmodeicon xxx-large wht noPad"></span>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -39,22 +40,27 @@
 		<div ng-view class="contentsArea col-xs-12"></div><!-- 컨텐츠 -->
 	
 		<!-- 하단 고정 영역 START -->
-		<div class="navbar navbar-default navbar-fixed-bottom row bottomNav botFixBg"
-			role="navigation">
-			<div class="col-xs-3 nopadding bottomNavleftBtn">
-				<a href="javascript:history.back();"><img src="resources/images/fix_btm_01.jpg" alt="..."></a>
-			</div>
-			<div class="col-xs-2 nopadding bottomNavHomeBtn">
-				<a href="#/marketplace"><img src="resources/images/fix_btm_02.jpg" alt="..."></a>
-			</div>
-			<div class="col-xs-2 nopadding bottomNavLikeBtn">
-				<a href="#/pickbox"><img src="resources/images/fix_btm_03.jpg" alt="..."></a>
-			</div>
-			<div class="col-xs-2 nopadding bottomNavPickBoxBtn">
-				<img src="resources/images/fix_btm_04.jpg" alt="...">
-			</div>
-			<div class="col-xs-3 nopadding bottomNavRightBtn">
-				<a href="javascript:history.go(1);"><img src="resources/images/fix_btm_05.jpg" alt="..."></a>
+		<div class="navbar navbar-default navbar-fixed-bottom" role="navigation">
+			<div class="col-xs-12 botBtnBg">
+				<div class="tbl">
+					<div class="tbl-tr">
+						<div class="tbl-td txC vaM">
+							<a href="javascript:history.back();"><span class="icon-previcon xx-large wht"></span></a>
+						</div>
+						<div class="tbl-td txC vaM">
+							<a href="#/marketplace"><span class="icon-homeicon xx-large wht"></span></a>
+						</div>
+						<div class="tbl-td txC vaM">
+							<a href="#/pickbox"><span class="icon-pickboxicon xx-large wht"></span></a>
+						</div>
+						<div class="tbl-td txC vaM">
+							<a href="#/checkout" ><span class="icon-checkouticon xx-large wht"></span></a>
+						</div>
+						<div class="tbl-td txC vaM">
+							<a href="javascript:history.go(1);"><span class="icon-nexticon xx-large wht"></span></a>
+						</div>
+					</div>
+				</div>
 			</div>
 		</div>
 		<!-- 하단 고정 영역 END -->

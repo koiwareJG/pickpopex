@@ -1,0 +1,14 @@
+
+.icon-pickicon:before { content: '\e800'; } /* '' */
+.icon-pickboxicon:before { content: '\e801'; } /* '' */
+.icon-likeicon:before { content: '\e802'; } /* '' */
+.icon-nexticon:before { content: '\e803'; } /* '' */
+.icon-homeicon:before { content: '\e804'; } /* '' */
+.icon-fllwicon:before { content: '\e805'; } /* '' */
+.icon-filtericon:before { content: '\e806'; } /* '' */
+.icon-checkouticon:before { content: '\e807'; } /* '' */
+.icon-swapviewicon:before { content: '\e808'; } /* '' */
+.icon-priceicon:before { content: '\e809'; } /* '' */
+.icon-previcon:before { content: '\e80a'; } /* '' */
+.icon-popmodeicon:before { content: '\e80b'; } /* '' */
+.icon-pointicon:before { content: '\e80c'; } /* '' */

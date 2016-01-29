@@ -39,65 +39,130 @@ span {
 .x-large{font-size: 14pt;}
 .xx-large{font-size: 16pt;}
 .xxx-large{font-size: 20pt;}
+.xxxx-large{font-size: 24pt;}
 
 /* [공통]폰트컬러 */
 .wht{color: white;}
 .blk{color: black;}
 .green{color: #408080;}
 
-/* [공통]상단고정영역 */
-.topFixBg{
-	background-color: rgba(0, 0, 0, 0)
-}
+/* [공통]기타 */
+.noPad{padding: 0; margin: 0;}
+
 /* [공통]상단고정영역 > 팝모드버튼영역 */
 .popModeBtnBg {
-    height:30px; 
-    text-align:center; 
-    vertical-align:middle;
+    height:40px; 
 	background-color: #68917f;
 }
 
 /* [공통]컨텐츠영역 */
-.contentsArea{margin-top: 30px; margin-bottom: 60px;}
+/* 위, 아래 고정 버튼영역 만큼 마진 줘야함 */
+.contentsArea{margin-top: 40px; margin-bottom: 50px;}
 
 /* [공통]하단고정영역 */
-.botFixBg{
+.botBtnBg{
+	height: 50px;
 	background-color: #3a4942;
 }
-/* [공통]하단고정영역 > 하단버튼영역 */
-.bottomNav{padding: 0 0 0 0; height: 60px; }
-.bottomNavleftBtn img{height: 60px; width: 100%;}
-.bottomNavHomeBtn img{height: 60px; width: 100%;}
-.bottomNavLikeBtn img{height: 60px; width: 100%;}
-.bottomNavPickBoxBtn img{height: 60px; width: 100%;}
-.bottomNavRightBtn img{height: 60px; width: 100%;}
-.nopadding{padding: 0; margin: 0;}
-
 
 
 /* [공통]div테이블 */
-
-tbl {
+.tbl {
 	display: table;
+	width: 100%;
+	height: 100%;
 }
-tbl-tr {
+.tbl-tr {
 	display: table-row;
+	height: 100%;
 }
-tbl-td {
+.tbl-td {
 	display: table-cell;
 }
 
+.fL{float: left;}
+.fR{float: right;}
+
+.txL{text-align: left;}
+.txC{text-align: center;}
+.txR{text-align: right;}
+
+.vaT{vertical-align: top;}
+.vaM{vertical-align: middle;}
+.vaB{vertical-align: bottom;}
+
+.wdthPer10{
+	width: 100%
+}
+.wdthPer9{
+	width: 90%
+}
+.wdthPer8{
+	width: 80%
+}
+.wdthPer7{
+	width: 70%
+}
+.wdthPer6{
+	width: 60%
+}
+.wdthPer5{
+	width: 50%
+}
+.wdthPer4{
+	width: 40%
+}
+.wdthPer3{
+	width: 30%
+}
+.wdthPer2{
+	width: 20%
+}
+.wdthPer1{
+	width: 10%
+}
+
+.hghtPer10{
+	height: 100%
+}
+.hghtPer9{
+	height: 90%
+}
+.hghtPer8{
+	height: 80%
+}
+.hghtPer7{
+	height: 70%
+}
+.hghtPer6{
+	height: 60%
+}
+.hghtPer5{
+	height: 50%
+}
+.hghtPer4{
+	height: 40%
+}
+.hghtPer3{
+	height: 30%
+}
+.hghtPer2{
+	height: 20%
+}
+.hghtPer1{
+	height: 10%
+}
 
 
 
 /* [공통]커스텀아이콘 */
 @font-face {
   font-family: 'pickpop-iconset';
-  src: url('fonts/pickpop-iconset.eot?72189975');
-  src: url('fonts/pickpop-iconset.eot?72189975#iefix') format('embedded-opentype'),
-       url('fonts/pickpop-iconset.woff?72189975') format('woff'),
-       url('fonts/pickpop-iconset.ttf?72189975') format('truetype'),
-       url('fonts/pickpop-iconset.svg?72189975#pickpop-iconset') format('svg');
+  src: url('fonts/pickpop-iconset.eot?86221556');
+  src: url('fonts/pickpop-iconset.eot?86221556#iefix') format('embedded-opentype'),
+       url('fonts/pickpop-iconset.woff?86221556') format('woff'),
+       url('fonts/pickpop-iconset.ttf?86221556') format('truetype'),
+       url('fonts/pickpop-iconset.svg?86221556#pickpop-iconset') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -107,7 +172,7 @@ tbl-td {
 @media screen and (-webkit-min-device-pixel-ratio:0) {
   @font-face {
     font-family: 'pickpop-iconset';
-    src: url('../font/pickpop-iconset.svg?72189975#pickpop-iconset') format('svg');
+    src: url('fonts/pickpop-iconset.svg?86221556#pickpop-iconset') format('svg');
   }
 }
 */
@@ -146,15 +211,17 @@ tbl-td {
   /* Uncomment for 3D effect */
   /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
 }
- 
-.icon-checkouticon:before { content: '\e800'; } /* '' */
-.icon-filtericon:before { content: '\e801'; } /* '' */
-.icon-fllwicon:before { content: '\e802'; } /* '' */
-.icon-homeicon:before { content: '\e803'; } /* '' */
-.icon-likeicon:before { content: '\e804'; } /* '' */
-.icon-pickboxicon:before { content: '\e805'; } /* '' */
-.icon-pickicon:before { content: '\e806'; } /* '' */
-.icon-pointicon:before { content: '\e807'; } /* '' */
-.icon-popmodeicon:before { content: '\e808'; } /* '' */
+
+.icon-pickicon:before { content: '\e800'; } /* '' */
+.icon-pickboxicon:before { content: '\e801'; } /* '' */
+.icon-likeicon:before { content: '\e802'; } /* '' */
+.icon-nexticon:before { content: '\e803'; } /* '' */
+.icon-homeicon:before { content: '\e804'; } /* '' */
+.icon-fllwicon:before { content: '\e805'; } /* '' */
+.icon-filtericon:before { content: '\e806'; } /* '' */
+.icon-checkouticon:before { content: '\e807'; } /* '' */
+.icon-swapviewicon:before { content: '\e808'; } /* '' */
 .icon-priceicon:before { content: '\e809'; } /* '' */
-.icon-swapviewicon:before { content: '\e80a'; } /* '' */
+.icon-previcon:before { content: '\e80a'; } /* '' */
+.icon-popmodeicon:before { content: '\e80b'; } /* '' */
+.icon-pointicon:before { content: '\e80c'; } /* '' */

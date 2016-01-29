@@ -8,17 +8,58 @@
 
 @CHARSET "utf-8";
 
-/* 필터영역 */
+/* 필터버튼 크기만큼 마진 줘야함 */
 .marketplace {
-  margin-top: 40px;
+  margin-top: 45px;
   width: 100%;
 }
+
+/* 필터영역 */
 .filter-area {
-  margin-top: 30px;
+  margin-top: 40px;
 }
+
 .filterBtnBg {
-	height: 40px;
+	height: 45px;
 	text-align:center; 
     vertical-align:middle;
 	background-color: rgba(116, 159, 139, 0.5);
 }
+
+
+.userProfileImg {
+	width: 75%;
+	height: auto;
+	border-radius: 50%;
+}
+
+.itemImg{
+	width: 100%;
+}
+
+
+/* 판매자상품 레이아웃*/
+.shopProfileArea{
+	width: 100%;
+	margin: 0 0 0 0;
+}
+.shopProfileImgArea{
+	display:inline-block;
+	width: 15%;
+	text-align: center;
+	vertical-align: middle;
+	float: left;
+}
+.shopProfileImg {
+	margin: 5px 5px 5px 5px;
+	width: 100%;
+	height: auto;
+	border-radius: 6px;
+}
+
+.shopName {
+	
+}
+
+
+.
