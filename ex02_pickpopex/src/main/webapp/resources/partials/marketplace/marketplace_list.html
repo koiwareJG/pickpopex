@@ -9,30 +9,42 @@
  -->
  
 <div class="marketplace">
-<div class="col-xs-12 filterBtnBg navbar-fixed-top filter-area">
-<div ng-click="click()" ><button ng-class="{' ': active == true , 'active': active == false}" class="btn btn-default col-xs-2" id="jqTest">두줄보기</button></div>
-	    	<span class="glyphicon glyphicon-filter wht">필터버튼영역</span><span class="glyphicon glyphicon-th-large wht"></span>
+<div class="col-xs-12 navbar-fixed-top filter-area">
+	<div class="filterBtnBg">
+		<div class="wrap">
+			<div class="outer w20 h100 fL txR">
+				<span class="inMid icon-filtericon large wht"></span>
+			</div>
+			<div class="outer w60 h100 fL txC">
+					<span class="inMid x-small wht txC">필터를 선택하여<br> 원하시는 상품만 골라보세요</span>
+			</div>
+			<div class="outer w20 h100 fL txL">
+				<span ng-click="click()"  class="inMid icon-swapviewicon large wht" ng-class="{' ': active == true , 'active': active == false}">
+				</span>
+			</div>
+		</div>
+	</div>
 </div>
+<div ng-class="{'col-xs-12': active == true , 'col-xs-6': active == false}">
 	<!-- Section -->
 	<section>
-		<div ng-class="{'col-xs-12': active == true , 'col-xs-6': active == false}">
 			<!-- Row1 -->
 			<div class="wrapper H15">
 				<div class="wrap">
 					<!-- 프로필이미지 영역 -->
-					<div class="wdP15 htP100 fL">
+					<div class="w15 h100 fL">
 						<div class="shopProfileArea">
 							<img class="shopProfile" src="resources/images/sample/sample_profile_user_woman_01_512x512.jpg" alt="...">
 							<span class="shopProfileTxt">SHOP</span>
 						</div>
 					</div>
 					
-					<div class="wdP85 htP100 fL">
-						<div class="wdP100 htP50">
-							<div class="wdP80 fL txL"><span class="shopId small">코이샵</span></div>
-							<div class="wdP20 fR txR"><span class="banIcon glyphicon glyphicon-ban-circle medium gray"></span></div>
+					<div class="w85 h100 fL">
+						<div class="w100 h50">
+							<div class="w80 fL txL"><span class="shopId small vBot">코이샵</span></div>
+							<div class="w20 fR txR"><span class="banIcon glyphicon glyphicon-ban-circle medium gray vBot"></span></div>
 						</div>
-						<div class="wdP100 htP50">
+						<div class="w100 h50">
 							<div class="commentArea">
 								<div class="commentBg">
 									<span class="comment x-small">여기는 코멘트 영역입니다.여기는 코멘트 영역입니다.여기는 코멘트 영역입니다.여기는 코멘트 영역입니다.</span>
@@ -42,22 +54,25 @@
 					</div>
 				</div>
 			</div>
+			
 			<!-- Row2 -->
 			<div class="wrapper H100">
 				<div class="wrap">
 						<img class="itemImg" src="resources/images/sample/sample_product_woman_top_01_512x512.jpg" alt="...">
 				</div>
 			</div>
+			
 			<!-- Row3 -->
 			<div class="wrapper H20">
 				<div class="wrap">
-					<div class="wdP20 htP100 fL">
-						<div class="wdP100 txC"><span class="icon-pickicon xxxx-large txCM"></span></div>
+					<div class="outerC w20 h100 fL">
+						<span class="inMid icon-pickicon xxx-large"></span>
 					</div>
-					<div class="wdP80 htP50 fL">고급진 빨강 자켓</div>
-					<div class="wdP40 htP50 fL"><span>9,999</span></div>
-					<div class="wdP20 htP50 fL">sd</div>
-					<div class="wdP20 htP50 fL">sd</div>
+					<div class="outerL w80 h50 fL">
+						<span class="inBot medium">고급진 빨강 자켓</span>
+					</div>
+					<div class="outerC w40 h50 fL"><span class="icon-priceicon medium green">99,999</span></div>
+					<div class="outerC w40 h50 fL"><span class="icon-pointicon medium green">99,999</span></div>
 				</div>
 			</div>
 		</div>

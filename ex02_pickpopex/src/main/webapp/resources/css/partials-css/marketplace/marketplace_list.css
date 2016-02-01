@@ -20,11 +20,13 @@
 
 .filterBtnBg {
 	height: 45px;
-	text-align: center;
-	vertical-align: middle;
 	background-color: rgba(116, 159, 139, 0.5);
 }
 
+.filterIcon{
+	display: inline-block;
+	vertical-align: middle;
+}
 
 /* 판매자상품 레이아웃*/
 .shopProfileArea{
@@ -54,8 +56,6 @@
 }
 
 .shopId{
-	display : inline-block;
-	vertical-align : bottom;
 	padding-left: 5px;
 }
 .banIcon{
