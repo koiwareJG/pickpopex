@@ -8,144 +8,116 @@
  */
  -->
  
-<div class="marketplace">
-<div class="col-xs-12 navbar-fixed-top filter-area">
-	<div class="filterBtnBg">
-		<div class="wrap">
-			<div class="outer w20 h100 fL txR">
-				<span class="inMid icon-filtericon large wht"></span>
-			</div>
-			<div class="outer w60 h100 fL txC">
-					<span class="inMid x-small wht txC">필터를 선택하여<br> 원하시는 상품만 골라보세요</span>
-			</div>
-			<div class="outer w20 h100 fL txL">
-				<span ng-click="click()"  class="inMid icon-swapviewicon large wht" ng-class="{' ': active == true , 'active': active == false}">
-				</span>
-			</div>
-		</div>
-	</div>
-</div>
-<div ng-class="{'col-xs-12': active == true , 'col-xs-6': active == false}">
-	<!-- Section -->
-	<section>
-			<!-- Row1 -->
-			<div class="wrapper H15">
-				<div class="wrap">
-					<!-- 프로필이미지 영역 -->
-					<div class="w15 h100 fL">
-						<div class="shopProfileArea">
-							<img class="shopProfile" src="resources/images/sample/sample_profile_user_woman_01_512x512.jpg" alt="...">
-							<span class="shopProfileTxt">SHOP</span>
-						</div>
-					</div>
-					
-					<div class="w85 h100 fL">
-						<div class="w100 h50">
-							<div class="w80 fL txL"><span class="shopId small vBot">코이샵</span></div>
-							<div class="w20 fR txR"><span class="banIcon glyphicon glyphicon-ban-circle medium gray vBot"></span></div>
-						</div>
-						<div class="w100 h50">
-							<div class="commentArea">
-								<div class="commentBg">
-									<span class="comment x-small">여기는 코멘트 영역입니다.여기는 코멘트 영역입니다.여기는 코멘트 영역입니다.여기는 코멘트 영역입니다.</span>
-								</div>
-							</div>
-						</div>
-					</div>
+<div class="marketplace"><!-- 마켓플레이슬 S-->
+	
+	<!-- 필터버튼영역 S-->
+	<div class="col-xs-12 navbar-fixed-top filter-area">
+		<div class="filterBtnBg">
+			<div class="wrap">
+				<div class="outer w20 h100 fL txR">
+					<span class="inMid icon-filtericon large wht"></span>
 				</div>
-			</div>
-			
-			<!-- Row2 -->
-			<div class="wrapper H100">
-				<div class="wrap">
-						<img class="itemImg" src="resources/images/sample/sample_product_woman_top_01_512x512.jpg" alt="...">
+				<div class="outer w60 h100 fL txC">
+						<span class="inMid x-small wht txC">필터를 선택하여<br> 원하시는 상품만 골라보세요</span>
 				</div>
-			</div>
-			
-			<!-- Row3 -->
-			<div class="wrapper H20">
-				<div class="wrap">
-					<div class="outerC w20 h100 fL">
-						<span class="inMid icon-pickicon xxx-large"></span>
-					</div>
-					<div class="outerL w80 h50 fL">
-						<span class="inBot medium">고급진 빨강 자켓</span>
-					</div>
-					<div class="outerC w40 h50 fL"><span class="icon-priceicon medium green">99,999</span></div>
-					<div class="outerC w40 h50 fL"><span class="icon-pointicon medium green">99,999</span></div>
+				<div class="outer w20 h100 fL txL">
+					<span ng-click="click()"  class="inMid icon-swapviewicon large wht" ng-class="{' ': active == true , 'active': active == false}">
+					</span>
 				</div>
 			</div>
 		</div>
-	</section>
-	<!-- Section -->
-<div ng-repeat="x in myData" ng-switch on="x.conType">
-	<div ng-class="{'col-xs-12': active == true , 'col-xs-6': active == false}"  class="col-sm-6" ng-switch-when='item'>
+	</div><!-- 필터버튼영역 E-->
+	
+	<!-- 	판매자 상품 S -->
+	<div ng-class="{'col-xs-12': active == true , 'col-xs-6': active == false}"  class="col-sm-6">
+		<!-- Row1 S -->
+		<div class="wrapper H15">
+			<div class="wrap">
+				<!-- 프로필이미지 영역 -->
+				<div class="w15 h100 fL">
+					<img class="shopProfile" src="resources/images/sample/sample_profile_user_woman_01_512x512.jpg" alt="...">
+					<span class="shopProfileTxt">SHOP</span>
+				</div>
+				<!-- 상단 정보 영역 -->
+				<div class="outerL w75 h50 fL"><span class="inBot shopId small">코이샵</span></div>
+				<div class="outerR w10 h50 fL"><span class="inTop banIcon glyphicon glyphicon-ban-circle medium gray"></span></div>
+				<div class="w85 h50 fL">
+					<div class="commentArea">
+						<div class="commentBg">
+							<span class="comment x-small">여기는 코멘트 영역입니다.여기는 코멘트 영역입니다.여기는 코멘트 영역입니다.여기는 코멘트 영역입니다.</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div><!-- Row1 E -->
 		
+		<!-- Row2 S -->
+		<div class="wrapper H100">
+			<div class="wrap">
+					<img class="itemImg" src="resources/images/sample/sample_product_woman_top_01_512x512.jpg" alt="...">
+			</div>
+		</div><!-- Row2 E -->
 		
-		<table style="width: 100%">
-			<colgroup>
-				<col width="20%">
-				<col width="20%">
-				<col width="20%">
-				<col width="20%">
-				<col width="20%">
-			</colgroup>
-			<tbody>
-				<tr>
-					<td rowspan="2"><img ng-src="resources/images/sample/shop.png" alt="..."
-						class="img-rounded"></td>
-					<td colspan="2">{{x.id}}</td>
-					<td colspan="2" class="xx-small">차단아이콘</td>
-				</tr>
-				<tr>
-					<td colspan="4">{{x.comment}}</td>
-				</tr>
-				<tr>
-					<td colspan="5"><a ng-href="#/itemDetail/{{x.productName}}"><img ng-src="{{x.imgPath}}" alt="..." style="width: 100%"></a></td>
-				</tr>
-				<tr>
-					<td><span class="icon-likeicon xxx-large green"></span>픽아이콘</td>
-					<td colspan="2">{{x.productName}}</td>
-					<td>{{x.price}}</td>
-					<td>{{x.point}}</td>
-				</tr>
-			</tbody>
-		</table>
-		<br>
-		<br>
-	</div>
-	<div ng-class="{'col-xs-12': active == true , 'col-xs-6': active == false}"  class="col-sm-6"  ng-switch-when='style'>
-		<table style="width: 100%">
-			<colgroup>
-				<col width="20%">
-				<col width="20%">
-				<col width="20%">
-				<col width="20%">
-				<col width="20%">
-			</colgroup>
-			<tbody>
-				<tr>
-					<td rowspan="2"><img ng-src="resources/images/sample/image1.jpg" alt="..."
-						class="img-circle" style="height: 50px; width: 50px;"></td>
-					<td colspan="2">{{x.id}}</td>
-					<td colspan="2">차단아이콘</td>
-				</tr>
-				<tr>
-					<td colspan="4">{{x.comment}}</td>
-				</tr>
-				<tr>
-					<td colspan="5"><a ng-href="#/itemDetail/{{x.productName}}"><img ng-src="{{x.imgPath}}" alt="..." style="width: 100%"></a></td>
-				</tr>
-				<tr>
-					<td>픽아이콘</td>
-					<td colspan="2">{{x.productName}}</td>
-					<td>{{x.price}}</td>
-					<td>{{x.point}}</td>
-				</tr>
-			</tbody>
-		</table>
-		<br>
-		<br>
-	</div>
-</div>
-</div>
+		<!-- Row3 S -->
+		<div class="wrapper H20">
+			<div class="wrap">
+				<div class="outerC w20 h100 fL">
+					<span class="inMid icon-pickicon xxx-large gray"></span>
+				</div>
+				<div class="outerL w80 h50 fL">
+					<span class="inMid medium">고급진 빨강 자켓</span>
+				</div>
+				<div class="outerR w50 h50 fL"><span class="icon-priceicon medium green"></span><span class="medium green">99,999</span></div>
+				<div class="outerC w30 h50 fL"><span class="icon-pointicon medium green"></span><span class="medium green">+999</span></div>
+			</div>
+		</div><!-- Row3 E -->
+	</div><!-- 	판매자 상품 E -->
+	
+	<!-- 	판매자 상품 S -->
+	<div ng-class="{'col-xs-12': active == true , 'col-xs-6': active == false}"  class="col-sm-6">
+		<!-- Row1 S -->
+		<div class="wrapper H15">
+			<div class="wrap">
+				<!-- 프로필이미지 영역 -->
+				<div class="w15 h100 fL">
+					<img class="shopProfile" src="resources/images/sample/sample_profile_user_woman_01_512x512.jpg" alt="...">
+					<span class="shopProfileTxt">SHOP</span>
+				</div>
+				<!-- 상단 정보 영역 -->
+				<div class="outerL w75 h50 fL"><span class="inBot shopId small">코이샵</span></div>
+				<div class="outerR w10 h50 fL"><span class="inTop banIcon glyphicon glyphicon-ban-circle medium gray"></span></div>
+				<div class="w85 h50 fL">
+					<div class="commentArea">
+						<div class="commentBg">
+							<span class="comment x-small">여기는 코멘트 영역입니다.여기는 코멘트 영역입니다.여기는 코멘트 영역입니다.여기는 코멘트 영역입니다.</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div><!-- Row1 E -->
+		
+		<!-- Row2 S -->
+		<div class="wrapper H100">
+			<div class="wrap">
+					<img class="itemImg" src="resources/images/sample/sample_product_woman_top_01_512x512.jpg" alt="...">
+			</div>
+		</div><!-- Row2 E -->
+		
+		<!-- Row3 S -->
+		<div class="wrapper H20">
+			<div class="wrap">
+				<div class="outerC w20 h100 fL">
+					<span class="inMid icon-pickicon xxx-large"></span>
+				</div>
+				<div class="outerL w80 h50 fL">
+					<span class="inMid medium">고급진 빨강 자켓</span>
+				</div>
+				<div class="outerR w50 h50 fL"><span class="icon-priceicon medium green">99,999</span></div>
+				<div class="outerC w30 h50 fL"><span class="icon-pointicon medium green">99,999</span></div>
+			</div>
+		</div><!-- Row3 E -->
+	</div><!-- 	판매자 상품 E -->
+	
+</div><!-- 마켓플레이슬 E-->
+
+
