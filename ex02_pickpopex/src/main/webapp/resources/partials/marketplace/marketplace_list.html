@@ -7,12 +7,12 @@
  * ==============================================================================
  */
  -->
- 
-<div class="marketplace"><!-- 마켓플레이슬 S-->
-	
+<div class="bgGrid"></div>
+<div class="rap marketplace" ><!-- 마켓플레이스 S-->
+
 	<!-- 필터버튼영역 S-->
-	<div class="col-xs-12 navbar-fixed-top filter-area">
-		<div class="filterBtnBg">
+	<div class="col-xs-12 navbar-fixed-top filter-area filter-dropshadow">
+		<div class="hrap-15 filterBtnBg">
 			<div class="wrap">
 				<div class="outer w20 h100 fL txR">
 					<span class="inMid icon-filtericon large wht"></span>
@@ -29,9 +29,9 @@
 	</div><!-- 필터버튼영역 E-->
 	
 	<!-- 	판매자 상품 S -->
-	<div ng-class="{'col-xs-12': active == true , 'col-xs-6': active == false}"  class="col-sm-6">
+	<div ng-class="{'col-xs-12': active == true , 'col-xs-6': active == false}"  class="col-sm-6 contentBg">
 		<!-- Row1 S -->
-		<div class="wrapper H15">
+		<div class="hrap-15">
 			<div class="wrap">
 				<!-- 프로필이미지 영역 -->
 				<div class="w15 h100 fL">
@@ -42,24 +42,24 @@
 				<div class="outerL w75 h50 fL"><span class="inBot shopId small">코이샵</span></div>
 				<div class="outerR w10 h50 fL"><span class="inTop banIcon glyphicon glyphicon-ban-circle medium gray"></span></div>
 				<div class="w85 h50 fL">
-					<div class="commentArea">
-						<div class="commentBg">
-							<span class="comment x-small">여기는 코멘트 영역입니다.여기는 코멘트 영역입니다.여기는 코멘트 영역입니다.여기는 코멘트 영역입니다.</span>
-						</div>
+					<div class="commentBg">
+						<span class="comment x-small">여기는 코멘트 영역입니다.여기는 코멘트 영역입니다.여기는 코멘트 영역입니다.여기는 코멘트 영역입니다.</span>
 					</div>
 				</div>
 			</div>
 		</div><!-- Row1 E -->
 		
 		<!-- Row2 S -->
-		<div class="wrapper H100">
+		<div class="hrap-100">
 			<div class="wrap">
+				<div class="w100 h100 fL">
 					<img class="itemImg" src="resources/images/sample/sample_product_woman_top_01_512x512.jpg" alt="...">
+				</div>
 			</div>
 		</div><!-- Row2 E -->
 		
 		<!-- Row3 S -->
-		<div class="wrapper H20">
+		<div class="hrap-20">
 			<div class="wrap">
 				<div class="outerC w20 h100 fL">
 					<span class="inMid icon-pickicon xxx-large gray"></span>
@@ -73,51 +73,434 @@
 		</div><!-- Row3 E -->
 	</div><!-- 	판매자 상품 E -->
 	
-	<!-- 	판매자 상품 S -->
-	<div ng-class="{'col-xs-12': active == true , 'col-xs-6': active == false}"  class="col-sm-6">
+	<!-- 	스타일 컨텐츠 type-1 S -->
+	<div ng-class="{'col-xs-12': active == true , 'col-xs-6': active == false}"  class="col-sm-6 contentBg">
 		<!-- Row1 S -->
-		<div class="wrapper H15">
+		<div class="hrap-15">
 			<div class="wrap">
 				<!-- 프로필이미지 영역 -->
 				<div class="w15 h100 fL">
-					<img class="shopProfile" src="resources/images/sample/sample_profile_user_woman_01_512x512.jpg" alt="...">
-					<span class="shopProfileTxt">SHOP</span>
+					<img class="userProfile" src="resources/images/sample/sample_profile_user_woman_02_512x512.jpg" alt="...">
 				</div>
 				<!-- 상단 정보 영역 -->
-				<div class="outerL w75 h50 fL"><span class="inBot shopId small">코이샵</span></div>
+				<div class="outerL w25 h50 fL"><span class="inBot shopId small">유저001</span></div>
+				<div class="outerL w50 h50 fL"><span class="inBot icon-fllwicon small green">9999</span></div>
 				<div class="outerR w10 h50 fL"><span class="inTop banIcon glyphicon glyphicon-ban-circle medium gray"></span></div>
 				<div class="w85 h50 fL">
-					<div class="commentArea">
-						<div class="commentBg">
-							<span class="comment x-small">여기는 코멘트 영역입니다.여기는 코멘트 영역입니다.여기는 코멘트 영역입니다.여기는 코멘트 영역입니다.</span>
-						</div>
+					<div class="commentBg">
+						<span class="comment x-small">여기는 코멘트 영역입니다.여기는 코멘트 영역입니다.여기는 코멘트 영역입니다.여기는 코멘트 영역입니다.</span>
 					</div>
 				</div>
 			</div>
 		</div><!-- Row1 E -->
 		
 		<!-- Row2 S -->
-		<div class="wrapper H100">
+		<div class="hrap-100">
 			<div class="wrap">
+				<div class="w100 h100 fL">
 					<img class="itemImg" src="resources/images/sample/sample_product_woman_top_01_512x512.jpg" alt="...">
+				</div>
 			</div>
 		</div><!-- Row2 E -->
 		
 		<!-- Row3 S -->
-		<div class="wrapper H20">
+		<div class="hrap-10">
 			<div class="wrap">
 				<div class="outerC w20 h100 fL">
-					<span class="inMid icon-pickicon xxx-large"></span>
+					<span class="inMid icon-likeicon small gray">999</span>
 				</div>
-				<div class="outerL w80 h50 fL">
-					<span class="inMid medium">고급진 빨강 자켓</span>
+				<div class="outerC w15 h100 fL">
+					<span class="inMid glyphicon glyphicon-comment small gray"></span><span class="inMid txL small gray">999</span>
 				</div>
-				<div class="outerR w50 h50 fL"><span class="icon-priceicon medium green">99,999</span></div>
-				<div class="outerC w30 h50 fL"><span class="icon-pointicon medium green">99,999</span></div>
+				<div class="outerC w30 h100 fL">
+					<span class="inMid icon-priceicon small green">99,999</span>
+				</div>
+				<div class="outerL w20 h100 fL">
+					<span class="inMid icon-pointicon small green">+999</span>
+				</div>
+				<div class="outerC w15 h100 fL">
+					<span class="inMid glyphicon glyphicon-plane small green"></span><span class="inMid txL small green">2,500</span>
+				</div>
 			</div>
 		</div><!-- Row3 E -->
-	</div><!-- 	판매자 상품 E -->
+	</div><!-- 	스타일 컨텐츠 type-1 E -->
 	
-</div><!-- 마켓플레이슬 E-->
-
-
+	<!-- 	스타일 컨텐츠 type-2 S -->
+	<div ng-class="{'col-xs-12': active == true , 'col-xs-6': active == false}"  class="col-sm-6 contentBg">
+		<!-- Row1 S -->
+		<div class="hrap-15">
+			<div class="wrap">
+				<!-- 프로필이미지 영역 -->
+				<div class="w15 h100 fL">
+					<img class="userProfile" src="resources/images/sample/sample_profile_user_woman_02_512x512.jpg" alt="...">
+				</div>
+				<!-- 상단 정보 영역 -->
+				<div class="outerL w25 h50 fL"><span class="inBot shopId small">유저001</span></div>
+				<div class="outerL w50 h50 fL"><span class="inBot icon-fllwicon small green">9999</span></div>
+				<div class="outerR w10 h50 fL"><span class="inTop banIcon glyphicon glyphicon-ban-circle medium gray"></span></div>
+				<div class="w85 h50 fL">
+					<div class="commentBg">
+						<span class="comment x-small">여기는 코멘트 영역입니다.여기는 코멘트 영역입니다.여기는 코멘트 영역입니다.여기는 코멘트 영역입니다.</span>
+					</div>
+				</div>
+			</div>
+		</div><!-- Row1 E -->
+		
+		<!-- Row2 S -->
+		<div class="hrap-100">
+			<div class="wrap">
+				<div class="w50 h100 fL"><img class="itemImg" src="resources/images/sample/sample_product_woman_top_01_512x1024.jpg" alt="..."></div>
+				<div class="w50 h100 fL"><img class="itemImg" src="resources/images/sample/sample_product_woman_top_01_512x1024.jpg" alt="..."></div>
+			</div>
+		</div><!-- Row2 E -->
+		
+		<!-- Row3 S -->
+		<div class="hrap-10">
+			<div class="wrap">
+				<div class="outerC w20 h100 fL">
+					<span class="inMid icon-likeicon small gray">999</span>
+				</div>
+				<div class="outerC w15 h100 fL">
+					<span class="inMid glyphicon glyphicon-comment small gray"></span><span class="inMid txL small gray">999</span>
+				</div>
+				<div class="outerC w30 h100 fL">
+					<span class="inMid icon-priceicon small green">99,999</span>
+				</div>
+				<div class="outerL w20 h100 fL">
+					<span class="inMid icon-pointicon small green">+999</span>
+				</div>
+				<div class="outerC w15 h100 fL">
+					<span class="inMid glyphicon glyphicon-plane small green"></span><span class="inMid txL small green">2,500</span>
+				</div>
+			</div>
+		</div><!-- Row3 E -->
+	</div><!-- 	스타일 컨텐츠 type-2 E -->
+	
+	<!-- 	스타일 컨텐츠 type-3 S -->
+	<div ng-class="{'col-xs-12': active == true , 'col-xs-6': active == false}"  class="col-sm-6 contentBg">
+		<!-- Row1 S -->
+		<div class="hrap-15">
+			<div class="wrap">
+				<!-- 프로필이미지 영역 -->
+				<div class="w15 h100 fL">
+					<img class="userProfile" src="resources/images/sample/sample_profile_user_woman_02_512x512.jpg" alt="...">
+				</div>
+				<!-- 상단 정보 영역 -->
+				<div class="outerL w25 h50 fL"><span class="inBot shopId small">유저001</span></div>
+				<div class="outerL w50 h50 fL"><span class="inBot icon-fllwicon small green">9999</span></div>
+				<div class="outerR w10 h50 fL"><span class="inTop banIcon glyphicon glyphicon-ban-circle medium gray"></span></div>
+				<div class="w85 h50 fL">
+					<div class="commentBg">
+						<span class="comment x-small">여기는 코멘트 영역입니다.여기는 코멘트 영역입니다.여기는 코멘트 영역입니다.여기는 코멘트 영역입니다.</span>
+					</div>
+				</div>
+			</div>
+		</div><!-- Row1 E -->
+		
+		<!-- Row2 S -->
+		<div class="hrap-100">
+			<div class="wrap">
+				<div class="w50 h50 fL"><img class="itemImg" src="resources/images/sample/sample_product_woman_top_01_512x512.jpg" alt="..."></div>
+				<div class="w50 h100 fR"><img class="itemImg" src="resources/images/sample/sample_product_woman_top_01_512x1024.jpg" alt="..."></div>
+				<div class="w50 h50 fL"><img class="itemImg" src="resources/images/sample/sample_product_woman_top_01_512x512.jpg" alt="..."></div>
+			</div>
+		</div><!-- Row2 E -->
+		
+		<!-- Row3 S -->
+		<div class="hrap-10">
+			<div class="wrap">
+				<div class="outerC w20 h100 fL">
+					<span class="inMid icon-likeicon small gray">999</span>
+				</div>
+				<div class="outerC w15 h100 fL">
+					<span class="inMid glyphicon glyphicon-comment small gray"></span><span class="inMid txL small gray">999</span>
+				</div>
+				<div class="outerC w30 h100 fL">
+					<span class="inMid icon-priceicon small green">99,999</span>
+				</div>
+				<div class="outerL w20 h100 fL">
+					<span class="inMid icon-pointicon small green">+999</span>
+				</div>
+				<div class="outerC w15 h100 fL">
+					<span class="inMid glyphicon glyphicon-plane small green"></span><span class="inMid txL small green">2,500</span>
+				</div>
+			</div>
+		</div><!-- Row3 E -->
+	</div><!-- 	스타일 컨텐츠 type-3 E -->
+	
+	<!-- 	스타일 컨텐츠 type-4 S -->
+	<div ng-class="{'col-xs-12': active == true , 'col-xs-6': active == false}"  class="col-sm-6 contentBg">
+		<!-- Row1 S -->
+		<div class="hrap-15">
+			<div class="wrap">
+				<!-- 프로필이미지 영역 -->
+				<div class="w15 h100 fL">
+					<img class="userProfile" src="resources/images/sample/sample_profile_user_woman_02_512x512.jpg" alt="...">
+				</div>
+				<!-- 상단 정보 영역 -->
+				<div class="outerL w25 h50 fL"><span class="inBot shopId small">유저001</span></div>
+				<div class="outerL w50 h50 fL"><span class="inBot icon-fllwicon small green">9999</span></div>
+				<div class="outerR w10 h50 fL"><span class="inTop banIcon glyphicon glyphicon-ban-circle medium gray"></span></div>
+				<div class="w85 h50 fL">
+					<div class="commentBg">
+						<span class="comment x-small">여기는 코멘트 영역입니다.여기는 코멘트 영역입니다.여기는 코멘트 영역입니다.여기는 코멘트 영역입니다.</span>
+					</div>
+				</div>
+			</div>
+		</div><!-- Row1 E -->
+		
+		<!-- Row2 S -->
+		<div class="hrap-100">
+			<div class="wrap">
+				<div class="w50 h50 fL"><img class="itemImg" src="resources/images/sample/sample_product_woman_top_01_512x512.jpg" alt="..."></div>
+				<div class="w50 h50 fL"><img class="itemImg" src="resources/images/sample/sample_product_woman_top_01_512x512.jpg" alt="..."></div>
+				<div class="w50 h50 fL"><img class="itemImg" src="resources/images/sample/sample_product_woman_top_01_512x512.jpg" alt="..."></div>
+				<div class="w50 h50 fL"><img class="itemImg" src="resources/images/sample/sample_product_woman_top_01_512x512.jpg" alt="..."></div>
+			</div>
+		</div><!-- Row2 E -->
+		
+		<!-- Row3 S -->
+		<div class="hrap-10">
+			<div class="wrap">
+				<div class="outerC w20 h100 fL">
+					<span class="inMid icon-likeicon small gray">999</span>
+				</div>
+				<div class="outerC w15 h100 fL">
+					<span class="inMid glyphicon glyphicon-comment small gray"></span><span class="inMid txL small gray">999</span>
+				</div>
+				<div class="outerC w30 h100 fL">
+					<span class="inMid icon-priceicon small green">99,999</span>
+				</div>
+				<div class="outerL w20 h100 fL">
+					<span class="inMid icon-pointicon small green">+999</span>
+				</div>
+				<div class="outerC w15 h100 fL">
+					<span class="inMid glyphicon glyphicon-plane small green"></span><span class="inMid txL small green">2,500</span>
+				</div>
+			</div>
+		</div><!-- Row3 E -->
+	</div><!-- 	스타일 컨텐츠 type-4 E -->
+	
+	<!-- 	스타일 컨텐츠 type-5 S -->
+	<div ng-class="{'col-xs-12': active == true , 'col-xs-6': active == false}"  class="col-sm-6 contentBg">
+		<!-- Row1 S -->
+		<div class="hrap-15">
+			<div class="wrap">
+				<!-- 프로필이미지 영역 -->
+				<div class="w15 h100 fL">
+					<img class="userProfile" src="resources/images/sample/sample_profile_user_woman_02_512x512.jpg" alt="...">
+				</div>
+				<!-- 상단 정보 영역 -->
+				<div class="outerL w25 h50 fL"><span class="inBot shopId small">유저001</span></div>
+				<div class="outerL w50 h50 fL"><span class="inBot icon-fllwicon small green">9999</span></div>
+				<div class="outerR w10 h50 fL"><span class="inTop banIcon glyphicon glyphicon-ban-circle medium gray"></span></div>
+				<div class="w85 h50 fL">
+					<div class="commentBg">
+						<span class="comment x-small">여기는 코멘트 영역입니다.여기는 코멘트 영역입니다.여기는 코멘트 영역입니다.여기는 코멘트 영역입니다.</span>
+					</div>
+				</div>
+			</div>
+		</div><!-- Row1 E -->
+		
+		<!-- Row2 S -->
+		<div class="hrap-100">
+			<div class="wrap">
+				<div class="w25 h50 fL"><img class="itemImg" src="resources/images/sample/sample_product_woman_top_01_512x1024.jpg" alt="..."></div>
+				<div class="w25 h50 fL"><img class="itemImg" src="resources/images/sample/sample_product_woman_top_01_512x1024.jpg" alt="..."></div>
+				<div class="w50 h50 fL"><img class="itemImg" src="resources/images/sample/sample_product_woman_top_01_512x512.jpg" alt="..."></div>
+				<div class="w50 h50 fL"><img class="itemImg" src="resources/images/sample/sample_product_woman_top_01_512x512.jpg" alt="..."></div>
+				<div class="w50 h50 fL"><img class="itemImg" src="resources/images/sample/sample_product_woman_top_01_512x512.jpg" alt="..."></div>
+			</div>
+		</div><!-- Row2 E -->
+		
+		<!-- Row3 S -->
+		<div class="hrap-10">
+			<div class="wrap">
+				<div class="outerC w20 h100 fL">
+					<span class="inMid icon-likeicon small gray">999</span>
+				</div>
+				<div class="outerC w15 h100 fL">
+					<span class="inMid glyphicon glyphicon-comment small gray"></span><span class="inMid txL small gray">999</span>
+				</div>
+				<div class="outerC w30 h100 fL">
+					<span class="inMid icon-priceicon small green">99,999</span>
+				</div>
+				<div class="outerL w20 h100 fL">
+					<span class="inMid icon-pointicon small green">+999</span>
+				</div>
+				<div class="outerC w15 h100 fL">
+					<span class="inMid glyphicon glyphicon-plane small green"></span><span class="inMid txL small green">2,500</span>
+				</div>
+			</div>
+		</div><!-- Row3 E -->
+	</div><!-- 	스타일 컨텐츠 type-5 E -->
+	
+	<!-- 	스타일 컨텐츠 type-6 S -->
+	<div ng-class="{'col-xs-12': active == true , 'col-xs-6': active == false}"  class="col-sm-6 contentBg">
+		<!-- Row1 S -->
+		<div class="hrap-15">
+			<div class="wrap">
+				<!-- 프로필이미지 영역 -->
+				<div class="w15 h100 fL">
+					<img class="userProfile" src="resources/images/sample/sample_profile_user_woman_02_512x512.jpg" alt="...">
+				</div>
+				<!-- 상단 정보 영역 -->
+				<div class="outerL w25 h50 fL"><span class="inBot shopId small">유저001</span></div>
+				<div class="outerL w50 h50 fL"><span class="inBot icon-fllwicon small green">9999</span></div>
+				<div class="outerR w10 h50 fL"><span class="inTop banIcon glyphicon glyphicon-ban-circle medium gray"></span></div>
+				<div class="w85 h50 fL">
+					<div class="commentBg">
+						<span class="comment x-small">여기는 코멘트 영역입니다.여기는 코멘트 영역입니다.여기는 코멘트 영역입니다.여기는 코멘트 영역입니다.</span>
+					</div>
+				</div>
+			</div>
+		</div><!-- Row1 E -->
+		
+		<!-- Row2 S -->
+		<div class="hrap-100">
+			<div class="wrap">
+				<div class="w33 h67 fL"><img class="itemImg" src="resources/images/sample/sample_product_woman_top_01_512x1024.jpg" alt="..."></div>
+				<div class="w33 h67 fL"><img class="itemImg" src="resources/images/sample/sample_product_woman_top_01_512x1024.jpg" alt="..."></div>
+				<div class="w34 h67 fL"><img class="itemImg" src="resources/images/sample/sample_product_woman_top_01_512x1024.jpg" alt="..."></div>
+				<div class="w33 h33 fL"><img class="itemImg" src="resources/images/sample/sample_product_woman_top_01_512x512.jpg" alt="..."></div>
+				<div class="w33 h33 fL"><img class="itemImg" src="resources/images/sample/sample_product_woman_top_01_512x512.jpg" alt="..."></div>
+				<div class="w34 h33 fL"><img class="itemImg" src="resources/images/sample/sample_product_woman_top_01_512x512.jpg" alt="..."></div>
+			</div>
+		</div><!-- Row2 E -->
+		
+		<!-- Row3 S -->
+		<div class="hrap-10">
+			<div class="wrap">
+				<div class="outerC w20 h100 fL">
+					<span class="inMid icon-likeicon small gray">999</span>
+				</div>
+				<div class="outerC w15 h100 fL">
+					<span class="inMid glyphicon glyphicon-comment small gray"></span><span class="inMid txL small gray">999</span>
+				</div>
+				<div class="outerC w30 h100 fL">
+					<span class="inMid icon-priceicon small green">99,999</span>
+				</div>
+				<div class="outerL w20 h100 fL">
+					<span class="inMid icon-pointicon small green">+999</span>
+				</div>
+				<div class="outerC w15 h100 fL">
+					<span class="inMid glyphicon glyphicon-plane small green"></span><span class="inMid txL small green">2,500</span>
+				</div>
+			</div>
+		</div><!-- Row3 E -->
+	</div><!-- 	스타일 컨텐츠 type-6 E -->
+	
+	<!-- 	스타일 컨텐츠 type-7 S -->
+	<div ng-class="{'col-xs-12': active == true , 'col-xs-6': active == false}"  class="col-sm-6 contentBg">
+		<!-- Row1 S -->
+		<div class="hrap-15">
+			<div class="wrap">
+				<!-- 프로필이미지 영역 -->
+				<div class="w15 h100 fL">
+					<img class="userProfile" src="resources/images/sample/sample_profile_user_woman_02_512x512.jpg" alt="...">
+				</div>
+				<!-- 상단 정보 영역 -->
+				<div class="outerL w25 h50 fL"><span class="inBot shopId small">유저001</span></div>
+				<div class="outerL w50 h50 fL"><span class="inBot icon-fllwicon small green">9999</span></div>
+				<div class="outerR w10 h50 fL"><span class="inTop banIcon glyphicon glyphicon-ban-circle medium gray"></span></div>
+				<div class="w85 h50 fL">
+					<div class="commentBg">
+						<span class="comment x-small">여기는 코멘트 영역입니다.여기는 코멘트 영역입니다.여기는 코멘트 영역입니다.여기는 코멘트 영역입니다.</span>
+					</div>
+				</div>
+			</div>
+		</div><!-- Row1 E -->
+		
+		<!-- Row2 S -->
+		<div class="hrap-100">
+			<div class="wrap">
+				<div class="w33 h33 fL"><img class="itemImg" src="resources/images/sample/sample_product_woman_top_01_512x512.jpg" alt="..."></div>
+				<div class="w33 h33 fL"><img class="itemImg" src="resources/images/sample/sample_product_woman_top_01_512x512.jpg" alt="..."></div>
+				<div class="w34 h66 fR"><img class="itemImg" src="resources/images/sample/sample_product_woman_top_01_512x1024.jpg" alt="..."></div>
+				<div class="w33 h67 fL"><img class="itemImg" src="resources/images/sample/sample_product_woman_top_01_512x1024.jpg" alt="..."></div>
+				<div class="w33 h33 fR"><img class="itemImg" src="resources/images/sample/sample_product_woman_top_01_512x512.jpg" alt="..."></div>
+				<div class="w33 h34 fL"><img class="itemImg" src="resources/images/sample/sample_product_woman_top_01_512x512.jpg" alt="..."></div>
+				<div class="w34 h34 fR"><img class="itemImg" src="resources/images/sample/sample_product_woman_top_01_512x512.jpg" alt="..."></div>
+			</div>
+		</div><!-- Row2 E -->
+		
+		<!-- Row3 S -->
+		<div class="hrap-10">
+			<div class="wrap">
+				<div class="outerC w20 h100 fL">
+					<span class="inMid icon-likeicon small gray">999</span>
+				</div>
+				<div class="outerC w15 h100 fL">
+					<span class="inMid glyphicon glyphicon-comment small gray"></span><span class="inMid txL small gray">999</span>
+				</div>
+				<div class="outerC w30 h100 fL">
+					<span class="inMid icon-priceicon small green">99,999</span>
+				</div>
+				<div class="outerL w20 h100 fL">
+					<span class="inMid icon-pointicon small green">+999</span>
+				</div>
+				<div class="outerC w15 h100 fL">
+					<span class="inMid glyphicon glyphicon-plane small green"></span><span class="inMid txL small green">2,500</span>
+				</div>
+			</div>
+		</div><!-- Row3 E -->
+	</div><!-- 	스타일 컨텐츠 type-7 E -->
+	
+	<!-- 	스타일 컨텐츠 type-8 S -->
+	<div ng-class="{'col-xs-12': active == true , 'col-xs-6': active == false}"  class="col-sm-6 contentBg">
+		<!-- Row1 S -->
+		<div class="hrap-15">
+			<div class="wrap">
+				<!-- 프로필이미지 영역 -->
+				<div class="w15 h100 fL">
+					<img class="userProfile" src="resources/images/sample/sample_profile_user_woman_02_512x512.jpg" alt="...">
+				</div>
+				<!-- 상단 정보 영역 -->
+				<div class="outerL w25 h50 fL"><span class="inBot shopId small">유저001</span></div>
+				<div class="outerL w50 h50 fL"><span class="inBot icon-fllwicon small green">9999</span></div>
+				<div class="outerR w10 h50 fL"><span class="inTop banIcon glyphicon glyphicon-ban-circle medium gray"></span></div>
+				<div class="w85 h50 fL">
+					<div class="commentBg">
+						<span class="comment x-small">여기는 코멘트 영역입니다.여기는 코멘트 영역입니다.여기는 코멘트 영역입니다.여기는 코멘트 영역입니다.</span>
+					</div>
+				</div>
+			</div>
+		</div><!-- Row1 E -->
+		
+		<!-- Row2 S -->
+		<div class="hrap-100">
+			<div class="wrap">
+				<div class="w33 h33 fL"><img class="itemImg" src="resources/images/sample/sample_product_woman_top_01_512x512.jpg" alt="..."></div>
+				<div class="w33 h33 fL"><img class="itemImg" src="resources/images/sample/sample_product_woman_top_01_512x512.jpg" alt="..."></div>
+				<div class="w34 h33 fL"><img class="itemImg" src="resources/images/sample/sample_product_woman_top_01_512x512.jpg" alt="..."></div>
+				<div class="w33 h67 fL"><img class="itemImg" src="resources/images/sample/sample_product_woman_top_01_512x1024.jpg" alt="..."></div>
+				<div class="w33 h33 fL"><img class="itemImg" src="resources/images/sample/sample_product_woman_top_01_512x512.jpg" alt="..."></div>
+				<div class="w34 h33 fL"><img class="itemImg" src="resources/images/sample/sample_product_woman_top_01_512x512.jpg" alt="..."></div>
+				<div class="w33 h34 fL"><img class="itemImg" src="resources/images/sample/sample_product_woman_top_01_512x512.jpg" alt="..."></div>
+				<div class="w34 h34 fL"><img class="itemImg" src="resources/images/sample/sample_product_woman_top_01_512x512.jpg" alt="..."></div>
+			</div>
+		</div><!-- Row2 E -->
+		
+		<!-- Row3 S -->
+		<div class="hrap-10">
+			<div class="wrap">
+				<div class="outerC w20 h100 fL">
+					<span class="inMid icon-likeicon small gray">999</span>
+				</div>
+				<div class="outerC w15 h100 fL">
+					<span class="inMid glyphicon glyphicon-comment small gray"></span><span class="inMid txL small gray">999</span>
+				</div>
+				<div class="outerC w30 h100 fL">
+					<span class="inMid icon-priceicon small green">99,999</span>
+				</div>
+				<div class="outerL w20 h100 fL">
+					<span class="inMid icon-pointicon small green">+999</span>
+				</div>
+				<div class="outerC w15 h100 fL">
+					<span class="inMid glyphicon glyphicon-plane small green"></span><span class="inMid txL small green">2,500</span>
+				</div>
+			</div>
+		</div><!-- Row3 E -->
+	</div><!-- 	스타일 컨텐츠 type-8 E -->
+	
+</div><!-- 마켓플레이스 E-->
