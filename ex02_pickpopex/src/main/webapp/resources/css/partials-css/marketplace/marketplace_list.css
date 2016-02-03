@@ -5,61 +5,84 @@
  * 작성일 : 2016.01.25
  * ==============================================================================
  */
-
 @CHARSET "utf-8";
 
 /* 필터버튼 크기만큼 마진 줘야함 */
 .marketplace {
-  margin-top: 45px;
-  width: 100%;
+	padding-top: 55px;
+	width: 100%;
+	height: 100%;
 }
 
 /* 필터영역 */
 .filter-area {
-  margin-top: 40px;
+	margin-top: 40px;
 }
 
 .filterBtnBg {
 	height: 45px;
-	text-align:center; 
-    vertical-align:middle;
 	background-color: rgba(116, 159, 139, 0.5);
 }
 
+.filterIcon{
+	display: inline-block;
+	vertical-align: middle;
+}
 
-.userProfileImg {
-	width: 75%;
+.itemImg {
+	width: 100%;
+    height: 100%;
+    border: 1px;
+    border-color: white;
+    border-style: solid;
+}
+
+/* 판매자상품 레이아웃*/
+.shopProfile {
+	padding: 4px;
+	width: 100%;
+	height: auto;
+}
+.shopProfileTxt {
+	position:absolute;
+	left: 1.5%;
+	top: 35%;
+	font-size: 4vw;
+	font-weight: bold;
+	opacity: 0.7;
+	filter: alpha(opacity = 90);
+	color: white;
+	text-shadow: 0 0 2px black;
+}
+.shopId{
+	padding-left: 5px;
+}
+.banIcon{
+	vertical-align : middle;
+	padding-right: 10px;
+}
+.commentBg{
+	width : 98%;
+	height : 80%;
+	background-color: #f2f2f2;
+	border-radius : 20px;
+	padding-left : 5px;
+	padding-right : 5px; 
+}
+.comment{
+	display : inline-block;
+	vertical-align : middle;
+	width : 100%;
+	height : 100%;
+	text-overflow : ellipsis;
+	white-space: nowrap;
+	overflow : hidden;
+}
+
+/* 스타일 컨텐츠 레이아웃 */
+.userProfile{
+	padding: 4px;
+	width: 100%;
 	height: auto;
 	border-radius: 50%;
 }
-
-.itemImg{
-	width: 100%;
-}
-
-
-/* 판매자상품 레이아웃*/
-.shopProfileArea{
-	width: 100%;
-	margin: 0 0 0 0;
-}
-.shopProfileImgArea{
-	display:inline-block;
-	width: 15%;
-	text-align: center;
-	vertical-align: middle;
-	float: left;
-}
-.shopProfileImg {
-	margin: 5px 5px 5px 5px;
-	width: 100%;
-	height: auto;
-	border-radius: 6px;
-}
-
-.shopName {
-	
-}
-
-
-.
