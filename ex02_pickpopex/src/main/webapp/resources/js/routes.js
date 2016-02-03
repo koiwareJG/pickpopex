@@ -9,13 +9,7 @@ define([
 	
 		//app은 생성한 myApp 앵귤러 모듈
 		return app.config(function ($routeProvider) {
-			
-//			수정테스트
-//			수정테스트2
-//			수정테스트3
-//			수정테스트5
-
-			
+					
 			//==========================================================================================
 			//[M001]마켓플레이스(홈) 메뉴 경로 설정
 			//------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -52,13 +46,6 @@ define([
 				services: [], 
 				filters: []
 			}));
-			//픽박스 > 아이템 > 아이템 목록
-			$routeProvider.when('/pickboxItemList', routeConfig.config('../partials/pickbox/pickbox_item_list.html', 'controllers/pickbox/pickbox_item_list', {
-				directives: [], 
-				services: [], 
-				filters: []
-			}));
-
 			//픽박스 > 스타일 > 스타일 목록 
 			$routeProvider.when('/pickboxStyleList', routeConfig.config('../partials/pickbox/pickbox_style_list.html', 'controllers/pickbox/pickbox_style_list', {
 				directives: [], 
