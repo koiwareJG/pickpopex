@@ -17,7 +17,7 @@ define([], function () {
 	function _controller($scope, $http, $routeParams) {
 		console.log("cmn_item_detail.js / define() / _contoller() : start");
 		//CSS 설정
-		$scope.$emit('updateCSS', ['resources/css/partials-css/marketplace/marketplace_list.css', 'resources/css/partials-css/cmn/cmn_item_detail.css']);
+		$scope.$emit('updateCSS', ['resources/css/partials-css/cmn/cmn_item_detail.css']);
 		
 //		alert($routeParams.productName);
 		

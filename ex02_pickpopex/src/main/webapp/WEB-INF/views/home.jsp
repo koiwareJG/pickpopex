@@ -28,8 +28,8 @@
 			<div class="col-xs-12 popModeBtnBg">
 				<div class="tbl">
 					<div class="tbl-tr">
-						<div class="tbl-td txCM">
-							<span class="icon-popmodeicon pt20 wht noPad"></span>
+						<div class="tbl-td txC vaM">
+							<span class="icon-popmodeicon xxx-large wht noPad"></span>
 						</div>
 					</div>
 				</div>
@@ -44,20 +44,20 @@
 			<div class="col-xs-12 botBtnBg">
 				<div class="tbl">
 					<div class="tbl-tr">
-						<div class="tbl-td txCM">
-							<a href="javascript:history.back();"><span class="icon-previcon pt14 wht"></span></a>
+						<div class="tbl-td txC vaM">
+							<a href="javascript:history.back();"><span class="icon-previcon xx-large wht"></span></a>
 						</div>
-						<div class="tbl-td txCM">
-							<a href="#/marketplace"><span class="icon-homeicon pt14 wht"></span></a>
+						<div class="tbl-td txC vaM">
+							<a href="#/marketplace"><span class="icon-homeicon xx-large wht"></span></a>
 						</div>
-						<div class="tbl-td txCM">
-							<a href="#/pickbox"><span class="icon-pickboxicon pt14 wht"></span></a>
+						<div class="tbl-td txC vaM">
+							<a href="#/pickbox"><span class="icon-pickboxicon xx-large wht"></span></a>
 						</div>
-						<div class="tbl-td txCM">
-							<a href="#/checkout" ><span class="icon-checkouticon pt14 wht"></span></a>
+						<div class="tbl-td txC vaM">
+							<a href="#/checkout" ><span class="icon-checkouticon xx-large wht"></span></a>
 						</div>
-						<div class="tbl-td txCM">
-							<a href="javascript:history.go(1);"><span class="icon-nexticon pt14 wht"></span></a>
+						<div class="tbl-td txC vaM">
+							<a href="javascript:history.go(1);"><span class="icon-nexticon xx-large wht"></span></a>
 						</div>
 					</div>
 				</div>

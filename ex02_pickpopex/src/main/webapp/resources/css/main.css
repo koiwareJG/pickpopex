@@ -1,7 +1,6 @@
 @CHARSET "utf-8";
-/* ====================================================== */
+
 /* CSS리셋부분 부트스트랩 사용하면 필요없음 */
-/* ====================================================== */
 /* html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video { */
 
 /*    margin: 0; */
@@ -25,122 +24,49 @@
 /* 	border-collapse:  */
 /* 	collapse;border-spacing: 0; */
 /* } */
-div {
-	color: #393939;
-	font-size: 5vw
+
+
+span {
+	color: #2b2b2b;
 }
-/* ------------------------------------------------------------------------------------- */
 
-/* ====================================================== */
-/* [공통]폰트 및 컬러 */
-/* ====================================================== */
-/* 폰트사이즈 */
-.xx-small{font-size: 2vw;}
-.x-small{font-size: 3vw;}
-.small{font-size: 4vw;}
-.medium{font-size: 5vw;}
-.large{font-size: 7vw;}
-.x-large{font-size: 9vw;}
-.xx-large{font-size: 11vw;}
-.xxx-large{font-size: 13vw;}
-.xxxx-large{font-size: 15vw;}
+/* [공통]폰트사이즈 */
+.xx-small{font-size: 7pt;}
+.x-small{font-size: 8pt;}
+.small{font-size: 9pt;}
+.medium{font-size: 10pt;}
+.large{font-size: 12pt;}
+.x-large{font-size: 14pt;}
+.xx-large{font-size: 16pt;}
+.xxx-large{font-size: 20pt;}
+.xxxx-large{font-size: 24pt;}
 
-.pt6{font-size: 6pt}
-.pt7{font-size: 7pt}
-.pt8{font-size: 8pt}
-.pt9{font-size: 9pt}
-.pt10{font-size: 10pt}
-.pt11{font-size: 11pt}
-.pt12{font-size: 12pt}
-.pt13{font-size: 13pt}
-.pt14{font-size: 14pt}
-.pt15{font-size: 15pt}
-.pt16{font-size: 16pt}
-.pt17{font-size: 17pt}
-.pt18{font-size: 18pt}
-.pt19{font-size: 19pt}
-.pt20{font-size: 20pt}
-.pt21{font-size: 21pt}
-.pt22{font-size: 22pt}
-.pt23{font-size: 23pt}
-.pt24{font-size: 24pt}
-.pt25{font-size: 25pt}
-
-/* 폰트컬러 */
+/* [공통]폰트컬러 */
 .wht{color: white;}
 .blk{color: black;}
 .green{color: #408080;}
-.gray{color: gray;}
 
-/* 배경 */
-.bgWht{background-color: white;}
-.bgGrid{
-    position:absolute;
-    z-index:-1;
-    width: 100%;
-    height: 100%;
-    background-image: url('../images/gridBg.jpg');
-    background-repeat: repeat;
-	opacity: 0.5!important; filter:alpha(opacity=50);
-}
-/* 상품,컨텐츠 공통 */
-.contentBg{
-	background-color: white;
-	border: 0.5px;
-	border-style:solid;
-	border-color: #d9d9d9;
-	margin-bottom: 5px;
-}
+/* [공통]기타 */
+.noPad{padding: 0; margin: 0;}
 
-
-
-/* 기타효과 */
-.filter-dropshadow{text-shadow: 0 0 2px #88979f;}
-
-/* 컨텐츠간격 */
-.mgBot-1{margin-bottom: 1px;}
-.mgBot-2{margin-bottom: 2px;}
-.mgBot-3{margin-bottom: 3px;}
-.mgBot-4{margin-bottom: 4px;}
-.mgBot-5{margin-bottom: 5px;}
-.mgBot-6{margin-bottom: 6px;}
-.mgBot-7{margin-bottom: 7px;}
-.mgBot-8{margin-bottom: 8px;}
-.mgBot-9{margin-bottom: 9px;}
-.mgBot-10{margin-bottom: 10px;}
-/* ------------------------------------------------------------------------------------- */
-
-
-/* ====================================================== */
-/* [공통]App 공통 레이아웃
-/* ====================================================== */
-/* 상단고정영역 > 팝모드버튼영역 */
+/* [공통]상단고정영역 > 팝모드버튼영역 */
 .popModeBtnBg {
-	height : 40px;
+    height:40px; 
 	background-color: #68917f;
 }
-/* 컨텐츠영역 */
+
+/* [공통]컨텐츠영역 */
 /* 위, 아래 고정 버튼영역 만큼 마진 줘야함 */
 .contentsArea{margin-top: 40px; margin-bottom: 50px;}
 
-/* 하단고정영역 */
+/* [공통]하단고정영역 */
 .botBtnBg{
 	height: 50px;
 	background-color: #3a4942;
 }
-/* ------------------------------------------------------------------------------------- */
 
-/* ====================================================== */
-/* [공통]레이아웃용 */
-/* ====================================================== */
-/* 세로길이가 늘어나야되는 영역을 잡을때 사용 */
-.rap{
-	display:inline-block;
-	width: 100%;
-	float:left;
-}
 
-/* div테이블(세로폭 고정된 영역이 필요할때 사용) */
+/* [공통]div테이블 */
 .tbl {
 	display: table;
 	width: 100%;
@@ -154,316 +80,6 @@ div {
 	display: table-cell;
 }
 
-/*화면 크기에 따라 비율을 유지하면서 늘었다 줄었다 하는 레이아웃에 사용.
-반드시 wrap 상위에 hrap 혹은 hrap-xx(높이 옵션값)가 함께 사용되어야 함*/
-.hrap{
-	position: relative;
-	height: 0;
-	overflow: hidden;
-}
-.wrap{
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-}
-
-/* div안쪽에 정렬을 사용할때 사용. 상위 div태그의 클래스에 outer만
-정의 해주면 하위 쪽에 vertical 옵션이 먹힘(vMid,vTop등...).  */
-/* 상위옵션 */
-.outer{
-	display: table;
-	width:100%;	height:100%;
-}
-.outerL{
-	display: table;
-	text-align: left;
-	width:100%;	height:100%;
-}
-.outerC{
-	display: table;
-	text-align: center;
-	width:100%;	height:100%;
-}
-.outerR{
-	display: table;
-	text-align: right;
-	width:100%;	height:100%;
-}
-/* 하위옵션 */
-.inner{
-	display: table-cell;
-}
-.inTop{
-	display: table-cell;
-	vertical-align: top;
-}
-.inMid{
-	display: table-cell;
-	vertical-align: middle;
-}
-.inBot{
-	display: table-cell;
-	vertical-align: bottom;
-}
-
-/* hrap 높이 Option */
-.hrap-5{position: relative;height: 0;overflow: hidden;width: 100%;padding-bottom: 5%}
-.hrap-10{position: relative;height: 0;overflow: hidden;width: 100%;padding-bottom: 10%}
-.hrap-15{position: relative;height: 0;overflow: hidden;width: 100%;padding-bottom: 15%}
-.hrap-20{position: relative;height: 0;overflow: hidden;width: 100%;padding-bottom: 20%}
-.hrap-25{position: relative;height: 0;overflow: hidden;width: 100%;padding-bottom: 25%}
-.hrap-30{position: relative;height: 0;overflow: hidden;width: 100%;padding-bottom: 30%}
-.hrap-35{position: relative;height: 0;overflow: hidden;width: 100%;padding-bottom: 35%}
-.hrap-40{position: relative;height: 0;overflow: hidden;width: 100%;padding-bottom: 40%}
-.hrap-45{position: relative;height: 0;overflow: hidden;width: 100%;padding-bottom: 45%}
-.hrap-50{position: relative;height: 0;overflow: hidden;width: 100%;padding-bottom: 50%}
-.hrap-55{position: relative;height: 0;overflow: hidden;width: 100%;padding-bottom: 55%}
-.hrap-60{position: relative;height: 0;overflow: hidden;width: 100%;padding-bottom: 60%}
-.hrap-65{position: relative;height: 0;overflow: hidden;width: 100%;padding-bottom: 65%}
-.hrap-70{position: relative;height: 0;overflow: hidden;width: 100%;padding-bottom: 70%}
-.hrap-75{position: relative;height: 0;overflow: hidden;width: 100%;padding-bottom: 75%}
-.hrap-80{position: relative;height: 0;overflow: hidden;width: 100%;padding-bottom: 80%}
-.hrap-85{position: relative;height: 0;overflow: hidden;width: 100%;padding-bottom: 85%}
-.hrap-90{position: relative;height: 0;overflow: hidden;width: 100%;padding-bottom: 90%}
-.hrap-95{position: relative;height: 0;overflow: hidden;width: 100%;padding-bottom: 95%}
-.hrap-100{position: relative;height: 0;overflow: hidden;width: 100%;padding-bottom: 100%}
-.hrap-105{position: relative;height: 0;overflow: hidden;width: 100%;padding-bottom: 105%}
-.hrap-110{position: relative;height: 0;overflow: hidden;width: 100%;padding-bottom: 110%}
-.hrap-115{position: relative;height: 0;overflow: hidden;width: 100%;padding-bottom: 115%}
-.hrap-120{position: relative;height: 0;overflow: hidden;width: 100%;padding-bottom: 120%}
-.hrap-125{position: relative;height: 0;overflow: hidden;width: 100%;padding-bottom: 125%}
-.hrap-130{position: relative;height: 0;overflow: hidden;width: 100%;padding-bottom: 130%}
-.hrap-135{position: relative;height: 0;overflow: hidden;width: 100%;padding-bottom: 135%}
-.hrap-140{position: relative;height: 0;overflow: hidden;width: 100%;padding-bottom: 140%}
-.hrap-145{position: relative;height: 0;overflow: hidden;width: 100%;padding-bottom: 145%}
-.hrap-150{position: relative;height: 0;overflow: hidden;width: 100%;padding-bottom: 150%}
-.hrap-155{position: relative;height: 0;overflow: hidden;width: 100%;padding-bottom: 155%}
-.hrap-160{position: relative;height: 0;overflow: hidden;width: 100%;padding-bottom: 160%}
-.hrap-165{position: relative;height: 0;overflow: hidden;width: 100%;padding-bottom: 165%}
-.hrap-170{position: relative;height: 0;overflow: hidden;width: 100%;padding-bottom: 170%}
-.hrap-175{position: relative;height: 0;overflow: hidden;width: 100%;padding-bottom: 175%}
-.hrap-180{position: relative;height: 0;overflow: hidden;width: 100%;padding-bottom: 180%}
-.hrap-185{position: relative;height: 0;overflow: hidden;width: 100%;padding-bottom: 185%}
-.hrap-190{position: relative;height: 0;overflow: hidden;width: 100%;padding-bottom: 190%}
-.hrap-195{position: relative;height: 0;overflow: hidden;width: 100%;padding-bottom: 195%}
-.hrap-200{position: relative;height: 0;overflow: hidden;width: 100%;padding-bottom: 200%}
-
-/* 가로%*/
-.w100{width: 100%;}
-.w99{width: 99%;}
-.w98{width: 98%;}
-.w97{width: 97%;}
-.w96{width: 96%;}
-.w95{width: 95%;}
-.w94{width: 94%;}
-.w93{width: 93%;}
-.w92{width: 92%;}
-.w91{width: 91%;}
-.w90{width: 90%;}
-.w89{width: 89%;}
-.w88{width: 88%;}
-.w87{width: 87%;}
-.w86{width: 86%;}
-.w85{width: 85%;}
-.w84{width: 84%;}
-.w83{width: 83%;}
-.w82{width: 82%;}
-.w81{width: 81%;}
-.w80{width: 80%;}
-.w79{width: 79%;}
-.w78{width: 78%;}
-.w77{width: 77%;}
-.w76{width: 76%;}
-.w75{width: 75%;}
-.w74{width: 74%;}
-.w73{width: 73%;}
-.w72{width: 72%;}
-.w71{width: 71%;}
-.w70{width: 70%;}
-.w69{width: 69%;}
-.w68{width: 68%;}
-.w67{width: 67%;}
-.w66{width: 66%;}
-.w65{width: 65%;}
-.w64{width: 64%;}
-.w63{width: 63%;}
-.w62{width: 62%;}
-.w61{width: 61%;}
-.w60{width: 60%;}
-.w60{width: 60%;}
-.w60{width: 60%;}
-.w60{width: 60%;}
-.w60{width: 60%;}
-.w59{width: 59%;}
-.w58{width: 58%;}
-.w57{width: 57%;}
-.w56{width: 56%;}
-.w55{width: 55%;}
-.w54{width: 54%;}
-.w53{width: 53%;}
-.w52{width: 52%;}
-.w51{width: 51%;}
-.w50{width: 50%;}
-.w49{width: 49%;}
-.w48{width: 48%;}
-.w47{width: 47%;}
-.w46{width: 46%;}
-.w45{width: 45%;}
-.w44{width: 44%;}
-.w43{width: 43%;}
-.w42{width: 42%;}
-.w41{width: 41%;}
-.w40{width: 40%;}
-.w39{width: 39%;}
-.w38{width: 38%;}
-.w37{width: 37%;}
-.w36{width: 36%;}
-.w35{width: 35%;}
-.w34{width: 34%;}
-.w33{width: 33%;}
-.w32{width: 32%;}
-.w31{width: 31%;}
-.w30{width: 30%;}
-.w29{width: 29%;}
-.w28{width: 28%;}
-.w27{width: 27%;}
-.w26{width: 26%;}
-.w25{width: 25%;}
-.w24{width: 24%;}
-.w23{width: 23%;}
-.w22{width: 22%;}
-.w21{width: 21%;}
-.w20{width: 20%;}
-.w19{width: 19%;}
-.w18{width: 18%;}
-.w17{width: 17%;}
-.w16{width: 16%;}
-.w15{width: 15%;}
-.w14{width: 14%;}
-.w13{width: 13%;}
-.w12{width: 12%;}
-.w11{width: 11%;}
-.w10{width: 10%;}
-.w9{width: 9%;}
-.w8{width: 8%;}
-.w7{width: 7%;}
-.w6{width: 6%;}
-.w5{width: 5%;}
-.w4{width: 4%;}
-.w3{width: 3%;}
-.w2{width: 2%;}
-.w1{width: 1%;}
-.w0{width: 0%;}
-/* 세로% */
-.h100{height: 100%;}
-.h99{height: 99%;}
-.h98{height: 98%;}
-.h97{height: 97%;}
-.h96{height: 96%;}
-.h95{height: 95%;}
-.h94{height: 94%;}
-.h93{height: 93%;}
-.h92{height: 92%;}
-.h91{height: 91%;}
-.h90{height: 90%;}
-.h89{height: 89%;}
-.h88{height: 88%;}
-.h87{height: 87%;}
-.h86{height: 86%;}
-.h85{height: 85%;}
-.h84{height: 84%;}
-.h83{height: 83%;}
-.h82{height: 82%;}
-.h81{height: 81%;}
-.h80{height: 80%;}
-.h79{height: 79%;}
-.h78{height: 78%;}
-.h77{height: 77%;}
-.h76{height: 76%;}
-.h75{height: 75%;}
-.h74{height: 74%;}
-.h73{height: 73%;}
-.h72{height: 72%;}
-.h71{height: 71%;}
-.h70{height: 70%;}
-.h69{height: 69%;}
-.h68{height: 68%;}
-.h67{height: 67%;}
-.h66{height: 66%;}
-.h65{height: 65%;}
-.h64{height: 64%;}
-.h63{height: 63%;}
-.h62{height: 62%;}
-.h61{height: 61%;}
-.h60{height: 60%;}
-.h60{height: 60%;}
-.h60{height: 60%;}
-.h60{height: 60%;}
-.h60{height: 60%;}
-.h59{height: 59%;}
-.h58{height: 58%;}
-.h57{height: 57%;}
-.h56{height: 56%;}
-.h55{height: 55%;}
-.h54{height: 54%;}
-.h53{height: 53%;}
-.h52{height: 52%;}
-.h51{height: 51%;}
-.h50{height: 50%;}
-.h49{height: 49%;}
-.h48{height: 48%;}
-.h47{height: 47%;}
-.h46{height: 46%;}
-.h45{height: 45%;}
-.h44{height: 44%;}
-.h43{height: 43%;}
-.h42{height: 42%;}
-.h41{height: 41%;}
-.h40{height: 40%;}
-.h39{height: 39%;}
-.h38{height: 38%;}
-.h37{height: 37%;}
-.h36{height: 36%;}
-.h35{height: 35%;}
-.h34{height: 34%;}
-.h33{height: 33%;}
-.h32{height: 32%;}
-.h31{height: 31%;}
-.h30{height: 30%;}
-.h29{height: 29%;}
-.h28{height: 28%;}
-.h27{height: 27%;}
-.h26{height: 26%;}
-.h25{height: 25%;}
-.h24{height: 24%;}
-.h23{height: 23%;}
-.h22{height: 22%;}
-.h21{height: 21%;}
-.h20{height: 20%;}
-.h19{height: 19%;}
-.h18{height: 18%;}
-.h17{height: 17%;}
-.h16{height: 16%;}
-.h15{height: 15%;}
-.h14{height: 14%;}
-.h13{height: 13%;}
-.h12{height: 12%;}
-.h11{height: 11%;}
-.h10{height: 10%;}
-.h9{height: 9%;}
-.h8{height: 8%;}
-.h7{height: 7%;}
-.h6{height: 6%;}
-.h5{height: 5%;}
-.h4{height: 4%;}
-.h3{height: 3%;}
-.h2{height: 2%;}
-.h1{height: 1%;}
-.h0{height: 0%;}
-
-/* 정렬 Option */
 .fL{float: left;}
 .fR{float: right;}
 
@@ -471,26 +87,75 @@ div {
 .txC{text-align: center;}
 .txR{text-align: right;}
 
-.vTop{vertical-align: top;}
-.vMid{vertical-align: middle;}
-.vBot{vertical-align: bottom;}
+.vaT{vertical-align: top;}
+.vaM{vertical-align: middle;}
+.vaB{vertical-align: bottom;}
 
-.txLT{text-align: left;vertical-align: top;}
-.txLM{text-align: left;vertical-align: middle;}
-.txLB{text-align: left;vertical-align: bottom;}
-.txCT{text-align: center;vertical-align: top;}
-.txCM{text-align: center;vertical-align: middle;}
-.txCB{text-align: center;vertical-align: bottom;}
-.txRT{text-align: right;vertical-align: top;}
-.txRM{text-align: right;vertical-align: middle;}
-.txRB{text-align: right;vertical-align: bottom;}
+.wdthPer10{
+	width: 100%
+}
+.wdthPer9{
+	width: 90%
+}
+.wdthPer8{
+	width: 80%
+}
+.wdthPer7{
+	width: 70%
+}
+.wdthPer6{
+	width: 60%
+}
+.wdthPer5{
+	width: 50%
+}
+.wdthPer4{
+	width: 40%
+}
+.wdthPer3{
+	width: 30%
+}
+.wdthPer2{
+	width: 20%
+}
+.wdthPer1{
+	width: 10%
+}
 
-.fit{padding: 0; margin: 0;}
-/* ------------------------------------------------------------------------------------- */
+.hghtPer10{
+	height: 100%
+}
+.hghtPer9{
+	height: 90%
+}
+.hghtPer8{
+	height: 80%
+}
+.hghtPer7{
+	height: 70%
+}
+.hghtPer6{
+	height: 60%
+}
+.hghtPer5{
+	height: 50%
+}
+.hghtPer4{
+	height: 40%
+}
+.hghtPer3{
+	height: 30%
+}
+.hghtPer2{
+	height: 20%
+}
+.hghtPer1{
+	height: 10%
+}
 
-/* ====================================================== */
+
+
 /* [공통]커스텀아이콘 */
-/* ====================================================== */
 @font-face {
   font-family: 'pickpop-iconset';
   src: url('fonts/pickpop-iconset.eot?86221556');
@@ -560,4 +225,3 @@ div {
 .icon-previcon:before { content: '\e80a'; } /* '' */
 .icon-popmodeicon:before { content: '\e80b'; } /* '' */
 .icon-pointicon:before { content: '\e80c'; } /* '' */
-/* ------------------------------------------------------------------------------------- */
