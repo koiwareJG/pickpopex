@@ -46,6 +46,13 @@ define([
 				services: [], 
 				filters: []
 			}));
+			//픽박스 > 아이템 > 아이템 목록
+			$routeProvider.when('/pickboxItemList', routeConfig.config('../partials/pickbox/pickbox_item_list.html', 'controllers/pickbox/pickbox_item_list', {
+				directives: [], 
+				services: [], 
+				filters: []
+			}));
+
 			//픽박스 > 스타일 > 스타일 목록 
 			$routeProvider.when('/pickboxStyleList', routeConfig.config('../partials/pickbox/pickbox_style_list.html', 'controllers/pickbox/pickbox_style_list', {
 				directives: [], 
