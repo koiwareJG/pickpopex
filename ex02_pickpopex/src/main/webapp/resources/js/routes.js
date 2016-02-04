@@ -46,7 +46,19 @@ define([
 				services: [], 
 				filters: []
 			}));
-			//픽박스 > 스타일 > 스타일 목록 
+			//픽박스 > 아이템 > 아이템 목록 > grid 형태로 보기(기존 list형태를 grid배열로만 바꿔서 보여주기)
+			$routeProvider.when('/pickboxItemListGrid', routeConfig.config('../partials/pickbox/pickbox_item_grid.html', 'controllers/pickbox/pickbox_item_list', {
+				directives: [], 
+				services: [], 
+				filters: []
+			}));
+			//픽박스 > 스타일 > 나의 스타일 목록 
+			$routeProvider.when('/pickboxStyleMine', routeConfig.config('../partials/pickbox/pickbox_style_mystyle.html', 'controllers/pickbox/pickbox_style_list', {
+				directives: [], 
+				services: [], 
+				filters: []
+			}));
+			//픽박스 > 스타일 > 관심 스타일 목록 
 			$routeProvider.when('/pickboxStyleList', routeConfig.config('../partials/pickbox/pickbox_style_list.html', 'controllers/pickbox/pickbox_style_list', {
 				directives: [], 
 				services: [], 

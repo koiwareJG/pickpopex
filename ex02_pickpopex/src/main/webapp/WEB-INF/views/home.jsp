@@ -24,7 +24,7 @@
 	<div class="container-fluid">
 		
 		<!-- 상단 고정 영역 START -->
-		<div class="navbar navbar-default navbar-fixed-top" role="navigation">
+		<div class="topNav navbar navbar-default navbar-fixed-top" role="navigation">
 			<div class="col-xs-12 popModeBtnBg">
 				<div class="tbl">
 					<div class="tbl-tr">
@@ -40,7 +40,7 @@
 		<div ng-view class="contentsArea col-xs-12"></div><!-- 컨텐츠 -->
 	
 		<!-- 하단 고정 영역 START -->
-		<div class="navbar navbar-default navbar-fixed-bottom" role="navigation">
+		<div class="botNav navbar navbar-default navbar-fixed-bottom" role="navigation">
 			<div class="col-xs-12 botBtnBg">
 				<div class="tbl">
 					<div class="tbl-tr">
