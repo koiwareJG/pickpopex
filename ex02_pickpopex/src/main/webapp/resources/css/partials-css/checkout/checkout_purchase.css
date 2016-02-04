@@ -1,0 +1,48 @@
+@CHARSET "UTF-8";
+
+/***********************background-color class*****************************/
+.color1 {background-color: rgb(221, 221, 221);}
+.color2 {background-color: rgb(217, 234, 226);}
+.color3 {background-color: rgb(235, 217, 217);}
+
+.colorWhite {background-color: rgb(255, 255, 255);}
+
+/********************************section1 관련*****************************/
+
+#section1 {width: 100%; height: 100%; position: absolute; 
+			overflow: hidden ;}
+
+/******************************section2 관련*******************************/
+
+#section2 {width: 100%; height: 100%;
+			position: absolute;	overflow: hidden ;}
+
+/******************************section3 관련*******************************/
+
+#section3 {width: 100%; height: auto;
+			overflow: hidden;}
+#section3_1 {width: 100%; height: 100%; position: absolute;
+				overflow: hidden;}
+#section3_2 {width: 100%; height: 100%; position: absolute;
+				overflow: hidden;}
+
+/******************************section4 관련********************************/
+
+#section4 {width: 100%; height: auto;
+			overflow: hidden;}
+#section4_1 {width: 100%; height: 100%; position: absolute;
+				overflow: hidden;}
+#section4_2 {width: 100%; height: 100%; position: absolute;
+				overflow: hidden;}
+
+/******************************section5 관련********************************/
+
+#section5 {width: 100%; height: auto;
+			overflow: hidden;}
+#section5_1 {width: 100%; height: 100%; position: absolute;
+				overflow: hidden;}
+#section5_2 {width: 100%; height: 100%; position: absolute;
+				overflow: hidden;}
+
+
+

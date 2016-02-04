@@ -1,23 +1,489 @@
-<!--
-/* ==============================================================================
- * 파일명 : 파일명.html
- * 화면명 : 메뉴명 > 목록 (View)
- * 작성자 : 홍길동
- * 작성일 : 2016.01.25
- * ==============================================================================
- */
- -->
-
-<!-- 이 부분은 삭제하고 쓰세요(가이드용). -->
-<!-- 오브젝트 데이터 표시법 -->
-<div >
-    <span>id : {{myData.id}}<br></span>
-    <span>상품명 : {{myData.productName}}<br></span>
+<div id="content">
+	
+	<div id="section1">	<!-- 계산대 / 구매내역 -->
+			<div class="containerH20">
+			<div class="w100 h100 ab">
+			<div class="w100 h100 rel">
+				<div class="w50 h100 ab">
+				<div class="w100 h100 rel">
+					<img class="w100 h70 ab t15" src="resources/images/sample/checkout/checkout_sub01_on.jpg">
+				</div>
+				</div>
+				<div class="w50 h100 ab l50">
+				<div class="w100 h100 rel">
+					<img class="w100 h70 ab t15" src="resources/images/sample/checkout/checkout_sub02_off.jpg">
+				</div>
+				</div>
+			</div>
+			</div>
+			</div>
+	</div>
+	
+	<div id="section2">
+			<div class="item borderDefault">	<!-- 한개의 아이템 시작 -->
+				
+				<!-- 아이템 배송비 부분 -->
+				<div class="containerH10">
+				<div class="w100 h100 ab">
+				<div class="w100 h100 rel color1 borderBottom">
+					<div class="w2 h100 ab"></div>
+					<div class="w8 h80 ab l2 t10">
+						<img class="w100 h100" src="resources/images/sample/checkout/checkout_img1.jpg">
+					</div>
+					<div class="w2 h100 ab l10"></div>
+					<div class="w76 h100 ab l12">
+					<div class="outer">
+						<div class="inner_left">
+						<span class="fontSize30">
+							[코코샵]의 상품으로 50,000원 이상 구매시 무료배송
+						</span>
+						</div>
+					</div>
+					</div>
+					<div class="w2 h100 ab l88"></div>
+					<div class="w8 h80 ab l90 t10">
+						<img class="w100 h100" src="resources/images/sample/checkout/checkout_img2.jpg">
+					</div>
+					<div class="w2 h100 ab l98"></div>
+				</div>
+				</div>
+				</div>
+				
+				<!-- 아이템 사진과 가격 부분 -->
+				<div class="containerH40">
+				<div class="w100 h100 ab">
+				<div class="w100 h100 rel">
+					<div class="w2 h100 ab"></div>
+					<div class="w36 h90 ab l2 t5">
+						<img class="w100 h100" src="resources/images/sample/checkout/checkout_img3.jpg">
+					</div>
+					<div class="w2 h100 ab l38"></div>
+					<div class="w58 h90 ab l40 t5">
+					<div class="w100 h100 rel">
+						<div class="w100 h25">
+						<div class="outer">
+							<div class="inner_left">
+							<span class="fontSize30">
+								롱 후드 집업 코트 (네이비)
+							</span>
+							</div>
+						</div>
+						</div>
+						<div class="w100 h15 rel">
+							<div class="w50 h100 ab">
+							<div class="outer">
+								<div class="inner_left">
+								<span class="fontSize20">
+									상품가격
+								</span>
+								</div>
+							</div>
+							</div>
+							<div class="w50 h100 ab l50">
+							<div class="outer">
+								<div class="inner_right">
+								<span class="fontSize20">
+									82,000원
+								</span>
+								</div>
+							</div>
+							</div>
+						</div>
+						<div class="w100 h15 rel">
+							<div class="w50 h100 ab">
+							<div class="outer">
+								<div class="inner_left">
+								<span class="fontSize20">
+									적립포인트
+								</span>
+								</div>
+							</div>
+							</div>
+							<div class="w50 h100 ab l50">
+							<div class="outer">
+								<div class="inner_right">
+								<span class="fontSize20">
+									820점
+								</span>
+								</div>
+							</div>
+							</div>
+						</div>
+						<div class="w100 h15 rel">
+							<div class="w50 h100 ab">
+							<div class="outer">
+								<div class="inner_left">
+								<span class="fontSize20">
+									배송비
+								</span>
+								</div>
+							</div>
+							</div>
+							<div class="w50 h100 ab l50">
+							<div class="outer">
+								<div class="inner_right">
+								<span class="fontSize20">
+									0원
+								</span>
+								</div>
+							</div>
+							</div>
+						</div>
+						<div class="w100 h30 rel">
+							<div class="w15 h80 ab t15">
+								<button class="w100 h100">
+								<span class="fontSize30">
+									-
+								</span>
+								</button>
+							</div>
+							<div class="w15 h80 ab l15 t15">
+							<div class="outer">
+								<div class="inner_center">
+								<span class="fontSize30">
+									1
+								</span>
+								</div>
+							</div>
+							</div>
+							<div class="w15 h80 ab l30 t15">
+								<button class="w100 h100">
+								<span class="fontSize30">
+									+
+								</span>
+								</button>
+							</div>
+							<div class="w5 h100 ab l45">
+							
+							</div>
+							<div class="w50 h80 ab l50 t15">
+								<button class="w100 h100">
+								<span class="fontSize30">
+									S(95)
+								</span>
+								<span class="fontSize25">
+									옵션수정
+								</span>
+								</button>
+							</div>
+						</div>
+					</div>					
+					</div>
+					<div class="w2 h100 ab l98"></div>
+				</div>
+				</div>					
+				</div>
+				
+			</div>	<!-- 한개의 아이템 끝 -->
+			
+			<div class="item borderDefault">	<!-- 한개의 아이템 시작 -->
+				
+				<!-- 아이템 배송비 부분 -->
+				<div class="containerH10">
+				<div class="w100 h100 ab">
+				<div class="w100 h100 rel color1 borderBottom">
+					<div class="w2 h100 ab"></div>
+					<div class="w8 h80 ab l2 t10">
+						<img class="w100 h100" src="resources/images/sample/checkout/checkout_img1.jpg">
+					</div>
+					<div class="w2 h100 ab l10"></div>
+					<div class="w76 h100 ab l12">
+					<div class="outer">
+						<div class="inner_left">
+						<span class="fontSize30">
+							[코코샵]의 상품으로 50,000원 이상 구매시 무료배송
+						</span>
+						</div>
+					</div>
+					</div>
+					<div class="w2 h100 ab l88"></div>
+					<div class="w8 h80 ab l90 t10">
+						<img class="w100 h100" src="resources/images/sample/checkout/checkout_img2.jpg">
+					</div>
+					<div class="w2 h100 ab l98"></div>
+				</div>
+				</div>
+				</div>
+				
+				<!-- 아이템 사진과 가격 부분 -->
+				<div class="containerH40">
+				<div class="w100 h100 ab">
+				<div class="w100 h100 rel">
+					<div class="w2 h100 ab"></div>
+					<div class="w36 h90 ab l2 t5">
+						<img class="w100 h100" src="resources/images/sample/checkout/checkout_img3.jpg">
+					</div>
+					<div class="w2 h100 ab l38"></div>
+					<div class="w58 h90 ab l40 t5">
+					<div class="w100 h100 rel">
+						<div class="w100 h25">
+						<div class="outer">
+							<div class="inner_left">
+							<span class="fontSize30">
+								롱 후드 집업 코트 (네이비)
+							</span>
+							</div>
+						</div>
+						</div>
+						<div class="w100 h15 rel">
+							<div class="w50 h100 ab">
+							<div class="outer">
+								<div class="inner_left">
+								<span class="fontSize20">
+									상품가격
+								</span>
+								</div>
+							</div>
+							</div>
+							<div class="w50 h100 ab l50">
+							<div class="outer">
+								<div class="inner_right">
+								<span class="fontSize20">
+									82,000원
+								</span>
+								</div>
+							</div>
+							</div>
+						</div>
+						<div class="w100 h15 rel">
+							<div class="w50 h100 ab">
+							<div class="outer">
+								<div class="inner_left">
+								<span class="fontSize20">
+									적립포인트
+								</span>
+								</div>
+							</div>
+							</div>
+							<div class="w50 h100 ab l50">
+							<div class="outer">
+								<div class="inner_right">
+								<span class="fontSize20">
+									820점
+								</span>
+								</div>
+							</div>
+							</div>
+						</div>
+						<div class="w100 h15 rel">
+							<div class="w50 h100 ab">
+							<div class="outer">
+								<div class="inner_left">
+								<span class="fontSize20">
+									배송비
+								</span>
+								</div>
+							</div>
+							</div>
+							<div class="w50 h100 ab l50">
+							<div class="outer">
+								<div class="inner_right">
+								<span class="fontSize20">
+									0원
+								</span>
+								</div>
+							</div>
+							</div>
+						</div>
+						<div class="w100 h30 rel">
+							<div class="w15 h80 ab t15">
+								<button class="w100 h100">
+								<span class="fontSize30">
+									-
+								</span>
+								</button>
+							</div>
+							<div class="w15 h80 ab l15 t15">
+							<div class="outer">
+								<div class="inner_center">
+								<span class="fontSize30">
+									1
+								</span>
+								</div>
+							</div>
+							</div>
+							<div class="w15 h80 ab l30 t15">
+								<button class="w100 h100">
+								<span class="fontSize30">
+									+
+								</span>
+								</button>
+							</div>
+							<div class="w5 h100 ab l45">
+							
+							</div>
+							<div class="w50 h80 ab l50 t15">
+								<button class="w100 h100">
+								<span class="fontSize30">
+									S(95)
+								</span>
+								<span class="fontSize25">
+									옵션수정
+								</span>
+								</button>
+							</div>
+						</div>
+					</div>					
+					</div>
+					<div class="w2 h100 ab l98"></div>
+				</div>
+				</div>					
+				</div>
+				
+			</div>	<!-- 한개의 아이템 끝 -->
+	</div>
+	
+	<div id="section3">
+			<div class="containerH50">
+			<div class="w100 h100 ab">
+			<div class="w100 h100 rel">
+				<div class="w2 h100 ab">
+				
+				</div>
+				<div class="w96 h100 ab l2 color2">
+					<div class="w100 h10">
+					<div class="outer">
+							<div class="inner_center">
+							<span class="fontSize25">
+								품절된 상품을 제외한 총 1건에 대한 결제예상정보
+							</span>
+							</div>
+					</div>
+					</div>
+					<div class="w100 h65 rel">
+						<div class="w2 h100 ab"></div>
+						<div class="w96 h100 ab l2">
+						<div class="w100 h100 rel colorWhite">
+							<div class="w96 h96 ab l2 t2">
+								<div class="w100 h20 rel">
+									<div class="w50 h100 ab">
+									<div class="outer">
+										<div class="inner_left">
+										<span class="fontSize30">
+											총 상품금액
+										</span>
+										</div>
+									</div>
+									</div>
+									<div class="w50 h100 ab l50">
+									<div class="outer">
+										<div class="inner_right">
+										<span class="fontSize30">
+											82,000 원
+										</span>
+										</div>
+									</div>
+									</div>
+								</div>
+								<div class="w100 h20 rel">
+									<div class="w50 h100 ab">
+									<div class="outer">
+										<div class="inner_left">
+										<span class="fontSize30">
+											총 적립 포인트
+										</span>
+										</div>
+									</div>
+									</div>
+									<div class="w50 h100 ab l50">
+									<div class="outer">
+										<div class="inner_right">
+										<span class="fontSize30">
+											820 점
+										</span>
+										</div>
+									</div>
+									</div>
+								</div>
+								<div class="w100 h20 rel">
+									<div class="w50 h100 ab">
+									<div class="outer">
+										<div class="inner_left">
+										<span class="fontSize30">
+											총 배송비
+										</span>
+										</div>
+									</div>
+									</div>
+									<div class="w50 h100 ab l50">
+									<div class="outer">
+										<div class="inner_right">
+										<span class="fontSize30">
+											0 원
+										</span>
+										</div>
+									</div>
+									</div>
+								</div>
+								<div class="w100 h20 rel borderBottom">
+									<div class="w50 h100 ab">
+									<div class="outer">
+										<div class="inner_left">
+										<span class="fontSize30">
+											픽팝추가할인
+										</span>
+										</div>
+									</div>
+									</div>
+									<div class="w50 h100 ab l50">
+									<div class="outer">
+										<div class="inner_right">
+										<span class="fontSize30">
+											- 0 원
+										</span>
+										</div>
+									</div>
+									</div>
+								</div>
+								<div class="w100 h20 rel">
+									<div class="w50 h100 ab">
+									<div class="outer">
+										<div class="inner_left">
+										<span class="fontSize30">
+											결제예상금액
+										</span>
+										</div>
+									</div>
+									</div>
+									<div class="w50 h100 ab l50">
+									<div class="outer">
+										<div class="inner_right">
+										<span class="fontSize30">
+											82,000 원
+										</span>
+										</div>
+									</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						</div>
+						<div class="w2 h100 ab l98"></div>
+					</div>
+					<div class="w100 h25 rel">
+						<div class="w2 h100 ab"></div>
+						<div class="w47 h75 ab l2 t15">
+							<button class="w100 h100 colorWhite borderRadius">
+							<span class="fontSize25">
+								계산대 비우기
+							</span>
+							</button>
+						</div>
+						<div class="w2 h100 ab l49"></div>
+						<div class="w47 h75 ab l51 t15">
+							<button class="w100 h100 color3 borderRadius">
+							<span class="fontSize25 fontColorWhite">
+								구매불가 상품 삭제
+							</span>
+							</button>
+						</div>
+						<div class="w2 h100 ab l98"></div>
+					</div>
+				</div>
+				<div class="w2 h100 ab l98"></div>
+			</div>
+			</div>
+			</div>
+	</div>
+	
 </div>
-<!-- 리스트 데이터 표시법 -->
-<div ng-repeat="x in myData" >
-	<span>{{x.id}}</span>
-	<span>{{x.name}}</span>
-	<span>{{x.comment}}</span>
-</div>
- <!-- 이 부분은 삭제하고 쓰세요. -->
