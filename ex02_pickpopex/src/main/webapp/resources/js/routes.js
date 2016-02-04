@@ -52,6 +52,7 @@ define([
 				services: [], 
 				filters: []
 			}));
+<<<<<<< HEAD
 			
 /***********************************************동주 시작*******************************************************************/			
 			$routeProvider.when('/styleRegist', routeConfig.config('../partials/pickbox/pickbox_styleRegist.html', 'controllers/pickbox/pickbox_styleRegist', {
@@ -116,6 +117,54 @@ define([
 				filters: []
 			}));
 /***********************************************동주 끝*********************************************************************/			
+=======
+			//==========================================================================================
+			
+			
+			
+			//==========================================================================================
+			//[M003] 체크아웃 메뉴 경로 설정
+			//------------------------------------------------------------------------------------------------------------------------------------------------------------------
+			//체크아웃 > 메인
+			$routeProvider.when('/checkout', routeConfig.config('../partials/checkout/checkout_list.html', 'controllers/checkout/checkout_list', {
+				directives: [], 
+				services: [], 
+				filters: []
+			}));
+			//체크아웃 > 체크아웃 목록
+			$routeProvider.when('/checkoutList', routeConfig.config('../partials/checkout/checkout_list.html', 'controllers/checkout/checkout_list', {
+				directives: [], 
+				services: [], 
+				filters: []
+			}));
+			//체크아웃 > 구매내역 목록
+			$routeProvider.when('/purchaseList', routeConfig.config('../partials/checkout/purchase_list.html', 'controllers/checkout/purchase_list', {
+				directives: [], 
+				services: [], 
+				filters: []
+			}));
+			//==========================================================================================
+
+			
+			
+			//==========================================================================================
+			//[M000] 공통 메뉴 경로 설정
+			//------------------------------------------------------------------------------------------------------------------------------------------------------------------
+			//아이템 상세
+			$routeProvider.when('/itemDetail/:productName', routeConfig.config('../partials/cmn/cmn_item_detail.html', 'controllers/cmn/cmn_item_detail', {
+				directives: [], 
+				services: [], 
+				filters: []
+			}));
+			$routeProvider.when('/styleDetail/:contentName', routeConfig.config('../partials/cmn/cmn_style_detail.html', 'controllers/cmn/cmn_style_detail', {
+				directives: [], 
+				services: [], 
+				filters: []
+			}));
+			//common 경로 설정 E
+			
+
+>>>>>>> branch 'master' of https://github.com/koiwareJG/pickpopex.git
 			//기본 경로 설정
 			$routeProvider.otherwise({redirectTo:'/marketplace'});
 			//==========================================================================================
