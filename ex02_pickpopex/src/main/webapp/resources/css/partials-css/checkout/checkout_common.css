@@ -1,0 +1,217 @@
+@CHARSET "UTF-8";
+
+/********************************body 초기화********************************/
+
+#content {height: auto;
+		 margin: 0; padding: 0; border: none;}
+
+/***************************container 관련 class****************************/
+.containerH10 	{width: 100%; height: 0;
+				position: relative; padding-bottom: 10%;}
+.containerH20 	{width: 100%; height: 0;
+				position: relative; padding-bottom: 20%;}
+.containerH35 	{width: 100%; height: 0;
+				position: relative; padding-bottom: 35%;}
+.containerH40 	{width: 100%; height: 0;
+				position: relative; padding-bottom: 40%;}
+.containerH50 	{width: 100%; height: 0;
+				position: relative; padding-bottom: 50%;}				
+
+/******************************정렬 관련 class******************************/			
+
+.outer 					{display: table; width: 100%; height: 100%;}
+.inner_center 			{display: table-cell;
+						text-align: center; vertical-align: middle;}
+.inner_center_top 		{display: table-cell;
+						text-align: center; vertical-align: top;}
+.inner_center_bottom 	{display: table-cell;
+						text-align: center; vertical-align: bottom;}
+.inner_left 			{display: table-cell;
+						text-align: left; vertical-align: middle;}
+.inner_left_top 		{display: table-cell;
+						text-align: left; vertical-align: top;}
+.inner_left_bottom 		{display: table-cell;
+						text-align: left; vertical-align: bottom;}			
+.inner_right 			{display: table-cell;
+						text-align: right; vertical-align: middle;}			
+.inner_right_top 		{display: table-cell;
+						text-align: right; vertical-align: top;}
+.inner_right_bottom 	{display: table-cell;
+						text-align: right; vertical-align: bottom;}
+/******************************font 관련 class*****************************/
+
+.fontSize10 {font-size: 1vw;}
+.fontSize15 {font-size: 1.5vw;}
+.fontSize20 {font-size: 2vw;}
+.fontSize25 {font-size: 2.5vw;}
+.fontSize30 {font-size: 3vw;}
+
+/**************************** width/height ********************************/
+
+.w2 	{width: 2%;}
+.w5 	{width: 5%;}
+.w8 	{width: 8%;}
+.w15 	{width: 15%;}
+.w20 	{width: 20%;}
+.w35 	{width: 35%;}
+.w36 	{width: 36%;}
+.w47 	{width: 47%;}
+.w50 	{width: 50%;}
+.w58 	{width: 58%;}
+.w76 	{width: 76%;}
+.w96 	{width: 96%;}
+.w100 	{width: 100%;}
+
+.h10 	{height: 10%;}
+.h15 	{height: 15%;}
+.h20 	{height: 20%;}
+.h25 	{height: 25%;}
+.h30 	{height: 30%;}
+.h60 	{height: 60%;}
+.h65 	{height: 65%;}
+.h70 	{height: 70%;}
+.h75 	{height: 75%;}
+.h80 	{height: 80%;}
+.h90 	{height: 90%;}
+.h96 	{height: 96%;}
+.h100 	{height: 100%;}
+
+/****************************** position **********************************/
+
+.l2 {left: 2%;}
+.l10 {left: 10%;}
+.l12 {left: 12%;}
+.l15 {left: 15%;}
+.l20 {left: 20%;}
+.l30 {left: 30%;}
+.l38 {left: 38%;}
+.l40 {left: 40%;}
+.l45 {left: 45%;}
+.l49 {left: 49%;}
+.l50 {left: 50%;}
+.l51 {left: 51%;}
+.l60 {left: 60%;}
+.l65 {left: 65%;}
+.l88 {left: 88%;}
+.l90 {left: 90%;}
+.l98 {left: 98%;}
+
+.t2 {top: 2%;}
+.t5 {top: 5%;}
+.t10 {top: 10%;}
+.t15 {top: 15%;}
+.t20 {top: 20%;}
+
+/******************************** etc *************************************/
+
+.rel 	{position: relative;}
+.ab 	{position: absolute;}
+
+.fL 	{float: left;}
+.hid 	{overflow: hidden;}
+
+.borderDefault 	{border: 1px solid black;}
+.borderTop 	{border-top: 1px solid black;}
+.borderBottom 	{border-bottom: 1px solid black;}
+.borderRadius {border-radius: 20px;}
+
+.fontColorWhite {color: white;}
+
+.displayTable {display: table;}
+/******************************** color ***********************************/
+
+.red 	{background-color: red;}
+.orange {background-color: orange;}
+.yellow {background-color: yellow;}
+.green 	{background-color: green;}
+.blue 	{background-color: blue;}
+.navy 	{background-color: navy;}
+.purple {background-color: purple;}
+.olive 	{background-color: olive;}
+
+
+
+
+
+
+/* .w100H100 {width: 100%; height: 100%}
+.w100H90 {width: 100%; height: 90%;}
+.w100H85 {width: 100%; height: 85%;}
+.w100H80 {width: 100%; height: 80%;}
+.w100H60 {width: 100%; height: 60%;}
+.w100H50 {width: 100%; height: 50%;}
+.w100H30 {width: 100%; height: 30%;}
+.w100H25 {width: 100%; height: 25%;}
+.w100H22 {width: 100%; height: 22%;}
+.w100H20 {width: 100%; height: 20%;}
+.w100H15 {width: 100%; height: 15%;}
+.w100H13 {width: 100%; height: 13%;}
+.w100H10 {width: 100%; height: 10%;}
+.w96H100 {width: 96%; height: 100%;}
+.w96H95 {width: 96%; height: 95%;}
+.w96H90 {width: 96%; height: 90%;}
+.w96H70 {width: 96%; height: 70%;}
+.w92H90 {width: 92%; height: 90%;}
+.w94H70 {width: 94%; height: 70%;}
+
+.w95H100 {width: 95%; height: 100%;}
+
+.w90H90 {width: 90%; height: 90%;}
+.w80H90 {width: 80%; height: 90%;}
+.w80H80 {width: 80%; height: 80%;}
+
+.w90H100Fl {width: 90%; height: 100%; float: left;}
+.w86H100Fl {width: 86%; height: 100%; float: left;}
+.w80H100Fl {width: 80%; height: 100%; float: left;}
+.w70H100Fl {width: 70%; height: 100%; float: left;}
+.w55H100Fl {width: 55%; height: 100%; float: left;}
+.w50H100Fl {width: 50%; height: 100%; float: left;}
+.w45H100Fl {width: 45%; height: 100%; float: left;}
+.w40H100Fl {width: 40%; height: 100%; float: left;}
+.w43H100Fl {width: 43%; height: 100%; float: left;}
+.w30H100Fl {width: 30%; height: 100%; float: left;}
+.w25H100Fl {width: 25%; height: 100%; float: left;}
+.w20H100Fl {width: 20%; height: 100%; float: left;}
+.w7H100Fl {width: 7%; height: 100%; float: left;}
+.w5H100Fl {width: 5%; height: 100%; float: left;}
+
+.l2 {left: 2%;}
+.l4 {left: 4%;}
+.l5 {left: 5%;}
+.l10 {left: 10%;}
+.l20 {left: 20%;}
+.l_5 {left: -5%;}
+
+.r2 {right: 2%;}
+.r5 {right: 5%;}
+.r_5 {right: -5%;}
+
+.t2 {top: 2%;}
+.t5 {top: 5%;}
+.t10 {top: 10%;}
+.t15 {top: 15%;}
+.t20 {top: 20%;}
+.t_5 {top: -5%;}
+
+.rel {position: relative;}
+.ab {position: absolute;}
+
+.block {display: block;}
+
+.hid {overflow: hidden;}
+
+
+.orange {background-color: orange;}
+
+.padl1 {padding-left: 1%;}
+.padl2 {padding-left: 2%;}
+.padl5 {padding-left: 5%;}
+
+.padr1 {padding-right: 1%;}
+.padr2 {padding-right: 2%;}
+.padr5 {padding-right: 5%;}
+
+.borderDefault {border: 1px solid black;}
+.borderBottom {border-bottom: 1px solid black;}
+.fontColorWhite {color: white;}
+ */

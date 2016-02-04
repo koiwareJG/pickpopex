@@ -1,0 +1,133 @@
+@CHARSET "UTF-8";
+
+/********************************body 초기화********************************/
+
+body {margin: 0; padding: 0; border: none;}
+#container {height: auto;}
+
+/***************************container 관련 class****************************/
+.containerH5 {width: 100%; height: 0;
+				position: relative; padding-bottom: 5%;}
+.containerH10 {width: 100%; height: 0;
+				position: relative; padding-bottom: 10%;}
+.containerH15 {width: 100%; height: 0;
+				position: relative; padding-bottom: 15%;}
+.containerH20 {width: 100%; height: 0;
+				position: relative; padding-bottom: 20%;}
+.containerH30 {width: 100%; height: 0;
+				position: relative; padding-bottom: 30%;}
+.containerH35 {width: 100%; height: 0;
+				position: relative; padding-bottom: 35%;}
+.containerH40 {width: 100%; height: 0;
+				position: relative; padding-bottom: 40%;}
+.containerH45 {width: 100%; height: 0;
+				position: relative; padding-bottom: 45%;}
+
+/******************************정렬 관련 class*******************************/			
+
+.outer {display: table; width: 100%; height: 100%;}
+.inner {display: table-cell;
+		vertical-align: middle;}
+.inner_center {display: table-cell;
+				text-align: center; vertical-align: middle;}
+.inner_center_top {display: table-cell;
+					text-align: center; vertical-align: top;}
+.inner_left {display: table-cell;
+				text-align: left; vertical-align: middle;}
+.inner_left_top {display: table-cell;
+				text-align: left; vertical-align: top;}
+.inner_left_bottom {display: table-cell;
+					text-align: left; vertical-align: bottom;}			
+.inner_right {display: table-cell;
+				text-align: right; vertical-align: middle;}			
+.inner_right_top {display: table-cell;
+				text-align: right; vertical-align: top;}
+/******************************font 관련 class******************************/
+
+.fontSize10 {font-size: 1vw;}
+.fontSize15 {font-size: 1.5vw;}
+.fontSize20 {font-size: 2vw;}
+.fontSize25 {font-size: 2.5vw;}
+.fontSize30 {font-size: 3vw;}
+
+/********************************section 공통******************************/
+
+.w100H100 {width: 100%; height: 100%}
+.w100H90 {width: 100%; height: 90%;}
+.w100H85 {width: 100%; height: 85%;}
+.w100H80 {width: 100%; height: 80%;}
+.w100H70 {width: 100%; height: 70%;}
+.w100H65 {width: 100%; height: 65%;}
+.w100H60 {width: 100%; height: 60%;}
+.w100H50 {width: 100%; height: 50%;}
+.w100H30 {width: 100%; height: 30%;}
+.w100H25 {width: 100%; height: 25%;}
+.w100H22 {width: 100%; height: 22%;}
+.w100H20 {width: 100%; height: 20%;}
+.w100H16 {width: 100%; height: 16%;}
+.w100H15 {width: 100%; height: 15%;}
+.w100H13 {width: 100%; height: 13%;}
+.w100H10 {width: 100%; height: 10%;}
+.w96H100 {width: 96%; height: 100%;}
+.w96H95 {width: 96%; height: 95%;}
+.w96H90 {width: 96%; height: 90%;}
+.w96H90 {width: 96%; height: 90%;}
+.w96H80 {width: 96%; height: 80%;}
+.w96H70 {width: 96%; height: 70%;}
+.w92H90 {width: 92%; height: 90%;}
+.w94H70 {width: 94%; height: 70%;}
+.w90H90 {width: 90%; height: 90%;}
+.w80H90 {width: 80%; height: 90%;}
+.w80H80 {width: 80%; height: 80%;}
+.w50H30 {width: 50%; height: 30%;}
+
+.w86H100Fl {width: 86%; height: 100%; float: left;}
+.w80H100Fl {width: 80%; height: 100%; float: left;}
+.w70H100Fl {width: 70%; height: 100%; float: left;}
+.w60H100Fl {width: 60%; height: 100%; float: left;}
+.w55H100Fl {width: 55%; height: 100%; float: left;}
+.w53H100Fl {width: 53%; height: 100%; float: left;}
+.w50H100Fl {width: 50%; height: 100%; float: left;}
+.w45H100Fl {width: 45%; height: 100%; float: left;}
+.w40H100Fl {width: 40%; height: 100%; float: left;}
+.w43H100Fl {width: 43%; height: 100%; float: left;}
+.w30H100Fl {width: 30%; height: 100%; float: left;}
+.w25H100Fl {width: 25%; height: 100%; float: left;}
+.w20H100Fl {width: 20%; height: 100%; float: left;}
+.w7H100Fl {width: 7%; height: 100%; float: left;}
+.w5H100Fl {width: 5%; height: 100%; float: left;}
+
+.l2 {left: 2%;}
+.l4 {left: 4%;}
+.l5 {left: 5%;}
+.l10 {left: 10%;}
+.l_5 {left: -5%;}
+
+.r2 {right: 2%;}
+.r5 {right: 5%;}
+.r_5 {right: -5%;}
+
+.t2 {top: 2%;}
+.t5 {top: 5%;}
+.t10 {top: 10%;}
+.t15 {top: 15%;}
+.t20 {top: 20%;}
+.t_5 {top: -5%;}
+
+.padl2 {padding-left: 2%;}
+.padl5 {padding-left: 5%;}
+
+.padr2 {padding-right: 2%;}
+.padr5 {padding-right: 5%;}
+
+
+.rel {position: relative;}
+.ab {position: absolute;}
+
+.block {display: block;}
+
+.hid {overflow: hidden;}
+
+
+.orange {background-color: orange;}
+.red {background-color: red;}

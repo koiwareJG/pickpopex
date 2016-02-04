@@ -9,7 +9,7 @@ define([
 	
 		//app은 생성한 myApp 앵귤러 모듈
 		return app.config(function ($routeProvider) {
-
+			
 			//==========================================================================================
 			//[M001]마켓플레이스(홈) 메뉴 경로 설정
 			//------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -52,6 +52,15 @@ define([
 				services: [], 
 				filters: []
 			}));
+			
+/***********************************************동주 시작*******************************************************************/			
+			$routeProvider.when('/styleRegist', routeConfig.config('../partials/pickbox/pickbox_styleRegist.html', 'controllers/pickbox/pickbox_styleRegist', {
+				directives: [], 
+				services: [], 
+				filters: []
+			}));
+			
+/***********************************************동주 끝*******************************************************************/
 			//==========================================================================================
 			
 			
@@ -60,25 +69,28 @@ define([
 			//[M003] 체크아웃 메뉴 경로 설정
 			//------------------------------------------------------------------------------------------------------------------------------------------------------------------
 			//체크아웃 > 메인
-			$routeProvider.when('/checkout', routeConfig.config('../partials/checkout/checkout_list.html', 'controllers/checkout/checkout_list', {
+/***********************************************동주 시작*******************************************************************/			
+
+			$routeProvider.when('/checkout_list', routeConfig.config('../partials/checkout/checkout_list.html', 'controllers/checkout/checkout_list', {
 				directives: [], 
 				services: [], 
 				filters: []
 			}));
 			//체크아웃 > 체크아웃 목록
-			$routeProvider.when('/checkoutList', routeConfig.config('../partials/checkout/checkout_list.html', 'controllers/checkout/checkout_list', {
+			$routeProvider.when('/checkout_purchase', routeConfig.config('../partials/checkout/checkout_purchase.html', 'controllers/checkout/checkout_purchase', {
 				directives: [], 
 				services: [], 
 				filters: []
 			}));
-			//체크아웃 > 구매내역 목록
-			$routeProvider.when('/purchaseList', routeConfig.config('../partials/checkout/purchase_list.html', 'controllers/checkout/purchase_list', {
+			//체크아웃 > 구매내역 상세
+			$routeProvider.when('/checkout_purchase_detail', routeConfig.config('../partials/checkout/checkout_purchase_detail.html', 'controllers/checkout/checkout_purchase_detail', {
 				directives: [], 
 				services: [], 
 				filters: []
 			}));
 			//==========================================================================================
 
+/***********************************************동주 끝*******************************************************************/			
 			
 			
 			//==========================================================================================
@@ -97,7 +109,13 @@ define([
 			}));
 			//common 경로 설정 E
 			
-
+/***********************************************동주 시작*******************************************************************/			
+			$routeProvider.when('/orderConfirm', routeConfig.config('../partials/cmn/cmn_orderConfirm.html', 'controllers/cmn/cmn_orderConfirm', {
+				directives: [], 
+				services: [], 
+				filters: []
+			}));
+/***********************************************동주 끝*********************************************************************/			
 			//기본 경로 설정
 			$routeProvider.otherwise({redirectTo:'/marketplace'});
 			//==========================================================================================
