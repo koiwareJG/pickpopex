@@ -21,7 +21,9 @@
 	<!-- pickBox top navi(아이템,스타일,필터,팔로잉) -->
 	<div class="col-xs-12 b pickBoxNav">
 		<div class="col-xs-3 item"><span class="itemCnt medium wht">16</span><br><span class="medium wht">아이템</span></div>
-		<div class="col-xs-3 style"><span class="styleCnt medium wht">8</span><br><span class="medium wht">스타일</span></div>
+		<a ng-href="#/pickboxStyleMine/">
+			<div class="col-xs-3 style"><span class="styleCnt medium wht">8</span><br><span class="medium wht">스타일</span></div>
+		</a>	
 		<div class="col-xs-3 filter"><span class="filterCnt medium wht">5</span><br><span class="medium wht">필터</span></div>
 		<div class="col-xs-3 follow"><span class="followCnt medium wht">5</span><br><span class="medium wht">팔로잉</span></div>
 	</div>
@@ -31,7 +33,8 @@
 		<div class="fixed">
 			<!-- 전체 폴더 start -->
 			<div class="col-xs-4 total">
-				<img ng-src="resources/images/pickBox/w_box.png" alt="...">
+				<a ng-href="#/pickboxItemList/">
+				<img ng-src="resources/images/sample/pickbox/w_box.png" alt="...">
 				<!-- 분류된 item cnt -->
 				<div class="col-xs-2 itemCnt small">16</div>
 				<div class="col-xs-8 folderContents "><!-- 나중에 ng-repeat로 교체 -->
@@ -46,7 +49,7 @@
 			
 			<!-- 미분류 폴더 start -->
 			<div class="col-xs-4 unDefine">
-				<img ng-src="resources/images/pickBox/g_box.png" alt="...">
+				<img ng-src="resources/images/sample/pickbox/g_box.png" alt="...">
 				<!-- 분류된 item cnt -->
 				<div class="col-xs-2 itemCnt small">16</div>
 				<div class="col-xs-8 folderContents "><!-- 나중에 ng-repeat로 교체 -->
