@@ -108,7 +108,6 @@ define([
 				filters: []
 			}));
 			//common 경로 설정 E
-			
 
 			//기본 경로 설정
 			$routeProvider.otherwise({redirectTo:'/marketplace'});
