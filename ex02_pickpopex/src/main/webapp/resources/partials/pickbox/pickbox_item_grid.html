@@ -1,0 +1,70 @@
+<!--
+/* ==============================================================================
+ * 파일명 : pickbox_item_grid.html
+ * 화면명 : 메뉴명 > 목록 (View)
+ * 작성자 : 안자훈
+ * 작성일 : 2016.02.03
+ * ==============================================================================
+ */ 
+ -->
+ <div class="bgGrid"></div>
+ 
+ <div class="item_list">
+	<div class="col-xs-12 userInfor">
+		<div class="blur1"></div>
+		<div class="blur2"></div>
+		<div class="col-xs-6 large userId">꾸꾸까까</div>
+		<div class="col-xs-6 large userF"><span class="green icon-fllwicon"></span>172</div>
+		<div class="col-xs-12 x-small userMessage">안녕하세요. 현업 스타일리스트 꾸꾸까까입니다~ *^^*</div>
+		<img class="col-xs-12 bgImg" ng-src="resources/images/sample/sample_profile_user_woman_02_512x512.jpg">
+		<img class="col-xs-3 img-circle circleImg" ng-src="resources/images/sample/sample_profile_user_woman_02_512x512.jpg">
+	</div>
+	
+	<!-- pickBox top navi -->
+	<div class="col-xs-12 pickBoxNav">
+		<div class="col-xs-3 item"><span class="itemCnt medium wht">16</span><br><span class="medium wht">아이템</span></div>
+		<a ng-href="#/pickboxStyleMine/">
+			<div class="col-xs-3 style"><span class="styleCnt medium wht">8</span><br><span class="medium wht">스타일</span></div>
+		</a>	
+		<div class="col-xs-3 filter"><span class="filterCnt medium wht">5</span><br><span class="medium wht">필터</span></div>
+		<div class="col-xs-3 follow"><span class="followCnt medium wht">5</span><br><span class="medium wht">팔로잉</span></div>
+	</div>
+	<div class="col-xs-12 topFilter bgWht">
+		<div class="col-xs-9 filterBar"><span class="icon-filtericon">	전	체</span></div>
+		<a ng-href="#/pickboxItemList/">
+			<div class="col-xs-2 filterBtn"><span class="glyphicon glyphicon-th-large"></span></div>
+		</a>
+	</div>
+	
+	<div ng-repeat="x in myData" class="wrapper w31 bgWht b" style="margin: 1% 1% 1% 1%;">
+		<!-- 분류 -->
+		<div class="hrap-25" style="border-bottom: thin #adadad solid;">
+			<div class="outerL">
+				<div class="vMid small" style="padding-left: 5%;">
+					<span class="glyphicon glyphicon-folder-close groupIcon">
+					<span class="groupName blk"> {{x.conType}}</span></span>
+				</div>
+			</div>
+		</div>
+		<div class="hrap-100 txC">
+			<img class="w90" ng-src="{{x.imgPath}}" style="margin: 3% 0 0 0;">
+		</div>
+		<!-- 상품 이름 -->
+		<div class="hrap-20 small">{{x.productName}}</div>
+		<!-- 상품 가격 -->
+		<div class="hrap-20 small txR">
+			<span class="icon-priceicon" style="color:#408080; "></span>
+			<span>{{x.price}}</span>
+		</div>
+		<!-- BuyBtn -->
+		<div class="hrap-50 w50 fL">
+			<img class="w100" ng-src="resources/images/sample/pickbox/buyBtn.png">
+		</div>
+		<!-- pickBtn -->
+		<div class="hrap-50 w50 txC">
+			<img class="w100" ng-src="resources/images/sample/pickbox/pickBtn.png">
+			<span class="">95</span>
+		</div>
+					
+	</div>
+ 

@@ -1,0 +1,17 @@
+@CHARSET "EUC-KR";
+.blur{
+	-webkit-filter: blur(2px) brightness(120%);
+	-moz-filter: blur(2px) brightness(120%);
+	-o-filter: blur(2px) brightness(120%);
+	-ms-filter: blur(2px) brightness(120%);
+	filter: blur(2px) brightness(120%);
+	}
+	
+.circle{z-index: 1000; position: inherit; top: 12%; left: 35%;}
+.circleImg{z-index: 999; margin: -32% 0 0 40%;}
+/* .userId{position: inherit; top: 0;}
+.message{position: inherit; top: 0;} */
+.topNav{background-color: #3a4942;}
+.ab{position: inherit;}
+.plusBtn{border: thin #adadad solid; border-radius:50%; cell }
+.pt1{padding-top: 1%;}
