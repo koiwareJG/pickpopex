@@ -1,12 +1,13 @@
 <!--
 /* ==============================================================================
- * 파일명 : pickbox_style_mystyle.html
+ * 파일명 : pickbox_style_list.html
  * 화면명 : 메뉴명 > 목록 (View)
  * 작성자 : 안자훈
  * 작성일 : 2016.02.04
  * ==============================================================================
  */ 
  -->
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 <div class="bgGrid"></div>
  <div class="contents">
 	<!-- 유저정보  start-->
@@ -74,30 +75,62 @@
 				</div>
 				<div class="outer w30 h100 x-small green">
 					<div class="inner vMid txC">
-						<a ng-href="#/pickboxStyleList/">
-							<span class="small gray">관심 스타일</span>
-						</a>		
+						<span class="small gray">관심 스타일</span>
 					</div>
 				</div>
 				
 				<div class="outer w20 h100">
 					<div class="inner vMid txC">
-						<span class="icon-swapviewicon large gray"></span>
+						<a ng-href="#/pickboxStyleMine/">
+							<span class="icon-swapviewicon large gray"></span>
+						</a>	
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
 	<div class="wrapper b">
-		<div class="hrap-100">
+		<div class="hrap-50">
 			<div class="wrap">
 				<div class="outer">
-					<div class="inner vMid txC b">
-						<img class="w60 h25 bgImg" ng-src="resources/images/sample/pickbox/circle.png">
+					<div class="inner vMid txC">
+						<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Open Modal</button>
+
 					</div>
 				</div>
 			</div>	
 		</div>
+	</div>	
+	
+	<div class="wrapper w100" style="z-index: 1050;">
+		<!-- <div class="hrap-40"> 
+			<div class="wrap">
+				<div class="inner vMind txC"> -->
+					<!-- Modal -->
+					  <div class="modal fade" id="myModal" role="dialog">
+					    <div class="modal-dialog">
+					    
+					      <!-- Modal content-->
+					      <div class="modal-content">
+					        <div class="modal-header">
+					          <button type="button" class="close" data-dismiss="modal">&times;</button>
+					          <h4 class="modal-title">Modal Header</h4>
+					        </div>
+					        <div class="modal-body">
+					          <p>Some text in the modal.</p>
+					        </div>
+					        <div class="modal-footer">
+					          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					        </div>
+					      </div>
+					      
+					    </div>
+					  </div>
+		<!-- 	 	</div>
+			</div>
+		</div> -->
 	</div>
+		
 </div>	
- 
+
+
