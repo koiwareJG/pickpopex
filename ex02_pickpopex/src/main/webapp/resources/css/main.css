@@ -227,7 +227,7 @@ div {
 	width: 100%;
 	height: auto;
 }
-.irap-
+
 .irap:after{
 	 content:""; display:block; clear:both;
 }
@@ -243,7 +243,7 @@ div {
 .outerB{
 	display: inline-block;
 	float: left;
-	width:100%;	height:auto;
+	width:100%;	height:100%;
 }
 .outer:after{
 	content:""; display:block; clear:both;
