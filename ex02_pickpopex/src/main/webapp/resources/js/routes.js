@@ -64,6 +64,7 @@ define([
 				services: [], 
 				filters: []
 			}));
+<<<<<<< HEAD
 			
 			//픽박스 > 스타일 > 관심 스타일 목록 -> 요약보기 
 			$routeProvider.when('/pickboxStyleGrid', routeConfig.config('../partials/pickbox/pickbox_style_grid.html', 'controllers/pickbox/pickbox_style_list', {
@@ -72,13 +73,16 @@ define([
 				filters: []
 			}));
 
+=======
+>>>>>>> branch 'master' of https://github.com/koiwareJG/pickpopex.git
 			
-/***********************************************동주 시작*******************************************************************/			
-			$routeProvider.when('/styleRegist', routeConfig.config('../partials/pickbox/pickbox_styleRegist.html', 'controllers/pickbox/pickbox_styleRegist', {
+			//픽박스 > 스타일 > 관심 스타일 목록 -> 요약보기 
+			$routeProvider.when('/pickboxStyleGrid', routeConfig.config('../partials/pickbox/pickbox_style_grid.html', 'controllers/pickbox/pickbox_style_list', {
 				directives: [], 
 				services: [], 
 				filters: []
 			}));
+<<<<<<< HEAD
 			
 /***********************************************동주 끝*******************************************************************/
 			//==========================================================================================
@@ -137,6 +141,8 @@ define([
 			}));
 /***********************************************동주 끝*********************************************************************/			
 
+=======
+>>>>>>> branch 'master' of https://github.com/koiwareJG/pickpopex.git
 			//==========================================================================================
 			
 			
@@ -189,7 +195,6 @@ define([
 			}));
 			
 			//common 경로 설정 E
-			
 
 			//기본 경로 설정
 			$routeProvider.otherwise({redirectTo:'/marketplace'});
