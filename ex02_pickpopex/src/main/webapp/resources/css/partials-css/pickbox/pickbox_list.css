@@ -60,4 +60,7 @@
 
 .b{border: thin #adadad solid;}
 
-
+.ab{position: absolute;}
+.itemCnt{position: absolute; top: 10%; left: 10%; text-align: center;}
+.folderContents{position:absolute; top: 20%; left: 25%;}
+.folderTitle{position: absolute; top: 65%; left: 10%;}

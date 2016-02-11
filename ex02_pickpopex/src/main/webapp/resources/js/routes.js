@@ -64,6 +64,13 @@ define([
 				services: [], 
 				filters: []
 			}));
+			
+			//픽박스 > 스타일 > 관심 스타일 목록 -> 요약보기 
+			$routeProvider.when('/pickboxStyleGrid', routeConfig.config('../partials/pickbox/pickbox_style_grid.html', 'controllers/pickbox/pickbox_style_list', {
+				directives: [], 
+				services: [], 
+				filters: []
+			}));
 			//==========================================================================================
 			
 			
