@@ -1,6 +1,6 @@
 /* ==============================================================================
- * 파일명 : cmn_item_detail.css
- * 화면명 : (공통)상품상세 (Style)
+ * 파일명 : cmn_style_detail.css
+ * 화면명 : (공통)컨텐츠상세 (Style)
  * 작성자 : 김종길
  * 작성일 : 2016.02.02
  * ==============================================================================
@@ -29,17 +29,6 @@
 .tabBtn.active{
 	background-color: white;
 }
-.tabContent{
-	top:-20px;
-    z-index:-99999;
-	width:100%;
-	height:100%;
-	background-color: white;
-	border: 0.5px;
-	border-style:solid;
-	border-color: #ff0000;
-	margin-bottom: 5px;
-}
 .commentNonOver{
 	display : inline-block;
 	width : 98%;
@@ -53,4 +42,17 @@
 }
 .replyBg{
 	margin: 5px 0; 
+}
+
+.shopProfileMini {
+	padding-left: 2px;
+	width: 100%;
+	height: auto;
+}
+.replyProduct{
+	background-color: white;
+	border: 5px;
+	border-style:solid;
+	border-color: white;
+	margin-bottom: 5px;
 }
