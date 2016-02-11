@@ -76,25 +76,31 @@ define([
 			//[M003] 체크아웃 메뉴 경로 설정
 			//------------------------------------------------------------------------------------------------------------------------------------------------------------------
 			//체크아웃 > 메인
-			$routeProvider.when('/checkout_list', routeConfig.config('../partials/checkout/checkout_list.html', 'controllers/checkout/checkout_list', {
+			$routeProvider.when('/checkout', routeConfig.config('../partials/checkout/checkout_list.html', 'controllers/checkout/checkout_list', {
 				directives: [], 
 				services: [], 
 				filters: []
 			}));
 			//체크아웃 > 체크아웃 목록
-			$routeProvider.when('/checkout_purchase', routeConfig.config('../partials/checkout/checkout_purchase.html', 'controllers/checkout/checkout_purchase', {
+			$routeProvider.when('/checkoutList', routeConfig.config('../partials/checkout/checkout_list.html', 'controllers/checkout/checkout_list', {
+				directives: [], 
+				services: [], 
+				filters: []
+			}));
+			//체크아웃 > 구매내역 목록
+			$routeProvider.when('/checkoutPurchase', routeConfig.config('../partials/checkout/checkout_purchase.html', 'controllers/checkout/checkout_purchase', {
 				directives: [], 
 				services: [], 
 				filters: []
 			}));
 			//체크아웃 > 구매내역 상세
-			$routeProvider.when('/checkout_purchase_detail', routeConfig.config('../partials/checkout/checkout_purchase_detail.html', 'controllers/checkout/checkout_purchase_detail', {
+			$routeProvider.when('/checkoutPurchaseDetail', routeConfig.config('../partials/checkout/checkout_purchase_detail.html', 'controllers/checkout/checkout_purchase_detail', {
 				directives: [], 
 				services: [], 
 				filters: []
 			}));
 			//==========================================================================================
-
+			
 			
 			//==========================================================================================
 			//[M000] 공통 메뉴 경로 설정
