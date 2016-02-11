@@ -9,18 +9,34 @@
 @CHARSET "utf-8";
 <!-- 상단 유저 정보 표시-->
 .pickBox{}
+.backImgArea{
+	position: inherit;
+	z-index:-99;
+	width: 100%;
+	height: 100%;
+}
+.backImg{
+	position: absolute;
+	top:0;
+	left:0;
+	width: 100%;
+	height: 100%;
+}
+.blurBox{background-color: rgba(255,255,255,0.5); 
+			position: inherit; top: 50%; height:50%; width:100%; 
+			z-index: -20;}
 .userInfor{height: 140px;}
 .blur1{width: 100%; height: 100%; background-color: rgba(255,255,255,0.5); z-index: 100; position: absolute;}
 .blur2{width: 100%; height: 59%; background-color: rgba(255,255,255,0.7); z-index: 150; position: absolute; top: 40%;}
-.userId{z-index: 160; top: 70%; text-align: right; padding-right: 5px;}
-.userF{z-index: 160; top: 70%;}
-.userMessage{z-index: 160; top: 70%; text-align: center;}
-.userInfor .bgImg{height: 100%; top:-37px;}
+.userId{z-index: 160; top: 65%; text-align: right; padding-right: 5px;}
+.userF{z-index: 160; top: 65%;}
+.userMessage{z-index: 160; top: 60%; text-align: center;}
+.userInfor .bgImg{height: 100%; top:-50px;}
 .userInfor .circleImg{position:absolute; height: 50%; top: 15%; left: 40%;  z-index: 999;}
 
 <!-- pickBox top nav-->
 .pickBoxNav{position: absolute;}
-.pickBoxNav div{height:50px; background-color: #3a4942; text-align: center; padding-top: 5px;}
+.pickBoxNav div{height:50px; background-color: #3a4942; text-align: center; padding-top: 0%;}
 
 .userFolder{background-image: url('../../../images/gridBg.jpg'); }
 .userFolder div{height: 140px; margin: 10px 0 0 0;}
@@ -42,6 +58,9 @@
 .folder .folderContents div{height: 50%; margin-top: 0;}
 .folder .folderTitle{position: absolute; height: 15%; width:70%; bottom: 20%; left: 16%; text-align: center;}
 
-.b{border: thin black solid;}
+.b{border: thin #adadad solid;}
 
-
+.ab{position: absolute;}
+.itemCnt{position: absolute; top: 10%; left: 10%; text-align: center;}
+.folderContents{position:absolute; top: 20%; left: 25%;}
+.folderTitle{position: absolute; top: 65%; left: 10%;}

@@ -7,80 +7,125 @@
  * ==============================================================================
  */
  -->
- <div class="pickBox">
-	<div class="col-xs-12 userInfor">
-		<div class="blur1"></div>
-		<div class="blur2"></div>
-		<div class="col-xs-6 large userId">꾸꾸까까</div>
-		<div class="col-xs-6 large userF"><span class="green icon-fllwicon"></span>172</div>
-		<div class="col-xs-12 x-small userMessage">안녕하세요. 현업 스타일리스트 꾸꾸까까입니다~ *^^*</div>
-		<img class="col-xs-12 bgImg" ng-src="resources/images/sample/sample_profile_user_woman_02_512x512.jpg">
-		<img class="col-xs-3 img-circle circleImg" ng-src="resources/images/sample/sample_profile_user_woman_02_512x512.jpg">
-	</div>
-	
-	<!-- pickBox top navi(아이템,스타일,필터,팔로잉) -->
-	<div class="col-xs-12 b pickBoxNav">
-		<div class="col-xs-3 item"><span class="itemCnt medium wht">16</span><br><span class="medium wht">아이템</span></div>
-		<div class="col-xs-3 style"><span class="styleCnt medium wht">8</span><br><span class="medium wht">스타일</span></div>
-		<div class="col-xs-3 filter"><span class="filterCnt medium wht">5</span><br><span class="medium wht">필터</span></div>
-		<div class="col-xs-3 follow"><span class="followCnt medium wht">5</span><br><span class="medium wht">팔로잉</span></div>
-	</div>
-	
-	<div class="col-xs-12 userFolder">
-		<!-- userFolder 전체, 미분류, 새박스 생성(고정 3개) -->
-		<div class="fixed">
-			<!-- 전체 폴더 start -->
-			<div class="col-xs-4 total">
-				<img ng-src="resources/images/pickBox/w_box.png" alt="...">
-				<!-- 분류된 item cnt -->
-				<div class="col-xs-2 itemCnt small">16</div>
-				<div class="col-xs-8 folderContents "><!-- 나중에 ng-repeat로 교체 -->
-					<div class="col-xs-6 "><img class="col-xs-12 bgImg" ng-src="resources/images/sample/top.png"></div>
-					<div class="col-xs-6 "><img class="col-xs-12 bgImg" ng-src="resources/images/sample/shoes.png"></div>
-					<div class="col-xs-6 "><img class="col-xs-12 bgImg" ng-src="resources/images/sample/coat.png"></div>
-					<div class="col-xs-6 "><img class="col-xs-12 bgImg" ng-src="resources/images/sample/top.png"></div>
+ <div class="bgGrid"></div>
+ <div class="contents">
+	<div class="wrapper w100">
+		<div class="hrap-35">
+			<div class="wrap">
+				<div class="backImgArea">
+					<div class="backImg"><img class="w100 h100 blur" ng-src="resources/images/sample/sample_profile_user_woman_02_512x512.jpg"></div>
 				</div>
-				<div class="col-xs-12 folderTitle"><span class="small blk">전 체 </span></div>
-			</div>
-			<!-- 전체 폴더 end -->	
-			
-			<!-- 미분류 폴더 start -->
-			<div class="col-xs-4 unDefine">
-				<img ng-src="resources/images/pickBox/g_box.png" alt="...">
-				<!-- 분류된 item cnt -->
-				<div class="col-xs-2 itemCnt small">16</div>
-				<div class="col-xs-8 folderContents "><!-- 나중에 ng-repeat로 교체 -->
-					<div class="col-xs-6 "><img class="col-xs-12 bgImg" ng-src="resources/images/sample/top.png"></div>
-					<div class="col-xs-6 "><img class="col-xs-12 bgImg" ng-src="resources/images/sample/shoes.png"></div>
-					<div class="col-xs-6 "><img class="col-xs-12 bgImg" ng-src="resources/images/sample/coat.png"></div>
-					<div class="col-xs-6 "><img class="col-xs-12 bgImg" ng-src="resources/images/sample/top.png"></div>
+				<div class="blurBox"></div>
+				<div class="outer w20 h50 circle">
+					<img class="innner w100 h100 img-circle circle" ng-src="resources/images/sample/sample_profile_user_woman_02_512x512.jpg">
 				</div>
-				<div class="col-xs-12 folderTitle"><span class="small blk">미분류 </span></div>
-			
+				<div class="outer w50 h85">
+					<div class="inner vBot txR small userId">꾸꾸까까</div>
+				</div>
+				<div class="outer w50 h85">
+					<div class="inner vBot txL small follow"><span class="green icon-fllwicon"></span>172</div>
+				</div>
+				<div class="outer w100 h10">
+					<div class="inner vBot txC x-small message">안녕하세요. 현업 스타일 리스트 꾸꾸까까 입니다~*^^*</div>
+				</div>
 			</div>
-			<!-- 미분류 폴더 start -->	
-			<!-- 새 박스 생성 start -->				
-			<div class="col-xs-4 newBox"><img ng-src="resources/images/sample/box3.png" alt="..."></div>	
-			<!-- 새 박스 생성 end -->
-		</div>	
-		
-		<div  ng-repeat="x in myData" class="col-xs-4 folder">
-			<!-- 폴더 img -->
-			<img ng-src="{{x.imgPath}}" alt="...">	
-			<!-- 분류된 item cnt -->
-			<div class="col-xs-2 itemCnt small">16</div>
-			<!-- user pickBox 요약 img -->
-			<div class="col-xs-8 folderContents">
-				<div class="col-xs-6 "><img class="col-xs-12 bgImg" ng-src="resources/images/sample/top.png"></div>
-				<div class="col-xs-6 "><img class="col-xs-12 bgImg" ng-src="resources/images/sample/shoes.png"></div>
-				<div class="col-xs-6 "><img class="col-xs-12 bgImg" ng-src="resources/images/sample/coat.png"></div>
-				<div class="col-xs-6 "><img class="col-xs-12 bgImg" ng-src="resources/images/sample/top.png"></div>
-			</div>
-			<!-- 분류 명 -->
-			<div class="col-xs-12 folderTitle"><span class="small blk">분류 명 </span></div>
 		</div>
-		
+	</div>	
+	<div class="wrapper w100 topNav">
+		<div class="hrap-10">
+			<div class="wrap">
+				<div class="outer w25 h100 x-small wht txC pt1">
+					<span>16</span></br>
+					<span>아이템</span>
+				</div>
+				<div class="outer w25 h100 x-small wht txC pt1">
+					<span>8</span></br>
+					<span>스타일</span>
+				</div>
+				<div class="outer w25 h100 x-small wht txC pt1">
+					<span>5</span></br>
+					<span>필터</span>
+				</div>
+				<div class="outer w25 h100 x-small wht txC pt1">
+					<span>5</span></br>
+					<span>팔로잉</span>
+				</div>
+				
+			</div>
+		</div>
 	</div>
+	<!-- 분류 영역(고정:전체,미분류,새로 만들기) -->
+	<div class="wrapper w33">
+		<div class="hrap-150">
+			<div class="wrap">
+				<div class="outer">
+					<div class="inner txR vTop" style="padding-top: 10%;">
+						<img class="w90 h80" ng-src="resources/images/sample/pickbox/w_box.png" alt="...">
+						<div class="w15 x-small itemCnt">16</div>
+						<div class="w60 h40 folderContents">
+							<img class="w50 h50 fL" ng-src="resources/images/sample/top.png">
+							<img class="w50 h50 fL" ng-src="resources/images/sample/shoes.png">
+							<img class="w50 h50 fL" ng-src="resources/images/sample/coat.png">
+							<img class="w50 h50 fL" ng-src="resources/images/sample/top.png">
+						</div>
+						<div class="folderTitle w90 small txC">전 체</div>	
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="wrapper w33">
+		<div class="hrap-150">
+			<div class="wrap">
+				<div class="outer">
+					<div class="inner txR vTop" style="padding-top: 10%;">
+						<img class="w90 h80" ng-src="resources/images/sample/pickbox/g_box.png" alt="...">
+						<div class="w15 x-small itemCnt">7</div>
+						<div class="w60 h40 folderContents">
+							<img class="w50 h50 fL" ng-src="resources/images/sample/top.png">
+							<img class="w50 h50 fL" ng-src="resources/images/sample/shoes.png">
+							<img class="w50 h50 fL" ng-src="resources/images/sample/coat.png">
+							<img class="w50 h50 fL" ng-src="resources/images/sample/top.png">
+						</div>
+						<div class="folderTitle w90 small txC">미 분 류</div>	
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>	
+	<div class="wrapper w33">
+		<div class="hrap-150">
+			<div class="wrap">
+				<div class="outer">
+					<div class="inner txR vTop" style="padding-top: 10%;">
+						<img class="w90 h80" ng-src="resources/images/sample/box3.png" alt="...">
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- 기존에 만들어 놓았던 분류 로딩 -->
+	<div ng-repeat="x in myData" class="wrapper w33" style="margin-top: -10%;">
+		<div class="hrap-150">
+			<div class="wrap">
+				<div class="outer">
+					<div class="inner txR vTop" style="padding-top: 10%;">
+						<img class="w90 h80" src="resources/images/sample/pickbox/w_box.png" alt="...">
+						<div class="w15 x-small itemCnt">7</div>
+						<div class="w60 h40 folderContents">
+							<img class="w50 h50 fL" src="resources/images/sample/top.png">
+							<img class="w50 h50 fL" src="resources/images/sample/shoes.png">
+							<img class="w50 h50 fL" src="resources/images/sample/coat.png">
+							<img class="w50 h50 fL" src="resources/images/sample/top.png">
+						</div>
+						<div class="folderTitle w90 small txC">분 류 명 </div>	
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>		
+		
+		
 	
 </div>
  

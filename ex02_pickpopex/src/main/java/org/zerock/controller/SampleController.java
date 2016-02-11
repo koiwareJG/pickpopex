@@ -49,7 +49,7 @@ public class SampleController {
       }
       vo.setId("id_00"+i);
       vo.setComment("여기는 코멘트 영역입니다"+i);
-      vo.setImgPath("resources/images/shoes.png");
+      vo.setImgPath("resources/images/sample/coat.png");
       vo.setProductName("상품이름영역입니다_상품00"+i);
       vo.setPrice(i+",000원");
       vo.setPoint(i+"0포인트");
@@ -60,7 +60,7 @@ public class SampleController {
     List<SampleVO> listFolder = new ArrayList<>();
     for(int i = 0; i<4 ; i++){
     	 SampleVO vo = new SampleVO();
-    	 vo.setImgPath("resources/images/pickBox/w_box.png");
+    	 vo.setImgPath("resources/images/sample/pickbox/w_box.png");
     	 
     	 listFolder.add(vo);
     }

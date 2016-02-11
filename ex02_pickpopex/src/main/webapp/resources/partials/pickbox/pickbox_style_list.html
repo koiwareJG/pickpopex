@@ -1,0 +1,220 @@
+<!--
+/* ==============================================================================
+ * 파일명 : pickbox_style_list.html
+ * 화면명 : 메뉴명 > 목록 (View)
+ * 작성자 : 안자훈
+ * 작성일 : 2016.02.04
+ * ==============================================================================
+ */ 
+ -->
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+
+<div class="bgGrid"></div>
+
+ <div class="contents"> 
+	<!-- 유저정보  start-->
+	<div class="wrapper w100">
+		<div class="hrap-35">
+			<div class="wrap">
+				<div class="backImgArea">
+					<div class="backImg"><img class="w100 h100 blur" ng-src="resources/images/sample/sample_profile_user_woman_02_512x512.jpg"></div>
+				</div>
+				<div class="blurBox"></div>
+				<div class="outer w20 h50 circle">
+					<img class="innner w100 h100 img-circle circle" ng-src="resources/images/sample/sample_profile_user_woman_02_512x512.jpg">
+				</div>
+				<div class="outer w50 h85">
+					<div class="inner vBot txR small userId">꾸꾸까까</div>
+				</div>
+				<div class="outer w50 h85">
+					<div class="inner vBot txL small follow"><span class="green icon-fllwicon"></span>172</div>
+				</div>
+				<div class="outer w100 h10">
+					<div class="inner vBot txC x-small message">안녕하세요. 현업 스타일 리스트 꾸꾸까까 입니다~*^^*</div>
+				</div>
+			</div>
+		</div>
+	</div>	
+	
+	<!-- 상단 navi btn -->
+	 <div class="wrapper w100 topNav">
+		<div class="hrap-10">
+			<div class="wrap">
+				<div class="outer w25 h100 x-small wht txC pt1">
+					<span>16</span></br>
+					<span>아이템</span>
+				</div>
+				<div class="outer w25 h100 x-small wht txC pt1">
+					<span>8</span></br>
+					<span>스타일</span>
+				</div>
+				<div class="outer w25 h100 x-small wht txC pt1">
+					<span>5</span></br>
+					<span>필터</span>
+				</div>
+				<div class="outer w25 h100 x-small wht txC pt1">
+					<span>5</span></br>
+					<span>팔로잉</span>
+				</div>
+				
+			</div>
+		</div>
+	</div>
+	
+	<!-- 스타일 선택(나의 스타일 , 관심 스타일) 구역 -->
+	<div class="wrapper w100 bgWht">
+		<div class="hrap-10">
+			<div class="wrap">
+				<div class="outer w20 h100">
+					<div class="inner vBot txC">
+						<span class="glyphicon glyphicon-plus-sign large"></span>
+					</div>
+				</div>
+				<div class="outer w30 h100 x-small">
+					<div class="inner vMid txC">
+						<span class="small gray">나의 스타일</span>
+					</div>
+				</div>
+				<div class="outer w30 h100 x-small ">
+					<div class="inner vMid txC">
+						<span class="small green">관심 스타일</span>
+					</div>
+				</div>
+				
+				<div class="outer w20 h100">
+					<div class="inner vMid txC">
+						<a ng-href="#/pickboxStyleGrid/">
+							<span class="icon-swapviewicon large gray"></span>
+						</a>	
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- 관신 스타일 구역 -->
+	<div class="wrapper w100">
+		<div class="hrap-125">
+			<div ng-class="{'col-xs-12': active == true , 'col-xs-6': active == false}"  class="col-sm-6 contentBg">
+				<!-- Row1 S -->
+				<div class="hrap-15">
+					<div class="wrap">
+						<!-- 프로필 이미지 영역-->
+						<div class="outerB w15 h100">
+							<img class="userProfile" src="resources/images/sample/sample_profile_user_woman_02_512x512.jpg" alt="...">
+						</div>
+						<!-- 상단 정보 영역 -->
+						<div class="outer w25 h50">
+							<span class="inner vBot txL shopId small">유저001</span>
+						</div>
+						<div class="outer w50 h50">
+							<span class="inner vBot txL icon-fllwicon small green">9999</span>
+						</div>
+						<div class="outer w10 h50">
+							<span class="inner vMid txC glyphicon glyphicon-ban-circle medium gray"></span>
+						</div>
+						<div class="outerB w85 h50">
+							<div class="commentBg">
+								<span class="comment x-small">여기는 코멘트 영역입니다.</span>
+							</div>
+						</div>
+					</div>
+				</div><!-- Row1 E -->
+				
+				<!-- Row2 S -->
+				<div class="hrap-100">
+					<div class="wrap">
+						<div class="outerB w50 h50"><img class="itemImg" src="resources/images/sample/sample_product_woman_top_01_512x512.jpg" alt="..."></div>
+						<div class="outerB w50 h100 fR"><img class="itemImg" src="resources/images/sample/sample_product_woman_top_01_512x1024.jpg" alt="..."></div>
+						<div class="outerB w50 h50"><img class="itemImg" src="resources/images/sample/sample_product_woman_top_01_512x512.jpg" alt="..."></div>
+					</div>
+				</div><!-- Row2 E -->
+				
+				<!-- Row3 S -->
+				<div class="hrap-10">
+					<div class="wrap">
+						<div class="outer w20 h100">
+							<span class="inner vMid txC icon-likeicon small gray">999</span>
+						</div>
+						<div class="outer w15 h100">
+							<span class="inner vMid txC glyphicon glyphicon-comment small gray"></span><span class="inMid txL small gray">999</span>
+						</div>
+						<div class="outer w30 h100">
+							<span class="inner vMid txC icon-priceicon small green">99,999</span>
+						</div>
+						<div class="outer w20 h100">
+							<span class="inner vMid txL icon-pointicon small green">+999</span>
+						</div>
+						<div class="outer w15 h100">
+							<span class="inner vMid txC glyphicon glyphicon-plane small green"></span><span class="inMid txL small green">2,500</span>
+						</div>
+					</div>
+				</div><!-- Row3 E -->
+			</div><!-- 관심 스타일 End -->
+		</div>		
+	</div>
+	
+	<div class="wrapper w100">
+		<div class="hrap-125">
+			<div ng-class="{'col-xs-12': active == true , 'col-xs-6': active == false}"  class="col-sm-6 contentBg">
+				<!-- Row1 S -->
+				<div class="hrap-15">
+					<div class="wrap">
+						<!-- 프로필 이미지 영역 -->
+						<div class="outerB w15 h100">
+							<img class="userProfile" src="resources/images/sample/sample_profile_user_woman_02_512x512.jpg" alt="...">
+						</div>
+						<!-- 상단 정보 영역 -->
+						<div class="outer w25 h50">
+							<span class="inner vBot txL shopId small">유저001</span>
+						</div>
+						<div class="outer w50 h50">
+							<span class="inner vBot txL icon-fllwicon small green">9999</span>
+						</div>
+						<div class="outer w10 h50">
+							<span class="inner vMid txC glyphicon glyphicon-ban-circle medium gray"></span>
+						</div>
+						<div class="outerB w85 h50">
+							<div class="commentBg">
+								<span class="comment x-small">여기는 코멘트 영역 입니다.</span>
+							</div>
+						</div>
+					</div>
+				</div><!-- Row1 E -->
+				
+				<!-- Row2 S -->
+				<div class="hrap-100">
+					<div class="wrap">
+						<div class="outerB w50 h50"><img class="itemImg" src="resources/images/sample/sample_product_woman_top_01_512x512.jpg" alt="..."></div>
+						<div class="outerB w50 h50"><img class="itemImg" src="resources/images/sample/sample_product_woman_top_01_512x512.jpg" alt="..."></div>
+						<div class="outerB w50 h50"><img class="itemImg" src="resources/images/sample/sample_product_woman_top_01_512x512.jpg" alt="..."></div>
+						<div class="outerB w50 h50"><img class="itemImg" src="resources/images/sample/sample_product_woman_top_01_512x512.jpg" alt="..."></div>
+					</div>
+				</div><!-- Row2 E -->
+				
+				<!-- Row3 S -->
+				<div class="hrap-10">
+					<div class="wrap">
+						<div class="outer w20 h100">
+							<span class="inner vMid txC icon-likeicon small gray">999</span>
+						</div>
+						<div class="outer w15 h100">
+							<span class="inner vMid txC glyphicon glyphicon-comment small gray"></span><span class="inMid txL small gray">999</span>
+						</div>
+						<div class="outer w30 h100">
+							<span class="inner vMid txC icon-priceicon small green">99,999</span>
+						</div>
+						<div class="outer w20 h100">
+							<span class="inner vMid txL icon-pointicon small green">+999</span>
+						</div>
+						<div class="outer w15 h100">
+							<span class="inner vMid txC glyphicon glyphicon-plane small green"></span><span class="inMid txL small green">2,500</span>
+						</div>
+					</div>
+				</div><!-- Row3 E -->
+			</div><!-- 관심 스타일 End -->
+		</div>		
+	</div>	
+</div>	
+
+

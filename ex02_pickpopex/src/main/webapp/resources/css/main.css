@@ -230,7 +230,7 @@ div {
 .outerB{
 	display: inline-block;
 	float: left;
-	width:100%;	height:100%;
+	width:100%;	height:auto;
 }
 .outer:after{
 	content:""; display:block; clear:both;
@@ -310,116 +310,116 @@ div {
 /* irap 최소 높이 Option */
 
 /* 기본 제공 외의 min-height 옵션은 필요한 페이지 css에 클래스 추가하여 사용 */
-.irap-600{min-height: 100px;}
-.irap-500{min-height: 100px;}
-.irap-400{min-height: 100px;}
-.irap-300{min-height: 100px;}
-.irap-200{min-height: 100px;}
-.irap-100{min-height: 100px;}
-.irap-99{min-height: 99px;}
-.irap-98{min-height: 98px;}
-.irap-97{min-height: 97px;}
-.irap-96{min-height: 96px;}
-.irap-95{min-height: 95px;}
-.irap-94{min-height: 94px;}
-.irap-93{min-height: 93px;}
-.irap-92{min-height: 92px;}
-.irap-91{min-height: 91px;}
-.irap-90{min-height: 90px;}
-.irap-89{min-height: 89px;}
-.irap-88{min-height: 88px;}
-.irap-87{min-height: 87px;}
-.irap-86{min-height: 86px;}
-.irap-85{min-height: 85px;}
-.irap-84{min-height: 84px;}
-.irap-83{min-height: 83px;}
-.irap-82{min-height: 82px;}
-.irap-81{min-height: 81px;}
-.irap-80{min-height: 80px;}
-.irap-79{min-height: 79px;}
-.irap-78{min-height: 78px;}
-.irap-77{min-height: 77px;}
-.irap-76{min-height: 76px;}
-.irap-75{min-height: 75px;}
-.irap-74{min-height: 74px;}
-.irap-73{min-height: 73px;}
-.irap-72{min-height: 72px;}
-.irap-71{min-height: 71px;}
-.irap-70{min-height: 70px;}
-.irap-69{min-height: 69px;}
-.irap-68{min-height: 68px;}
-.irap-67{min-height: 67px;}
-.irap-66{min-height: 66px;}
-.irap-65{min-height: 65px;}
-.irap-64{min-height: 64px;}
-.irap-63{min-height: 63px;}
-.irap-62{min-height: 62px;}
-.irap-61{min-height: 61px;}
-.irap-60{min-height: 60px;}
-.irap-60{min-height: 60px;}
-.irap-60{min-height: 60px;}
-.irap-60{min-height: 60px;}
-.irap-60{min-height: 60px;}
-.irap-59{min-height: 59px;}
-.irap-58{min-height: 58px;}
-.irap-57{min-height: 57px;}
-.irap-56{min-height: 56px;}
-.irap-55{min-height: 55px;}
-.irap-54{min-height: 54px;}
-.irap-53{min-height: 53px;}
-.irap-52{min-height: 52px;}
-.irap-51{min-height: 51px;}
-.irap-50{min-height: 50px;}
-.irap-49{min-height: 49px;}
-.irap-48{min-height: 48px;}
-.irap-47{min-height: 47px;}
-.irap-46{min-height: 46px;}
-.irap-45{min-height: 45px;}
-.irap-44{min-height: 44px;}
-.irap-43{min-height: 43px;}
-.irap-42{min-height: 42px;}
-.irap-41{min-height: 41px;}
-.irap-40{min-height: 40px;}
-.irap-39{min-height: 39px;}
-.irap-38{min-height: 38px;}
-.irap-37{min-height: 37px;}
-.irap-36{min-height: 36px;}
-.irap-35{min-height: 35px;}
-.irap-34{min-height: 34px;}
-.irap-33{min-height: 33px;}
-.irap-32{min-height: 32px;}
-.irap-31{min-height: 31px;}
-.irap-30{min-height: 30px;}
-.irap-29{min-height: 29px;}
-.irap-28{min-height: 28px;}
-.irap-27{min-height: 27px;}
-.irap-26{min-height: 26px;}
-.irap-25{min-height: 25px;}
-.irap-24{min-height: 24px;}
-.irap-23{min-height: 23px;}
-.irap-22{min-height: 22px;}
-.irap-21{min-height: 21px;}
-.irap-20{min-height: 20px;}
-.irap-19{min-height: 19px;}
-.irap-18{min-height: 18px;}
-.irap-17{min-height: 17px;}
-.irap-16{min-height: 16px;}
-.irap-15{min-height: 15px;}
-.irap-14{min-height: 14px;}
-.irap-13{min-height: 13px;}
-.irap-12{min-height: 12px;}
-.irap-11{min-height: 11px;}
-.irap-10{min-height: 10px;}
-.irap-9{min-height: 9px;}
-.irap-8{min-height: 8px;}
-.irap-7{min-height: 7px;}
-.irap-6{min-height: 6px;}
-.irap-5{min-height: 5px;}
-.irap-4{min-height: 4px;}
-.irap-3{min-height: 3px;}
-.irap-2{min-height: 2px;}
-.irap-1{min-height: 1px;}
-.irap-0{min-height: 0px;}
+.irap-600{display:inline-block; float:left; width: 100%; height: auto;min-height: 600px;}
+.irap-500{display:inline-block; float:left; width: 100%; height: auto;min-height: 500px;}
+.irap-400{display:inline-block; float:left; width: 100%; height: auto;min-height: 400px;}
+.irap-300{display:inline-block; float:left; width: 100%; height: auto;min-height: 300px;}
+.irap-200{display:inline-block; float:left; width: 100%; height: auto;min-height: 200px;}
+.irap-100{display:inline-block; float:left; width: 100%; height: auto;min-height: 100px;}
+.irap-99{display:inline-block; float:left; width: 100%; height: auto;min-height: 99px;}
+.irap-98{display:inline-block; float:left; width: 100%; height: auto;min-height: 98px;}
+.irap-97{display:inline-block; float:left; width: 100%; height: auto;min-height: 97px;}
+.irap-96{display:inline-block; float:left; width: 100%; height: auto;min-height: 96px;}
+.irap-95{display:inline-block; float:left; width: 100%; height: auto;min-height: 95px;}
+.irap-94{display:inline-block; float:left; width: 100%; height: auto;min-height: 94px;}
+.irap-93{display:inline-block; float:left; width: 100%; height: auto;min-height: 93px;}
+.irap-92{display:inline-block; float:left; width: 100%; height: auto;min-height: 92px;}
+.irap-91{display:inline-block; float:left; width: 100%; height: auto;min-height: 91px;}
+.irap-90{display:inline-block; float:left; width: 100%; height: auto;min-height: 90px;}
+.irap-89{display:inline-block; float:left; width: 100%; height: auto;min-height: 89px;}
+.irap-88{display:inline-block; float:left; width: 100%; height: auto;min-height: 88px;}
+.irap-87{display:inline-block; float:left; width: 100%; height: auto;min-height: 87px;}
+.irap-86{display:inline-block; float:left; width: 100%; height: auto;min-height: 86px;}
+.irap-85{display:inline-block; float:left; width: 100%; height: auto;min-height: 85px;}
+.irap-84{display:inline-block; float:left; width: 100%; height: auto;min-height: 84px;}
+.irap-83{display:inline-block; float:left; width: 100%; height: auto;min-height: 83px;}
+.irap-82{display:inline-block; float:left; width: 100%; height: auto;min-height: 82px;}
+.irap-81{display:inline-block; float:left; width: 100%; height: auto;min-height: 81px;}
+.irap-80{display:inline-block; float:left; width: 100%; height: auto;min-height: 80px;}
+.irap-79{display:inline-block; float:left; width: 100%; height: auto;min-height: 79px;}
+.irap-78{display:inline-block; float:left; width: 100%; height: auto;min-height: 78px;}
+.irap-77{display:inline-block; float:left; width: 100%; height: auto;min-height: 77px;}
+.irap-76{display:inline-block; float:left; width: 100%; height: auto;min-height: 76px;}
+.irap-75{display:inline-block; float:left; width: 100%; height: auto;min-height: 75px;}
+.irap-74{display:inline-block; float:left; width: 100%; height: auto;min-height: 74px;}
+.irap-73{display:inline-block; float:left; width: 100%; height: auto;min-height: 73px;}
+.irap-72{display:inline-block; float:left; width: 100%; height: auto;min-height: 72px;}
+.irap-71{display:inline-block; float:left; width: 100%; height: auto;min-height: 71px;}
+.irap-70{display:inline-block; float:left; width: 100%; height: auto;min-height: 70px;}
+.irap-69{display:inline-block; float:left; width: 100%; height: auto;min-height: 69px;}
+.irap-68{display:inline-block; float:left; width: 100%; height: auto;min-height: 68px;}
+.irap-67{display:inline-block; float:left; width: 100%; height: auto;min-height: 67px;}
+.irap-66{display:inline-block; float:left; width: 100%; height: auto;min-height: 66px;}
+.irap-65{display:inline-block; float:left; width: 100%; height: auto;min-height: 65px;}
+.irap-64{display:inline-block; float:left; width: 100%; height: auto;min-height: 64px;}
+.irap-63{display:inline-block; float:left; width: 100%; height: auto;min-height: 63px;}
+.irap-62{display:inline-block; float:left; width: 100%; height: auto;min-height: 62px;}
+.irap-61{display:inline-block; float:left; width: 100%; height: auto;min-height: 61px;}
+.irap-60{display:inline-block; float:left; width: 100%; height: auto;min-height: 60px;}
+.irap-60{display:inline-block; float:left; width: 100%; height: auto;min-height: 60px;}
+.irap-60{display:inline-block; float:left; width: 100%; height: auto;min-height: 60px;}
+.irap-60{display:inline-block; float:left; width: 100%; height: auto;min-height: 60px;}
+.irap-60{display:inline-block; float:left; width: 100%; height: auto;min-height: 60px;}
+.irap-59{display:inline-block; float:left; width: 100%; height: auto;min-height: 59px;}
+.irap-58{display:inline-block; float:left; width: 100%; height: auto;min-height: 58px;}
+.irap-57{display:inline-block; float:left; width: 100%; height: auto;min-height: 57px;}
+.irap-56{display:inline-block; float:left; width: 100%; height: auto;min-height: 56px;}
+.irap-55{display:inline-block; float:left; width: 100%; height: auto;min-height: 55px;}
+.irap-54{display:inline-block; float:left; width: 100%; height: auto;min-height: 54px;}
+.irap-53{display:inline-block; float:left; width: 100%; height: auto;min-height: 53px;}
+.irap-52{display:inline-block; float:left; width: 100%; height: auto;min-height: 52px;}
+.irap-51{display:inline-block; float:left; width: 100%; height: auto;min-height: 51px;}
+.irap-50{display:inline-block; float:left; width: 100%; height: auto;min-height: 50px;}
+.irap-49{display:inline-block; float:left; width: 100%; height: auto;min-height: 49px;}
+.irap-48{display:inline-block; float:left; width: 100%; height: auto;min-height: 48px;}
+.irap-47{display:inline-block; float:left; width: 100%; height: auto;min-height: 47px;}
+.irap-46{display:inline-block; float:left; width: 100%; height: auto;min-height: 46px;}
+.irap-45{display:inline-block; float:left; width: 100%; height: auto;min-height: 45px;}
+.irap-44{display:inline-block; float:left; width: 100%; height: auto;min-height: 44px;}
+.irap-43{display:inline-block; float:left; width: 100%; height: auto;min-height: 43px;}
+.irap-42{display:inline-block; float:left; width: 100%; height: auto;min-height: 42px;}
+.irap-41{display:inline-block; float:left; width: 100%; height: auto;min-height: 41px;}
+.irap-40{display:inline-block; float:left; width: 100%; height: auto;min-height: 40px;}
+.irap-39{display:inline-block; float:left; width: 100%; height: auto;min-height: 39px;}
+.irap-38{display:inline-block; float:left; width: 100%; height: auto;min-height: 38px;}
+.irap-37{display:inline-block; float:left; width: 100%; height: auto;min-height: 37px;}
+.irap-36{display:inline-block; float:left; width: 100%; height: auto;min-height: 36px;}
+.irap-35{display:inline-block; float:left; width: 100%; height: auto;min-height: 35px;}
+.irap-34{display:inline-block; float:left; width: 100%; height: auto;min-height: 34px;}
+.irap-33{display:inline-block; float:left; width: 100%; height: auto;min-height: 33px;}
+.irap-32{display:inline-block; float:left; width: 100%; height: auto;min-height: 32px;}
+.irap-31{display:inline-block; float:left; width: 100%; height: auto;min-height: 31px;}
+.irap-30{display:inline-block; float:left; width: 100%; height: auto;min-height: 30px;}
+.irap-29{display:inline-block; float:left; width: 100%; height: auto;min-height: 29px;}
+.irap-28{display:inline-block; float:left; width: 100%; height: auto;min-height: 28px;}
+.irap-27{display:inline-block; float:left; width: 100%; height: auto;min-height: 27px;}
+.irap-26{display:inline-block; float:left; width: 100%; height: auto;min-height: 26px;}
+.irap-25{display:inline-block; float:left; width: 100%; height: auto;min-height: 25px;}
+.irap-24{display:inline-block; float:left; width: 100%; height: auto;min-height: 24px;}
+.irap-23{display:inline-block; float:left; width: 100%; height: auto;min-height: 23px;}
+.irap-22{display:inline-block; float:left; width: 100%; height: auto;min-height: 22px;}
+.irap-21{display:inline-block; float:left; width: 100%; height: auto;min-height: 21px;}
+.irap-20{display:inline-block; float:left; width: 100%; height: auto;min-height: 20px;}
+.irap-19{display:inline-block; float:left; width: 100%; height: auto;min-height: 19px;}
+.irap-18{display:inline-block; float:left; width: 100%; height: auto;min-height: 18px;}
+.irap-17{display:inline-block; float:left; width: 100%; height: auto;min-height: 17px;}
+.irap-16{display:inline-block; float:left; width: 100%; height: auto;min-height: 16px;}
+.irap-15{display:inline-block; float:left; width: 100%; height: auto;min-height: 15px;}
+.irap-14{display:inline-block; float:left; width: 100%; height: auto;min-height: 14px;}
+.irap-13{display:inline-block; float:left; width: 100%; height: auto;min-height: 13px;}
+.irap-12{display:inline-block; float:left; width: 100%; height: auto;min-height: 12px;}
+.irap-11{display:inline-block; float:left; width: 100%; height: auto;min-height: 11px;}
+.irap-10{display:inline-block; float:left; width: 100%; height: auto;min-height: 10px;}
+.irap-9{display:inline-block; float:left; width: 100%; height: auto; min-height: 9px;}
+.irap-8{display:inline-block; float:left; width: 100%; height: auto; min-height: 8px;}
+.irap-7{display:inline-block; float:left; width: 100%; height: auto; min-height: 7px;}
+.irap-6{display:inline-block; float:left; width: 100%; height: auto; min-height: 6px;}
+.irap-5{display:inline-block; float:left; width: 100%; height: auto; min-height: 5px;}
+.irap-4{display:inline-block; float:left; width: 100%; height: auto; min-height: 4px;}
+.irap-3{display:inline-block; float:left; width: 100%; height: auto; min-height: 3px;}
+.irap-2{display:inline-block; float:left; width: 100%; height: auto; min-height: 2px;}
+.irap-1{display:inline-block; float:left; width: 100%; height: auto; min-height: 1px;}
+.irap-0{display:inline-block; float:left; width: 100%; height: auto; min-height: 0px;}
 
 /* 공통 가로%*/
 .w100{width: 100%;}
@@ -568,10 +568,6 @@ div {
 .h63{height: 63%;}
 .h62{height: 62%;}
 .h61{height: 61%;}
-.h60{height: 60%;}
-.h60{height: 60%;}
-.h60{height: 60%;}
-.h60{height: 60%;}
 .h60{height: 60%;}
 .h59{height: 59%;}
 .h58{height: 58%;}
