@@ -13,7 +13,7 @@ define([], function () {
 		console.log("pickbox_folder_list contorller loaded"); //파일명과 동일하게 맞출것
 		
 		//CSS 로딩 설정 S
-		$scope.$emit('updateCSS', ['resources/css/partials-css/pickbox/pickbox_list.css']);//로드할 css파일 경로 설정(없으면 삭제)
+		$scope.$emit('updateCSS', ['resources/css/partials-css/pickbox/pickbox_list.css','resources/css/partials-css/pickbox/pickbox_style_list.css']);//로드할 css파일 경로 설정(없으면 삭제)
 		//CSS 로딩 설정 E
 		
 		//데이터 세팅 S (받아올 데이터 없으면 삭제)
