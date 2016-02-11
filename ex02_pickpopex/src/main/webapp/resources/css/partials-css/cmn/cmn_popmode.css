@@ -1,0 +1,55 @@
+@CHARSET "utf-8";
+
+html, body { width: 100%; height: 100%;}
+
+.topNav, .botNav { visibility: hidden;}
+
+.contentsArea {	margin-top: 0px; margin-bottom: 0px;}
+
+.content {width: 100%; height: 100%;}
+
+.ab {position: absolute;}
+.rel {position: relative;}
+
+.red {background-color: red;}
+.orange {background-color: orange;}
+.yellow {background-color: yellow;}
+.green {background-color: green;}
+.blue {background-color: blue;}
+.navy {background-color: navy;}
+.purple {background-color: purple;}
+.olive {background-color: olive;}
+
+.color1 {background-color: rgb(023, 023, 023);}
+.color2 {background-color: rgb(049, 057, 049);}
+.color3 {background-color: rgb(016, 016, 016);}
+.color4 {background-color: rgb(013, 015, 014);}
+
+.borderTopRadius10	{border-top-left-radius: 10px;
+					 border-top-right-radius: 10px;}
+
+.fontColorWhite {color: white;}
+
+#slidebox {position: relative; width: 100%;height: 100%;;
+			overflow: hidden; white-space: nowrap;
+			border: 1px solid #000;}
+
+#slidebox ul#slider {list-style: none; margin: 0; padding: 0;}
+
+#slidebox ul li {position: absolute; width: 100%;; height: 100%;}
+
+#slidebox ul li div {width: 100%; height: 100%;}
+
+
+#fadebox {overflow:hidden; }
+#fade1 {position: relative; ist-style: none; 
+		margin: 0; padding: 0;	width: 100%; height: 100%;}
+#fade1 li {position: absolute; width: 100%; height: 100%; }
+
+#fade2 {position: relative; list-style: none; margin: 0; padding: 0; }
+#fade2 li {position: absolute; width: 100%; height: 100%; }
+#fade2 li img {width: 100%; height: 100%;}
+
+.good {height: 100%; width: auto;}
+
+
