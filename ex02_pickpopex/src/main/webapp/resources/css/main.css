@@ -115,6 +115,7 @@ div {
 }
 
 
+
 /* 기타효과 */
 .filter-dropshadow{text-shadow: 0 0 2px #88979f;}
 
@@ -242,7 +243,7 @@ div {
 .outerB{
 	display: inline-block;
 	float: left;
-	width:100%;	height:100%;
+	width:100%;	height:auto;
 }
 .outer:after{
 	content:""; display:block; clear:both;
@@ -580,10 +581,6 @@ div {
 .h63{height: 63%;}
 .h62{height: 62%;}
 .h61{height: 61%;}
-.h60{height: 60%;}
-.h60{height: 60%;}
-.h60{height: 60%;}
-.h60{height: 60%;}
 .h60{height: 60%;}
 .h59{height: 59%;}
 .h58{height: 58%;}

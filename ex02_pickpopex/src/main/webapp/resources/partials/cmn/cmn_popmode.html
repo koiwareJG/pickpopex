@@ -1,0 +1,267 @@
+
+
+
+<div class="content">
+	<div class="wrapper h100">
+		
+		
+		<div class="w70 h100 fL rel color2">
+		<div class="w96 h96 ab l2 t2">
+			<div id="slidebox">
+				<ul id="slider">
+					<li>
+						<img class="w100 h100" src="resources/images/sample/sample_product_woman_top_01_512x512.jpg">
+					</li>
+					<li>
+						<img class="w100 h100" src="resources/images/sample/sample_profile_user_man_01_512x512.jpg">
+					</li>
+					<li>
+						<img class="w100 h100" src="resources/images/sample/sample_product_woman_top_01_512x512.jpg">
+					</li>
+					<li>
+						<img class="w100 h100" src="resources/images/sample/sample_profile_user_man_01_512x512.jpg">
+					</li>
+					<li>
+						<img class="w100 h100" src="resources/images/sample/sample_product_woman_top_01_512x512.jpg">
+					</li>
+				</ul>
+			</div>
+		</div>
+		</div>
+	
+	
+		<div class="w30 h100 fL rel color2">
+			<div id="fadebox" class="w100 h50 ab">
+				<ul id="fade1">
+					<li class="w100 h100">
+						<img class="w100 h60" src="resources/images/sample/sample_product_woman_top_01_512x512.jpg"/>
+						<img class="w100 h20" src="resources/images/sample/sample_product_woman_top_01_512x512.jpg"/>
+						<img class="w100 h20" src="resources/images/sample/sample_product_woman_top_01_512x512.jpg"/>
+					</li>
+					<li>
+						<img class="w100 h60" src="resources/images/sample/sample_profile_user_man_01_512x512.jpg" />
+						<img class="w100 h20" src="resources/images/sample/sample_product_woman_top_01_512x512.jpg"/>
+						<img class="w100 h20" src="resources/images/sample/sample_product_woman_top_01_512x512.jpg"/>
+					</li>
+					<li>
+						<img class="w100 h60" src="resources/images/sample/sample_product_woman_top_01_512x512.jpg" />
+						<img class="w100 h20" src="resources/images/sample/sample_product_woman_top_01_512x512.jpg"/>
+						<img class="w100 h20" src="resources/images/sample/sample_product_woman_top_01_512x512.jpg"/>
+					</li>
+					<li>
+						<img class="w100 h60" src="resources/images/sample/sample_profile_user_man_01_512x512.jpg" />
+						<img class="w100 h20" src="resources/images/sample/sample_product_woman_top_01_512x512.jpg"/>
+						<img class="w100 h20" src="resources/images/sample/sample_product_woman_top_01_512x512.jpg"/>
+					</li>
+					<li>
+						<img class="w100 h60" src="resources/images/sample/sample_product_woman_top_01_512x512.jpg" />
+						<img class="w100 h20" src="resources/images/sample/sample_product_woman_top_01_512x512.jpg"/>
+						<img class="w100 h20" src="resources/images/sample/sample_product_woman_top_01_512x512.jpg"/>
+					</li>
+				</ul>
+			</div>
+			<div id="fadebox" class="w100 h50 ab t50">
+				<ul id="fade2" class="w100 h100">
+					<li>
+						<img class="w100 h100" src="resources/images/sample/sample_product_woman_top_01_512x512.jpg"/>
+					</li>
+					<li>
+						<img class="w100 h100" src="resources/images/sample/sample_profile_user_man_01_512x512.jpg" />
+					</li>
+					<li>
+						<img class="w100 h100" src="resources/images/sample/sample_product_woman_top_01_512x512.jpg" />
+					</li>
+					<li>
+						<img class="w100 h100" src="resources/images/sample/sample_profile_user_man_01_512x512.jpg" />
+					</li>
+					<li>
+						<img class="w100 h100" src="resources/images/sample/sample_product_woman_top_01_512x512.jpg" />
+					</li>
+				</ul>
+			</div>
+			
+		</div>
+		
+		
+		
+	</div>
+
+</div>
+<script>
+	controlRatio();
+	
+	$(window).resize(function() {
+		controlRatio();
+	});
+	
+	function controlRatio() {
+		console.log("controlRatio() 시작 전!");
+		var ch = $(".good").height();
+		console.log("height : " + ch);
+		console.log("availHeight : " + screen.availHeight);
+		$('.good').css({
+		    'width': ch+ 'px'
+		});
+		console.log("controlRatio() 시작 후!");
+	}
+
+</script>
+<script>
+	var x = parseInt($("#slidebox").css("width"));
+	var slider = document.getElementById("slider");
+	var slideArray = slider.getElementsByTagName("li");
+	var slideMax = slideArray.length - 1;
+	var curSlideNo = 0;
+	
+	for (i = 0; i <= slideMax; i++) {
+		if (i == curSlideNo)
+			slideArray[i].style.left = 0;
+		else
+			slideArray[i].style.left = -x + "px";
+	}
+
+	var aniStart = false;
+	var next = 1;
+	var changeSlide = function() {
+		if (aniStart === true)
+			return;
+		next = curSlideNo + 1;
+		if (next > slideMax)
+			next = 0;
+		aniStart = true;
+		sliding();
+	}
+
+	var distance = 20;
+	var repeatTime = 10;
+	var delayTime = 3000;
+	
+	function sliding() {
+		var curX = parseInt(slideArray[curSlideNo].style.left, 10);
+		var nextX = parseInt(slideArray[next].style.left, 10);
+		var newCurX = curX + distance;
+		var newNextX = nextX + distance;
+		if (newCurX >= x) {
+			slideArray[curSlideNo].style.left = -x + "px";
+			slideArray[next].style.left = 0;
+			curSlideNo = curSlideNo + 1;
+			if (curSlideNo > slideMax)
+				curSlideNo = 0;
+			aniStart = false;
+			return;
+		}
+		slideArray[curSlideNo].style.left = newCurX + "px";
+		slideArray[next].style.left = newNextX + "px";
+		setTimeout(function() {
+			sliding();
+		}, repeatTime);
+	}
+	setInterval(changeSlide, delayTime);
+</script>
+<script type="text/javascript">
+
+	var fade1 = document.getElementById("fade1");
+	var fade2 = document.getElementById("fade2");
+	
+	
+	var fadeArray1 = fade1.getElementsByTagName("li");
+	var fadeArray2 = fade2.getElementsByTagName("li");
+	
+	
+	var fadeMax = fadeArray1.length - 1;
+	var curfadeNo = 0;
+	var nextfadeNo =null;
+	var fadeStart = false;
+	var curfadeLevel = 1;
+	var nextfadeLevel = 0;
+	var delayTime = 3000;
+
+	for (i = 0; i <= fadeMax; i++) {
+		if (i == curfadeNo) {
+			changeOpacity(fadeArray1[i], 1);
+			changeOpacity(fadeArray2[i], 1);
+		}
+		else {
+			changeOpacity(fadeArray1[i], 0);
+			changeOpacity(fadeArray2[i], 0);
+		}
+	}
+
+	function startfade(dir)
+	{
+		if (fadeStart === true) return;
+		if( dir == "prev" ) 
+		{
+			nextfadeNo = curfadeNo - 1;
+			if ( nextfadeNo < 0 ) nextfadeNo = fadeMax;
+		}
+		else if( dir == "next" ) 
+		{
+			nextfadeNo = curfadeNo + 1;
+			if ( nextfadeNo > fadeMax ) nextfadeNo = 0;
+		}
+		else
+		{
+			fadeStart = false;
+			return;
+		}
+		fadeStart = true;
+		changeOpacity(fadeArray1[curfadeNo], curfadeLevel);
+		changeOpacity(fadeArray2[curfadeNo], curfadeLevel);
+		
+		changeOpacity(fadeArray1[nextfadeNo], nextfadeLevel);
+		changeOpacity(fadeArray2[nextfadeNo], nextfadeLevel);
+		fadeInOutAction(dir);
+	}
+
+	function fadeInOutAction(dir)
+	{
+		curfadeLevel = curfadeLevel - 0.1;
+		nextfadeLevel = nextfadeLevel + 0.1;
+		if( curfadeLevel <= 0 ) 
+		{
+			changeOpacity(fadeArray1[curfadeNo], 0);
+			changeOpacity(fadeArray2[curfadeNo], 0);
+			
+			changeOpacity(fadeArray1[nextfadeNo], 1);
+			changeOpacity(fadeArray2[nextfadeNo], 1);
+			
+			if(dir == "prev")
+			{
+				curfadeNo = curfadeNo - 1;
+				if (curfadeNo < 0) curfadeNo = fadeMax;
+			}
+			else
+			{
+				curfadeNo = curfadeNo + 1;
+				if (curfadeNo > fadeMax) curfadeNo = 0;
+			}
+			curfadeLevel = 1;
+			nextfadeLevel = 0;
+			fadeStart = false;
+			return;
+		}
+		changeOpacity(fadeArray1[curfadeNo], curfadeLevel);
+		changeOpacity(fadeArray2[curfadeNo], curfadeLevel);
+		
+		changeOpacity(fadeArray1[nextfadeNo], nextfadeLevel);
+		changeOpacity(fadeArray2[nextfadeNo], nextfadeLevel);
+		
+		
+		setTimeout(function () {
+			fadeInOutAction(dir);
+		}, 100);
+	}
+
+	function changeOpacity(obj,level) 
+	{
+		obj.style.opacity = level; 
+		obj.style.MozOpacity = level; 
+		obj.style.KhtmlOpacity = level;
+		obj.style.MsFilter = "'progid:DXImageTransform.Microsoft.Alpha(Opacity=" + (level * 100) + ")'";
+		obj.style.filter = "alpha(opacity=" + (level * 100) + ");"; 
+	}
+
+	//1초마다 Fade In/Out 슬라이드를 반복하는 코드
+	var autofade = setInterval( function(){startfade('next');}, delayTime);
+</script>
