@@ -16,4 +16,4 @@
 .plusBtn{border: thin #adadad solid; border-radius:50%; cell }
 .modal{position: inherit; top: -300px;}
 .pt1{padding-top: 1%;}
-/* #myModal{z-index: 9999;} */
+#myModal{position: fixed; top: 10%;}
