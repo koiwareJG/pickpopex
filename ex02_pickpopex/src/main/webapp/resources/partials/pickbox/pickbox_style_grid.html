@@ -1,0 +1,141 @@
+<!--
+/* ==============================================================================
+ * 파일명: pickbox_style_grid.html
+ * 화면명 : 메뉴명 > 목록 (View)
+ * 작성자 : 안자훈
+ * 작성일 : 2016.02.11
+ * ==============================================================================
+ */ 
+ -->
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+
+<div class="bgGrid"></div>
+
+ <div class="contents"> 
+	<!-- 상단 유저 영역  start-->
+	<div class="wrapper w100">
+		<div class="hrap-35">
+			<div class="wrap">
+				<div class="backImgArea">
+					<div class="backImg"><img class="w100 h100 blur" ng-src="resources/images/sample/sample_profile_user_woman_02_512x512.jpg"></div>
+				</div>
+				<div class="blurBox"></div>
+				<div class="outer w20 h50 circle">
+					<img class="innner w100 h100 img-circle circle" ng-src="resources/images/sample/sample_profile_user_woman_02_512x512.jpg">
+				</div>
+				<div class="outer w50 h85">
+					<div class="inner vBot txR small userId">꾸꾸까까</div>
+				</div>
+				<div class="outer w50 h85">
+					<div class="inner vBot txL small follow"><span class="green icon-fllwicon"></span>172</div>
+				</div>
+				<div class="outer w100 h10">
+					<div class="inner vBot txC x-small message">안녕하세요. 현업 스타일 리스트 꾸꾸까까 입니다~*^^*</div>
+				</div>
+			</div>
+		</div>
+	</div>	
+	
+	<!-- 상단 navi btn -->
+	 <div class="wrapper w100 topNav">
+		<div class="hrap-10">
+			<div class="wrap">
+				<div class="outer w25 h100 x-small wht txC pt1">
+					<span>16</span></br>
+					<span>아이템</span>
+				</div>
+				<div class="outer w25 h100 x-small wht txC pt1">
+					<span>8</span></br>
+					<span>스타일</span>
+				</div>
+				<div class="outer w25 h100 x-small wht txC pt1">
+					<span>5</span></br>
+					<span>필터</span>
+				</div>
+				<div class="outer w25 h100 x-small wht txC pt1">
+					<span>5</span></br>
+					<span>팔로잉</span>
+				</div>
+				
+			</div>
+		</div>
+	</div>
+	
+	<!-- 스타일 선택(나의 스타일 , 관심 스타일) 구역 -->
+	<div class="wrapper w100 bgWht">
+		<div class="hrap-10">
+			<div class="wrap">
+				<div class="outer w20 h100">
+					<div class="inner vBot txC">
+						<span class="glyphicon glyphicon-plus-sign large"></span>
+					</div>
+				</div>
+				<div class="outer w30 h100 x-small">
+					<div class="inner vMid txC">
+						<span class="small gray">나의 스타일</span>
+					</div>
+				</div>
+				<div class="outer w30 h100 x-small ">
+					<div class="inner vMid txC">
+						<span class="small green">관심 스타일</span>
+					</div>
+				</div>
+				
+				<div class="outer w20 h100">
+					<div class="inner vMid txC">
+						<a ng-href="#/pickbox_style_grid/">
+							<span class="icon-swapviewicon large green"></span>
+						</a>	
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<!-- 요약 보기 구역 -->	
+	<div ng-repeat="x in myData" class="wrapper w45 bgWht b" style="margin: 3% 0 0 3%;">
+		<!-- 분류 -->
+		<div class="hrap-25">
+			<div class="wrap">
+				<div class="outerL">
+					<div class="inner w100" style="padding: 5%;">
+						<!-- 추후 src를 ng-src로 바꿀것 -->
+						<img class="w20 fL img-circle" src="resources/images/sample/sample_profile_user_woman_02_512x512.jpg">
+						<div class="w40 fL id small" style="padding:5%;">koikoiko</div>
+						<div class="w40 x-small fL" style="padding: 8% 0% 5% 10%;"><span class="icon-fllwicon green"></span><span class="x-small">172</span></div>
+					</div>	
+				</div>
+			</div>
+		</div>
+		
+		<!-- 관심 스타일 이미지 -->
+		<div class="hrap-100">
+			<div class="wrap">
+				<div class="outerB w50 h50"><img class="itemImg" src="resources/images/sample/sample_product_woman_top_01_512x512.jpg" alt="..."></div>
+				<div class="outerB w50 h100 fR"><img class="itemImg" src="resources/images/sample/sample_product_woman_top_01_512x1024.jpg" alt="..."></div>
+				<div class="outerB w50 h50"><img class="itemImg" src="resources/images/sample/sample_product_woman_top_01_512x512.jpg" alt="..."></div>
+			</div>
+		</div>
+			
+		<!-- 하단 버튼 -->
+		<div class="hrap-20">
+			<div class="wrap">
+				<div class="outer w50 ">
+					<div class="inner txC vMid small">
+						<span class="glyphicon glyphicon-heart green"></span>
+						<span class="likeCnt gray">5</span>
+					</div>
+				</div>
+				<div class="outer w50 ">
+					<div class="inner txC vMid small">
+						<span class="glyphicon glyphicon-comment green"></span>
+						<span class="commentCnt gray">35</span>
+					</div>
+				</div>
+			</div>
+		</div>			
+	</div>
+</div>	
+
+

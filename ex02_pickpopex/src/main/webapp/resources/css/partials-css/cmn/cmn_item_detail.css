@@ -29,17 +29,6 @@
 .tabBtn.active{
 	background-color: white;
 }
-.tabContent{
-	top:-20px;
-    z-index:-99999;
-	width:100%;
-	height:100%;
-	background-color: white;
-	border: 0.5px;
-	border-style:solid;
-	border-color: #ff0000;
-	margin-bottom: 5px;
-}
 .commentNonOver{
 	display : inline-block;
 	width : 98%;
@@ -53,4 +42,19 @@
 }
 .replyBg{
 	margin: 5px 0; 
+}
+.sizeMapImg{
+	height: 100%;
+	width: auto;
+}
+.productImg{
+	padding:5px;
+	width:100%;
+	heigth:auto;
+}
+.mg-left-20px{
+	margin-left: 20px;
+}
+.mg-right-20px{
+	margin-right: 20px;
 }

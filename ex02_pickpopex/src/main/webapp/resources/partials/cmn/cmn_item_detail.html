@@ -7,6 +7,7 @@
  * ==============================================================================
  */
  -->
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 
 <div class="bgGrid"></div>
 	<!-- 상품 상세 S -->
@@ -45,11 +46,14 @@
 				<div class="outer w20 h100">
 					<span class="inner vMid txC icon-pickicon xxx-large gray"></span>
 				</div>
-				<div class="outer w80 h50">
+				<div class="outer w50 h50">
 					<span class="inner vMid txL medium">고급진 빨강 자켓</span>
 				</div>
+				<div class="outer w30 h50">
+					<span class="inner vMid txC icon-priceicon medium green">99,999</span>
+				</div>
 				<div class="outer w50 h50">
-					<span class="inner vMid txR icon-priceicon medium green">99,999</span>
+					<span class="inner vMid txL x-small green">999명의 픽커가 이 상품을<br>픽박스에 담았습니다.</span>
 				</div>
 				<div class="outer w30 h50">
 					<span class="inner vMid txC icon-pointicon medium green">+999</span>
@@ -62,7 +66,7 @@
 			<div class="wrap">
 				<div class="outer pd-10px">
 					<div class="inner vMid txC buyBtn">
-						<span class="wht medium">옵션선택 및 바로구매</span>
+						<span class="wht medium" data-toggle="modal" data-target="#myModal">옵션선택 및 바로구매</span>
 					</div>
 				</div>
 			</div>
@@ -93,10 +97,10 @@
 					<img class="inner vMid userProfile" src="resources/images/sample/sample_profile_user_woman_02_512x512.jpg" alt="...">
 			</div>
 			<!-- 정보 영역 -->
-			<div class="outer w25 mg-tb5px"><span class="inner vMid txL shopId small">유저001</span></div>
-			<div class="outerL w50 fL"><span class="vBot icon-fllwicon small green">9999</span></div>
-			<div class="outerR w10 fL"><span class="vTop banIcon glyphicon glyphicon-ban-circle medium gray"></span></div>
-			<div class="outer w85 h50 fL">
+			<div class="outer w25"><span class="inner vMid txL shopId small">유저001</span></div>
+			<div class="outer w50"><span class="inner vBot txL icon-fllwicon small green">9999</span></div>
+			<div class="outer w10 fL"><span class="inner vTop txR banIcon glyphicon glyphicon-ban-circle medium gray"></span></div>
+			<div class="outer w85 h50">
 					<span class="commentNonOver x-small">여기는 코멘트 영역입니다.여기는 코멘트 영역입니다.여기는 코멘트 영역입니다.여기는 코멘트 영역입니다.</span>
 			</div>
 		</div>
@@ -106,9 +110,9 @@
 				<img class="userProfile" src="resources/images/sample/sample_profile_user_woman_02_512x512.jpg" alt="...">
 			</div>
 			<!-- 정보 영역 -->
-			<div class="outerL w25 fL"><span class="vBot shopId small">유저001</span></div>
-			<div class="outerL w50 fL"><span class="vBot icon-fllwicon small green">9999</span></div>
-			<div class="outerR w10 fL"><span class="vTop banIcon glyphicon glyphicon-ban-circle medium gray"></span></div>
+			<div class="outer w25"><span class="inner vBot txL shopId small">유저001</span></div>
+			<div class="outer w50"><span class="inner vBot txL icon-fllwicon small green">9999</span></div>
+			<div class="outer w10"><span class="inner vTop txR banIcon glyphicon glyphicon-ban-circle medium gray"></span></div>
 			<div class="w85 fL">
 				<span class="w50 h100 fL commentNonOver x-small">
 					<img class="w50 h100 pd-10px fL" src="resources/images/sample/sample_product_woman_top_01_512x512.jpg" alt="...">
@@ -124,11 +128,101 @@
 				<img class="userProfile" src="resources/images/sample/sample_profile_user_woman_02_512x512.jpg" alt="...">
 			</div>
 			<!-- 정보 영역 -->
-			<div class="outerL w25 fL"><span class="vBot shopId small">유저001</span></div>
-			<div class="outerL w50 fL"><span class="vBot icon-fllwicon small green">9999</span></div>
-			<div class="outerR w10 fL"><span class="vTop banIcon glyphicon glyphicon-ban-circle medium gray"></span></div>
+			<div class="outer w25"><span class="inner vBot txL shopId small">유저001</span></div>
+			<div class="outer w50"><span class="inner vBot txL icon-fllwicon small green">9999</span></div>
+			<div class="outer w10"><span class="inner vTop txR banIcon glyphicon glyphicon-ban-circle medium gray"></span></div>
 			<div class="w85 h50 fL">
 					<span class="commentNonOver x-small">여기는 코멘트 영역입니다.여기는 코멘트 영역입니다.여기는 코멘트 영역입니다.여기는 코멘트 영역입니다.여기는 코멘트 영역입니다.여기는 코멘트 영역입니다.여기는 코멘트 영역입니다.여기는 코멘트 영역입니다.여기는 코멘트 영역입니다.여기는 코멘트 영역입니다.여기는 코멘트 영역입니다.여기는 코멘트 영역입니다.</span>
 			</div>
 		</div>
+		<div class="hrap-15">
+		<div class="wrap">
+			<div class="outer txC pd-10px">
+				<div class="inner vMid txC buyBtn">
+					<span class="wht medium">더보기</span>
+				</div>
+			</div>
+		</div>
+	</div>
+	</div>
+	
+	
+	
+	
+	
+	<!-- Modal -->
+	 <div class="modal fade" id="myModal" role="dialog">
+	  <div class="modal-dialog">
+	  
+	    <!-- Modal content-->
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <button type="button" class="close" data-dismiss="modal">&times;</button>
+	        <h4 class="modal-title txC">옵션선택</h4>
+	      </div>
+	      <div class="modal-body hrap-130">
+	      	<div class="wrap">
+		      	<div class="hrap-60">
+		      		<div class="wrap">
+		      			<div class="outerB txC">
+		      				<img class="sizeMapImg" src="resources/images/sample/sample_sizemap_woman_coat_01_512x512.jpg" alt="...">
+						</div>
+		      		</div>
+		      	</div>
+		      	<div class="hrap-80">
+		      		<div class="wrap">
+		      			<div class="outer w40 mg-left-20px">
+		      				<div class="outer h10 w100"><div class="inner txovOuter"><span class="vBot txC small txovInner">상품명ㄴㅇㄹㄴㅇㄹㅇㄴ</span></div></div>
+		      				<div class="outerB h18 w40"><img class="productImg" src="resources/images/sample/sample_profile_user_woman_02_512x512.jpg" art="..."/></div>
+		      				<div class="outer h20 w60"><span class="inner vMid txC x-small green">선택한 상품<br>사이즈정보(cm)</span></div>
+		      				<div class="pdSide-5px">
+		      				<div class="outer h10 w60"><span class="inner vMid txL small">① 총 길이</span></div>
+		      				<div class="outer h10 w40"><span class="inner vMid txR small blue">▼99</span></div>
+		      				<div class="outer h10 w60"><span class="inner vMid txL small">② 목 넓이</span></div>
+		      				<div class="outer h10 w40 fR"><span class="inner vMid txR small blue">▼99</span></div>
+		      				<div class="outer h10 w60"><span class="inner vMid txL small">③ 어깨 넓이</span></div>
+		      				<div class="outer h10 w40 fR"><span class="inner vMid txR small">99</span></div>
+		      				<div class="outer h10 w60"><span class="inner vMid txL small">④ 허리 넓이</span></div>
+		      				<div class="outer h10 w40 fR"><span class="inner vMid txR small">99</span></div>
+		      				<div class="outer h10 w60"><span class="inner vMid txL small">⑤ 밑단 넓이</span></div>
+		      				<div class="outer h10 w40 fR"><span class="inner vMid txR small red">▲99</span></div>
+		      				<div class="outer h10 w60"><span class="inner vMid txL small">⑥ 소매 길이</span></div>
+		      				<div class="outer h10 w40 fR"><span class="inner vMid txR small">99</span></div>
+		      				<div class="outer h10 w60"><span class="inner vMid txL small">⑦ 소매 넓이</span></div>
+		      				<div class="outer h10 w40 fR"><span class="inner vMid txR small">99</span></div>
+		      				</div>
+						</div>
+						<div class="outer w40 fR mg-right-20px">
+		      				<div class="outer h10 w100"><div class="inner txovOuter"><span class="vBot txC small txovInner">상품명ㄴㅇㄹㄴㅇㄹㅇㄴ</span></div></div>
+		      				<div class="outerB h18 w40"><img class="productImg" src="resources/images/sample/sample_profile_user_woman_02_512x512.jpg" art="..."/></div>
+		      				<div class="outer h20 w60"><span class="inner vMid txC x-small green">선택한 상품<br>사이즈정보(cm)</span></div>
+		      				<div class="pdSide-5px">
+		      				<div class="outer h10 w60"><span class="inner vMid txL small">① 총 길이</span></div>
+		      				<div class="outer h10 w40 fR"><span class="inner vMid txR small">99</span></div>
+		      				<div class="outer h10 w60"><span class="inner vMid txL small">② 목 넓이</span></div>
+		      				<div class="outer h10 w40 fR"><span class="inner vMid txR small">99</span></div>
+		      				<div class="outer h10 w60"><span class="inner vMid txL small">③ 어깨 넓이</span></div>
+		      				<div class="outer h10 w40 fR"><span class="inner vMid txR small">99</span></div>
+		      				<div class="outer h10 w60"><span class="inner vMid txL small">④ 허리 넓이</span></div>
+		      				<div class="outer h10 w40 fR"><span class="inner vMid txR small">99</span></div>
+		      				<div class="outer h10 w60"><span class="inner vMid txL small">⑤ 밑단 넓이</span></div>
+		      				<div class="outer h10 w40 fR"><span class="inner vMid txR small">99</span></div>
+		      				<div class="outer h10 w60"><span class="inner vMid txL small">⑥ 소매 길이</span></div>
+		      				<div class="outer h10 w40 fR"><span class="inner vMid txR small">99</span></div>
+		      				<div class="outer h10 w60"><span class="inner vMid txL small">⑦ 소매 넓이</span></div>
+		      				<div class="outer h10 w40 fR"><span class="inner vMid txR small">99</span></div>
+		      				</div>
+						</div>
+		      		</div>
+		      	</div>
+		     </div>
+	      </div>
+	      <div class="modal-footer txC">
+	        <button type="button" class="btn btn-default w30" data-dismiss="modal">닫 기</button>
+	        <button type="button" class="btn btn-default w30" data-dismiss="modal">계산대</button>
+	        <button type="button" class="btn btn-default w30" data-dismiss="modal">바로구매</button>
+	      </div>
+	    </div>
+	    
+	  </div>
 	</div>

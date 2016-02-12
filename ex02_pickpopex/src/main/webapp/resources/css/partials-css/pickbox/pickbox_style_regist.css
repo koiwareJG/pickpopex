@@ -1,0 +1,33 @@
+@CHARSET "UTF-8";
+
+/***********************background-color class*****************************/
+.color1 {background-color: rgb(085, 085, 085);}
+.color2 {background-color: rgb(071, 071, 071);}
+.color3 {background-color: rgb(221, 221, 221);}
+.color4 {background-color: rgb(098, 140, 120);}
+
+.colorWhite {background-color: rgb(255, 255, 255);}
+
+/******************************section1 관련********************************/
+
+#section1 {width: 100%; height: auto;}
+			
+/******************************section2 관련********************************/
+
+#section2 {width: 100%; height: auto;}
+			
+/******************************section3 관련********************************/
+
+#section3 {width: 100%; height: auto;}		
+			
+/******************************section4 관련********************************/
+
+#section4 {width: 100%; height: auto;}
+
+/******************************section5 관련********************************/
+
+#section5 {width: 100%; height: auto;}		
+
+/******************************section6 관련********************************/
+
+#section6 {width: 100%; height: auto;}		

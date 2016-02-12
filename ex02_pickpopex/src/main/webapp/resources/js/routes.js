@@ -22,7 +22,6 @@ define([
 //				(directives/services/filters): ['폴더명/js파일명 확장자']
 			}));
 			//==========================================================================================
-
 			
 			
 			//==========================================================================================
@@ -76,16 +75,25 @@ define([
 				services: [], 
 				filters: []
 			}));
-			
-			
-			
 
+			//==========================================================================================
+			
+			
+			//==========================================================================================
+			//[M003] 체크아웃 메뉴 경로 설정
+			//------------------------------------------------------------------------------------------------------------------------------------------------------------------
+			//체크아웃 > 메인
+			$routeProvider.when('/checkout', routeConfig.config('../partials/checkout/checkout_list.html', 'controllers/checkout/checkout_list', {
+				directives: [], 
+				services: [], 
+				filters: []
+			}));
 			$routeProvider.when('/checkoutList', routeConfig.config('../partials/checkout/checkout_list.html', 'controllers/checkout/checkout_list', {
 				directives: [], 
 				services: [], 
 				filters: []
 			}));
-			//체크아웃 > 체크아웃 목록
+			//체크아웃 > 구매내역 목록
 			$routeProvider.when('/checkoutPurchase', routeConfig.config('../partials/checkout/checkout_purchase.html', 'controllers/checkout/checkout_purchase', {
 				directives: [], 
 				services: [], 
@@ -97,7 +105,7 @@ define([
 				services: [], 
 				filters: []
 			}));
-
+			//==========================================================================================
 			
 			
 			//==========================================================================================
@@ -109,25 +117,25 @@ define([
 				services: [], 
 				filters: []
 			}));
+			//스타일 상세
 			$routeProvider.when('/styleDetail/:contentName', routeConfig.config('../partials/cmn/cmn_style_detail.html', 'controllers/cmn/cmn_style_detail', {
 				directives: [], 
 				services: [], 
 				filters: []
 			}));
-			//common 경로 설정 E
-			
+			//주문확인
 			$routeProvider.when('/cmnOrderConfirm', routeConfig.config('../partials/cmn/cmn_orderConfirm.html', 'controllers/cmn/cmn_orderConfirm', {
 				directives: [], 
 				services: [], 
 				filters: []
 			}));
-			
+			//팝업 인벤토리
 			$routeProvider.when('/cmnPopupInventory', routeConfig.config('../partials/cmn/cmn_popup_inventory.html', 'controllers/cmn/cmn_popup_inventory', {
 				directives: [], 
 				services: [], 
 				filters: []
 			}));
-			
+			//팝모드	
 			$routeProvider.when('/cmnPopmode', routeConfig.config('../partials/cmn/cmn_popmode.html', 'controllers/cmn/cmn_popmode', {
 				directives: [], 
 				services: [], 
