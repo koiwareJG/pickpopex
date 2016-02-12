@@ -28,7 +28,8 @@ define([], function () {
 		
 		$scope.modalPopup = function(){
 			$("#myModal").modal()
-		}		
+		}
+		
 		console.log("cmn_item_detail.js / define() / _contoller() : end");
 	}
 	

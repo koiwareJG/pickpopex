@@ -50,7 +50,6 @@ define([
 					if(event != null){
 							if($(event.target).data('dismiss') == 'modal'){
 							    window.location.reload();
-							    alert('reload')
 							}
 						}
 					
