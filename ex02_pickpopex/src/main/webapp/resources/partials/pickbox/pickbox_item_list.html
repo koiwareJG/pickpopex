@@ -11,7 +11,7 @@
  <div class="contents">
 	
 	<div class="wrapper w100">
-		<div class="hrap-35">
+		<div class="hrap-35" >
 			<div class="wrap">
 				<div class="backImgArea">
 					<div class="backImg"><img class="w100 h100 blur" ng-src="resources/images/sample/sample_profile_user_woman_02_512x512.jpg"></div>
@@ -73,7 +73,8 @@
 				</div>
 			</div>
 		</div>
-		<div class="wrapper w100" ng-repeat="x in myData" style="margin-bottom: 3%;">
+		<!--  삭제 금지 : 추후 ng-repeat(폰에서 적용 X) 문제 해결후 사용 -->
+		<!-- <div class="wrapper w100" ng-repeat="x in myData" style="margin-bottom: 3%;">
 			<div class="hrap-10">
 				<div class="wrap">
 					<div class="outer">
@@ -121,8 +122,203 @@
 					</div>
 				</div>
 			</div>	
+		</div> -->
+		<div class="wrapper w100" style="margin-bottom: 3%;">
+			<div class="hrap-10">
+				<div class="wrap">
+					<div class="outer">
+						<div class="inner h100 vMid bgWht b">
+							<span class="glyphicon glyphicon-folder-close groupIcon gray fL w10"></span>
+							<span class="classification small fL">미분류</span>
+						</div>
+					</div>
+				</div>
+			</div>	
+			<div class="hrap-35" ng-click="goPage('cmnItemDetail/pid')">
+				<div class="wrap">
+					<div class="outer">
+						<div class="inner h100 vMid list_userItemInfor bgWht">
+							<div class="w30 h90 list_userItemImg fL">
+								<img class="w100" src="resources/images/sample/coat.png">
+							</div>
+							<div class="w60 h25 list_userItemName fL">
+								<span class="fL small">상품 이름 구역입니다.</span>
+							</div>
+							<div class="w30 h25 list_userItemPrice fL vBot">
+								<span class="icon-priceicon small fL green"></span>
+								<span class="fL small">82,000</span>
+							</div>
+							<div class="w18 h50 list_buyBtn fL vBot">
+								<img class="w100" ng-src="resources/images/sample/pickbox/buyBtn.png">
+							</div>
+							<div class="w18 h50 list_pickBtn fL vBot">
+								<img class="w100" ng-src="resources/images/sample/pickbox/pickBtn.png">
+								<span class="list_pickCnt small green">95</span>
+							</div>
+							<div class="w8 h23 list_userImg">
+								<img class="w100 h100 img-circle" ng-src="resources/images/sample/sample_profile_user_woman_02_512x512.jpg">
+							</div>
+							<div class="w20 h20 list_userId txL">
+								<span class="small vMid">koikoiko</span>
+							</div>
+							<div class="w20 h15 list_userF txL">
+								<span class="icon-fllwicon x-small green vTop"></span>
+								<span class=" x-small vTop">172</span>
+							</div>
+					
+							
+						</div>
+					</div>
+				</div>
+			</div>	
 		</div>
-		
+		<div class="wrapper w100" style="margin-bottom: 3%;">
+			<div class="hrap-10">
+				<div class="wrap">
+					<div class="outer">
+						<div class="inner h100 vMid bgWht b">
+							<span class="glyphicon glyphicon-folder-close groupIcon gray fL w10"></span>
+							<span class="classification small fL">미분류</span>
+						</div>
+					</div>
+				</div>
+			</div>	
+			<div class="hrap-35" ng-click="goPage('cmnItemDetail/pid')">
+				<div class="wrap">
+					<div class="outer">
+						<div class="inner h100 vMid list_userItemInfor bgWht">
+							<div class="w30 h90 list_userItemImg fL">
+								<img class="w100" src="resources/images/sample/shoes.png">
+							</div>
+							<div class="w60 h25 list_userItemName fL">
+								<span class="fL small">상품 이름 구역입니다.</span>
+							</div>
+							<div class="w30 h25 list_userItemPrice fL vBot">
+								<span class="icon-priceicon small fL green"></span>
+								<span class="fL small">82,000</span>
+							</div>
+							<div class="w18 h50 list_buyBtn fL vBot">
+								<img class="w100" ng-src="resources/images/sample/pickbox/buyBtn.png">
+							</div>
+							<div class="w18 h50 list_pickBtn fL vBot">
+								<img class="w100" ng-src="resources/images/sample/pickbox/pickBtn.png">
+								<span class="list_pickCnt small green">95</span>
+							</div>
+							<div class="w8 h23 list_userImg">
+								<img class="w100 h100 img-circle" ng-src="resources/images/sample/sample_profile_user_woman_02_512x512.jpg">
+							</div>
+							<div class="w20 h20 list_userId txL">
+								<span class="small vMid">koikoiko</span>
+							</div>
+							<div class="w20 h15 list_userF txL">
+								<span class="icon-fllwicon x-small green vTop"></span>
+								<span class=" x-small vTop">172</span>
+							</div>
+					
+							
+						</div>
+					</div>
+				</div>
+			</div>	
+		</div>
+		<div class="wrapper w100" style="margin-bottom: 3%;">
+			<div class="hrap-10">
+				<div class="wrap">
+					<div class="outer">
+						<div class="inner h100 vMid bgWht b">
+							<span class="glyphicon glyphicon-folder-close groupIcon gray fL w10"></span>
+							<span class="classification small fL">미분류</span>
+						</div>
+					</div>
+				</div>
+			</div>	
+			<div class="hrap-35" ng-click="goPage('cmnItemDetail/pid')">
+				<div class="wrap">
+					<div class="outer">
+						<div class="inner h100 vMid list_userItemInfor bgWht">
+							<div class="w30 h90 list_userItemImg fL">
+								<img class="w100" src="resources/images/sample/top.png">
+							</div>
+							<div class="w60 h25 list_userItemName fL">
+								<span class="fL small">상품 이름 구역입니다.</span>
+							</div>
+							<div class="w30 h25 list_userItemPrice fL vBot">
+								<span class="icon-priceicon small fL green"></span>
+								<span class="fL small">82,000</span>
+							</div>
+							<div class="w18 h50 list_buyBtn fL vBot">
+								<img class="w100" ng-src="resources/images/sample/pickbox/buyBtn.png">
+							</div>
+							<div class="w18 h50 list_pickBtn fL vBot">
+								<img class="w100" ng-src="resources/images/sample/pickbox/pickBtn.png">
+								<span class="list_pickCnt small green">95</span>
+							</div>
+							<div class="w8 h23 list_userImg">
+								<img class="w100 h100 img-circle" ng-src="resources/images/sample/sample_profile_user_woman_02_512x512.jpg">
+							</div>
+							<div class="w20 h20 list_userId txL">
+								<span class="small vMid">koikoiko</span>
+							</div>
+							<div class="w20 h15 list_userF txL">
+								<span class="icon-fllwicon x-small green vTop"></span>
+								<span class=" x-small vTop">172</span>
+							</div>
+					
+							
+						</div>
+					</div>
+				</div>
+			</div>	
+		</div>
+		<div class="wrapper w100" style="margin-bottom: 3%;">
+			<div class="hrap-10">
+				<div class="wrap">
+					<div class="outer">
+						<div class="inner h100 vMid bgWht b">
+							<span class="glyphicon glyphicon-folder-close groupIcon gray fL w10"></span>
+							<span class="classification small fL">미분류</span>
+						</div>
+					</div>
+				</div>
+			</div>	
+			<div class="hrap-35" ng-click="goPage('cmnItemDetail/pid')">
+				<div class="wrap">
+					<div class="outer">
+						<div class="inner h100 vMid list_userItemInfor bgWht">
+							<div class="w30 h90 list_userItemImg fL">
+								<img class="w100" src="resources/images/sample/coat.png">
+							</div>
+							<div class="w60 h25 list_userItemName fL">
+								<span class="fL small">상품 이름 구역입니다.</span>
+							</div>
+							<div class="w30 h25 list_userItemPrice fL vBot">
+								<span class="icon-priceicon small fL green"></span>
+								<span class="fL small">82,000</span>
+							</div>
+							<div class="w18 h50 list_buyBtn fL vBot">
+								<img class="w100" ng-src="resources/images/sample/pickbox/buyBtn.png">
+							</div>
+							<div class="w18 h50 list_pickBtn fL vBot">
+								<img class="w100" ng-src="resources/images/sample/pickbox/pickBtn.png">
+								<span class="list_pickCnt small green">95</span>
+							</div>
+							<div class="w8 h23 list_userImg">
+								<img class="w100 h100 img-circle" ng-src="resources/images/sample/sample_profile_user_woman_02_512x512.jpg">
+							</div>
+							<div class="w20 h20 list_userId txL">
+								<span class="small vMid">koikoiko</span>
+							</div>
+							<div class="w20 h15 list_userF txL">
+								<span class="icon-fllwicon x-small green vTop"></span>
+								<span class=" x-small vTop">172</span>
+							</div>
+					
+							
+						</div>
+					</div>
+				</div>
+			</div>	
+		</div>
 	</div>
 
 	

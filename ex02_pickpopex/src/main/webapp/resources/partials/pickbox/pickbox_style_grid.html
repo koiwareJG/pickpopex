@@ -92,7 +92,49 @@
 	</div>
 	
 	<!-- 요약 보기 구역 -->	
-	<div ng-repeat="x in myData" class="wrapper w45 bgWht b" style="margin: 3% 0 0 3%;">
+	<!-- <div ng-repeat="x in myData" class="wrapper w45 bgWht b" style="margin: 3% 0 0 3%;">
+		분류
+		<div class="hrap-25">
+			<div class="wrap">
+				<div class="outerL">
+					<div class="inner w100" style="padding: 5%;">
+						추후 src를 ng-src로 바꿀것
+						<img class="w20 fL img-circle" src="resources/images/sample/sample_profile_user_woman_02_512x512.jpg">
+						<div class="w40 fL id small" style="padding:5%;">koikoiko</div>
+						<div class="w40 x-small fL" style="padding: 8% 0% 5% 10%;"><span class="icon-fllwicon green"></span><span class="x-small">172</span></div>
+					</div>	
+				</div>
+			</div>
+		</div>
+		
+		관심 스타일 이미지
+		<div class="hrap-100">
+			<div class="wrap">
+				<div class="outerB w50 h50"><img class="itemImg" src="resources/images/sample/sample_product_woman_top_01_512x512.jpg" alt="..."></div>
+				<div class="outerB w50 h100 fR"><img class="itemImg" src="resources/images/sample/sample_product_woman_top_01_512x1024.jpg" alt="..."></div>
+				<div class="outerB w50 h50"><img class="itemImg" src="resources/images/sample/sample_product_woman_top_01_512x512.jpg" alt="..."></div>
+			</div>
+		</div>
+			
+		하단 버튼
+		<div class="hrap-20">
+			<div class="wrap">
+				<div class="outer w50 ">
+					<div class="inner txC vMid small">
+						<span class="glyphicon glyphicon-heart green"></span>
+						<span class="likeCnt gray">5</span>
+					</div>
+				</div>
+				<div class="outer w50 ">
+					<div class="inner txC vMid small">
+						<span class="glyphicon glyphicon-comment green"></span>
+						<span class="commentCnt gray">35</span>
+					</div>
+				</div>
+			</div>
+		</div>			
+	</div> -->
+	<div class="wrapper w45 bgWht b" style="margin: 3% 0 0 3%;">
 		<!-- 분류 -->
 		<div class="hrap-25">
 			<div class="wrap">
@@ -108,7 +150,217 @@
 		</div>
 		
 		<!-- 관심 스타일 이미지 -->
-		<div class="hrap-100">
+		<div class="hrap-100" ng-click="goPage('cmnStyleDetail/cid')">
+			<div class="wrap">
+				<div class="outerB w50 h50"><img class="itemImg" src="resources/images/sample/sample_product_woman_top_01_512x512.jpg" alt="..."></div>
+				<div class="outerB w50 h100 fR"><img class="itemImg" src="resources/images/sample/sample_product_woman_top_01_512x1024.jpg" alt="..."></div>
+				<div class="outerB w50 h50"><img class="itemImg" src="resources/images/sample/sample_product_woman_top_01_512x512.jpg" alt="..."></div>
+			</div>
+		</div>
+			
+		<!-- 하단 버튼 -->
+		<div class="hrap-20">
+			<div class="wrap">
+				<div class="outer w50 ">
+					<div class="inner txC vMid small">
+						<span class="glyphicon glyphicon-heart green"></span>
+						<span class="likeCnt gray">5</span>
+					</div>
+				</div>
+				<div class="outer w50 ">
+					<div class="inner txC vMid small">
+						<span class="glyphicon glyphicon-comment green"></span>
+						<span class="commentCnt gray">35</span>
+					</div>
+				</div>
+			</div>
+		</div>			
+	</div>
+	<div class="wrapper w45 bgWht b" style="margin: 3% 0 0 3%;">
+		<!-- 분류 -->
+		<div class="hrap-25">
+			<div class="wrap">
+				<div class="outerL">
+					<div class="inner w100" style="padding: 5%;">
+						<!-- 추후 src를 ng-src로 바꿀것 -->
+						<img class="w20 fL img-circle" src="resources/images/sample/sample_profile_user_woman_02_512x512.jpg">
+						<div class="w40 fL id small" style="padding:5%;">koikoiko</div>
+						<div class="w40 x-small fL" style="padding: 8% 0% 5% 10%;"><span class="icon-fllwicon green"></span><span class="x-small">172</span></div>
+					</div>	
+				</div>
+			</div>
+		</div>
+		
+		<!-- 관심 스타일 이미지 -->
+		<div class="hrap-100" ng-click="goPage('cmnStyleDetail/cid')">
+			<div class="wrap">
+				<div class="outerB w50 h50"><img class="itemImg" src="resources/images/sample/sample_product_woman_top_01_512x512.jpg" alt="..."></div>
+				<div class="outerB w50 h100 fR"><img class="itemImg" src="resources/images/sample/sample_product_woman_top_01_512x1024.jpg" alt="..."></div>
+				<div class="outerB w50 h50"><img class="itemImg" src="resources/images/sample/sample_product_woman_top_01_512x512.jpg" alt="..."></div>
+			</div>
+		</div>
+			
+		<!-- 하단 버튼 -->
+		<div class="hrap-20">
+			<div class="wrap">
+				<div class="outer w50 ">
+					<div class="inner txC vMid small">
+						<span class="glyphicon glyphicon-heart green"></span>
+						<span class="likeCnt gray">5</span>
+					</div>
+				</div>
+				<div class="outer w50 ">
+					<div class="inner txC vMid small">
+						<span class="glyphicon glyphicon-comment green"></span>
+						<span class="commentCnt gray">35</span>
+					</div>
+				</div>
+			</div>
+		</div>			
+	</div>
+	<div class="wrapper w45 bgWht b" style="margin: 3% 0 0 3%;">
+		<!-- 분류 -->
+		<div class="hrap-25">
+			<div class="wrap">
+				<div class="outerL">
+					<div class="inner w100" style="padding: 5%;">
+						<!-- 추후 src를 ng-src로 바꿀것 -->
+						<img class="w20 fL img-circle" src="resources/images/sample/sample_profile_user_woman_02_512x512.jpg">
+						<div class="w40 fL id small" style="padding:5%;">koikoiko</div>
+						<div class="w40 x-small fL" style="padding: 8% 0% 5% 10%;"><span class="icon-fllwicon green"></span><span class="x-small">172</span></div>
+					</div>	
+				</div>
+			</div>
+		</div>
+		
+		<!-- 관심 스타일 이미지 -->
+		<div class="hrap-100" ng-click="goPage('cmnStyleDetail/cid')">
+			<div class="wrap">
+				<div class="outerB w50 h50"><img class="itemImg" src="resources/images/sample/sample_product_woman_top_01_512x512.jpg" alt="..."></div>
+				<div class="outerB w50 h100 fR"><img class="itemImg" src="resources/images/sample/sample_product_woman_top_01_512x1024.jpg" alt="..."></div>
+				<div class="outerB w50 h50"><img class="itemImg" src="resources/images/sample/sample_product_woman_top_01_512x512.jpg" alt="..."></div>
+			</div>
+		</div>
+			
+		<!-- 하단 버튼 -->
+		<div class="hrap-20">
+			<div class="wrap">
+				<div class="outer w50 ">
+					<div class="inner txC vMid small">
+						<span class="glyphicon glyphicon-heart green"></span>
+						<span class="likeCnt gray">5</span>
+					</div>
+				</div>
+				<div class="outer w50 ">
+					<div class="inner txC vMid small">
+						<span class="glyphicon glyphicon-comment green"></span>
+						<span class="commentCnt gray">35</span>
+					</div>
+				</div>
+			</div>
+		</div>			
+	</div>
+	<div class="wrapper w45 bgWht b" style="margin: 3% 0 0 3%;">
+		<!-- 분류 -->
+		<div class="hrap-25">
+			<div class="wrap">
+				<div class="outerL">
+					<div class="inner w100" style="padding: 5%;">
+						<!-- 추후 src를 ng-src로 바꿀것 -->
+						<img class="w20 fL img-circle" src="resources/images/sample/sample_profile_user_woman_02_512x512.jpg">
+						<div class="w40 fL id small" style="padding:5%;">koikoiko</div>
+						<div class="w40 x-small fL" style="padding: 8% 0% 5% 10%;"><span class="icon-fllwicon green"></span><span class="x-small">172</span></div>
+					</div>	
+				</div>
+			</div>
+		</div>
+		
+		<!-- 관심 스타일 이미지 -->
+		<div class="hrap-100" ng-click="goPage('cmnStyleDetail/cid')">
+			<div class="wrap">
+				<div class="outerB w50 h50"><img class="itemImg" src="resources/images/sample/sample_product_woman_top_01_512x512.jpg" alt="..."></div>
+				<div class="outerB w50 h100 fR"><img class="itemImg" src="resources/images/sample/sample_product_woman_top_01_512x1024.jpg" alt="..."></div>
+				<div class="outerB w50 h50"><img class="itemImg" src="resources/images/sample/sample_product_woman_top_01_512x512.jpg" alt="..."></div>
+			</div>
+		</div>
+			
+		<!-- 하단 버튼 -->
+		<div class="hrap-20">
+			<div class="wrap">
+				<div class="outer w50 ">
+					<div class="inner txC vMid small">
+						<span class="glyphicon glyphicon-heart green"></span>
+						<span class="likeCnt gray">5</span>
+					</div>
+				</div>
+				<div class="outer w50 ">
+					<div class="inner txC vMid small">
+						<span class="glyphicon glyphicon-comment green"></span>
+						<span class="commentCnt gray">35</span>
+					</div>
+				</div>
+			</div>
+		</div>			
+	</div>
+	<div class="wrapper w45 bgWht b" style="margin: 3% 0 0 3%;">
+		<!-- 분류 -->
+		<div class="hrap-25">
+			<div class="wrap">
+				<div class="outerL">
+					<div class="inner w100" style="padding: 5%;">
+						<!-- 추후 src를 ng-src로 바꿀것 -->
+						<img class="w20 fL img-circle" src="resources/images/sample/sample_profile_user_woman_02_512x512.jpg">
+						<div class="w40 fL id small" style="padding:5%;">koikoiko</div>
+						<div class="w40 x-small fL" style="padding: 8% 0% 5% 10%;"><span class="icon-fllwicon green"></span><span class="x-small">172</span></div>
+					</div>	
+				</div>
+			</div>
+		</div>
+		
+		<!-- 관심 스타일 이미지 -->
+		<div class="hrap-100" ng-click="goPage('cmnStyleDetail/cid')">
+			<div class="wrap">
+				<div class="outerB w50 h50"><img class="itemImg" src="resources/images/sample/sample_product_woman_top_01_512x512.jpg" alt="..."></div>
+				<div class="outerB w50 h100 fR"><img class="itemImg" src="resources/images/sample/sample_product_woman_top_01_512x1024.jpg" alt="..."></div>
+				<div class="outerB w50 h50"><img class="itemImg" src="resources/images/sample/sample_product_woman_top_01_512x512.jpg" alt="..."></div>
+			</div>
+		</div>
+			
+		<!-- 하단 버튼 -->
+		<div class="hrap-20">
+			<div class="wrap">
+				<div class="outer w50 ">
+					<div class="inner txC vMid small">
+						<span class="glyphicon glyphicon-heart green"></span>
+						<span class="likeCnt gray">5</span>
+					</div>
+				</div>
+				<div class="outer w50 ">
+					<div class="inner txC vMid small">
+						<span class="glyphicon glyphicon-comment green"></span>
+						<span class="commentCnt gray">35</span>
+					</div>
+				</div>
+			</div>
+		</div>			
+	</div>
+	<div class="wrapper w45 bgWht b" style="margin: 3% 0 0 3%;">
+		<!-- 분류 -->
+		<div class="hrap-25">
+			<div class="wrap">
+				<div class="outerL">
+					<div class="inner w100" style="padding: 5%;">
+						<!-- 추후 src를 ng-src로 바꿀것 -->
+						<img class="w20 fL img-circle" src="resources/images/sample/sample_profile_user_woman_02_512x512.jpg">
+						<div class="w40 fL id small" style="padding:5%;">koikoiko</div>
+						<div class="w40 x-small fL" style="padding: 8% 0% 5% 10%;"><span class="icon-fllwicon green"></span><span class="x-small">172</span></div>
+					</div>	
+				</div>
+			</div>
+		</div>
+		
+		<!-- 관심 스타일 이미지 -->
+		<div class="hrap-100" ng-click="goPage('cmnStyleDetail/cid')">
 			<div class="wrap">
 				<div class="outerB w50 h50"><img class="itemImg" src="resources/images/sample/sample_product_woman_top_01_512x512.jpg" alt="..."></div>
 				<div class="outerB w50 h100 fR"><img class="itemImg" src="resources/images/sample/sample_product_woman_top_01_512x1024.jpg" alt="..."></div>

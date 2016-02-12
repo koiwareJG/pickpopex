@@ -82,7 +82,8 @@
 		</div>
 		
 	<!-- grid view 영역 -->
-	<div ng-repeat="x in myData" class="wrapper w31" style="margin:0.5% 0% 0.5% 1.7%;">
+	<!--  삭제 금지 : 추후 ng-repeat(폰에서 적용 X) 문제 해결후 사용 -->
+	<!-- <div ng-repeat="x in myData" class="wrapper w31" style="margin:0.5% 0% 0.5% 1.7%;">
 		<div class="hrap-200">
 			<div class="wrap">
 				<div class="outer">
@@ -146,36 +147,395 @@
 				</div>
 			</div>
 		</div>
-	</div>	
-	<!-- <div ng-repeat="x in myData" class="wrapper w31 bgWht b" style="margin: 1% 1% 1% 1%;">
-		분류
-		<div class="hrap-25" style="border-bottom: thin #adadad solid;">
-			<div class="outerL">
-				<div class="vMid small" style="padding-left: 5%;">
-					<span class="glyphicon glyphicon-folder-close groupIcon">
-					<span class="groupName blk"> {{x.conType}}</span></span>
+	</div>	 -->
+	<div class="wrapper w31" style="margin:0.5% 0% 0.5% 1.7%;" >
+		<div class="hrap-200" ng-click="goPage('cmnItemDetail/pid')">
+			<div class="wrap">
+				<div class="outer">
+					<div class="inner vTop bgWht b">
+						<div class="hrap-25 bBot vTop">
+							<span class="glyphicon glyphicon-folder-close x-small gray classIcon"></span>								
+							<span class="x-small txC">분류 영역 입니다.</span>								
+						</div>
+						<div class="hrap-90">
+							<div class="wrap">
+								<div class="outer">
+									<div class="inner txC vMid">
+										<div class="w93 h93 gridItemImg">
+											<img class="w100" ng-src="resources/images/sample/top.png">
+										</div>	
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="hrap-20">
+							<div class="wrap">
+								<div class="outer">
+									<div class="inner txC vTop">
+										<span class="small">상품 이름 구역 입니다.</span>	
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="hrap-20">
+							<div class="wrap">
+								<div class="outer">
+									<div class="inner txR vTop">
+										<span class="icon-priceicon small" style="color:#408080; "></span>
+										<span class="small">82,000원</span>		
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="hrap-45">
+							<div class="wrap">
+								<div class="outer">
+									<div class="inner w50 txC vMid">
+										<img class="w70 h70" ng-src="resources/images/sample/pickbox/buyBtn.png">
+									</div>
+									<div class="inner w50 txC vMid">
+										<img class="w70 h70" ng-src="resources/images/sample/pickbox/pickBtn.png">
+									</div>
+								</div>
+							</div>
+						
+							<div class="wrap"> 
+								<div class="outer">
+									<div class="pickCnt inner w30 h100 vTop txC">
+										<span class="x-small green">95</span>
+									</div>
+								</div>
+							</div>
+						
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
-		<div class="hrap-100 txC">
-			<img class="w90" ng-src="{{x.imgPath}}" style="margin: 3% 0 0 0;">
+	</div>
+	<div class="wrapper w31" style="margin:0.5% 0% 0.5% 1.7%;">
+		<div class="hrap-200" ng-click="goPage('cmnItemDetail/pid')">
+			<div class="wrap">
+				<div class="outer">
+					<div class="inner vTop bgWht b">
+						<div class="hrap-25 bBot vTop">
+							<span class="glyphicon glyphicon-folder-close x-small gray classIcon"></span>								
+							<span class="x-small txC">분류 영역 입니다.</span>								
+						</div>
+						<div class="hrap-90">
+							<div class="wrap">
+								<div class="outer">
+									<div class="inner txC vMid">
+										<div class="w93 h93 gridItemImg">
+											<img class="w100" ng-src="resources/images/sample/shoes.png">
+										</div>	
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="hrap-20">
+							<div class="wrap">
+								<div class="outer">
+									<div class="inner txC vTop">
+										<span class="small">상품 이름 구역 입니다.</span>	
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="hrap-20">
+							<div class="wrap">
+								<div class="outer">
+									<div class="inner txR vTop">
+										<span class="icon-priceicon small" style="color:#408080; "></span>
+										<span class="small">82,000원</span>		
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="hrap-45">
+							<div class="wrap">
+								<div class="outer">
+									<div class="inner w50 txC vMid">
+										<img class="w70 h70" ng-src="resources/images/sample/pickbox/buyBtn.png">
+									</div>
+									<div class="inner w50 txC vMid">
+										<img class="w70 h70" ng-src="resources/images/sample/pickbox/pickBtn.png">
+									</div>
+								</div>
+							</div>
+						
+							<div class="wrap"> 
+								<div class="outer">
+									<div class="pickCnt inner w30 h100 vTop txC">
+										<span class="x-small green">95</span>
+									</div>
+								</div>
+							</div>
+						
+						</div>
+					</div>
+				</div>
+			</div>
 		</div>
-		상품 이름
-		<div class="hrap-20 small">{{x.productName}}</div>
-		상품 가격
-		<div class="hrap-20 small txR">
-			<span class="icon-priceicon" style="color:#408080; "></span>
-			<span>{{x.price}}</span>
+	</div>	
+	<div class="wrapper w31" style="margin:0.5% 0% 0.5% 1.7%;">
+		<div class="hrap-200" ng-click="goPage('cmnItemDetail/pid')">
+			<div class="wrap">
+				<div class="outer">
+					<div class="inner vTop bgWht b">
+						<div class="hrap-25 bBot vTop">
+							<span class="glyphicon glyphicon-folder-close x-small gray classIcon"></span>								
+							<span class="x-small txC">분류 영역 입니다.</span>								
+						</div>
+						<div class="hrap-90">
+							<div class="wrap">
+								<div class="outer">
+									<div class="inner txC vMid">
+										<div class="w93 h93 gridItemImg">
+											<img class="w100" ng-src="resources/images/sample/coat.png">
+										</div>	
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="hrap-20">
+							<div class="wrap">
+								<div class="outer">
+									<div class="inner txC vTop">
+										<span class="small">상품 이름 구역 입니다.</span>	
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="hrap-20">
+							<div class="wrap">
+								<div class="outer">
+									<div class="inner txR vTop">
+										<span class="icon-priceicon small" style="color:#408080; "></span>
+										<span class="small">82,000원</span>		
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="hrap-45">
+							<div class="wrap">
+								<div class="outer">
+									<div class="inner w50 txC vMid">
+										<img class="w70 h70" ng-src="resources/images/sample/pickbox/buyBtn.png">
+									</div>
+									<div class="inner w50 txC vMid">
+										<img class="w70 h70" ng-src="resources/images/sample/pickbox/pickBtn.png">
+									</div>
+								</div>
+							</div>
+						
+							<div class="wrap"> 
+								<div class="outer">
+									<div class="pickCnt inner w30 h100 vTop txC">
+										<span class="x-small green">95</span>
+									</div>
+								</div>
+							</div>
+						
+						</div>
+					</div>
+				</div>
+			</div>
 		</div>
-		BuyBtn
-		<div class="hrap-50 w50 fL">
-			<img class="w100" ng-src="resources/images/sample/pickbox/buyBtn.png">
+	</div>	
+	<div class="wrapper w31" style="margin:0.5% 0% 0.5% 1.7%;">
+		<div class="hrap-200" ng-click="goPage('cmnItemDetail/pid')">
+			<div class="wrap">
+				<div class="outer">
+					<div class="inner vTop bgWht b">
+						<div class="hrap-25 bBot vTop">
+							<span class="glyphicon glyphicon-folder-close x-small gray classIcon"></span>								
+							<span class="x-small txC">분류 영역 입니다.</span>								
+						</div>
+						<div class="hrap-90">
+							<div class="wrap">
+								<div class="outer">
+									<div class="inner txC vMid">
+										<div class="w93 h93 gridItemImg">
+											<img class="w100" ng-src="resources/images/sample/top.png">
+										</div>	
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="hrap-20">
+							<div class="wrap">
+								<div class="outer">
+									<div class="inner txC vTop">
+										<span class="small">상품 이름 구역 입니다.</span>	
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="hrap-20">
+							<div class="wrap">
+								<div class="outer">
+									<div class="inner txR vTop">
+										<span class="icon-priceicon small" style="color:#408080; "></span>
+										<span class="small">82,000원</span>		
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="hrap-45">
+							<div class="wrap">
+								<div class="outer">
+									<div class="inner w50 txC vMid">
+										<img class="w70 h70" ng-src="resources/images/sample/pickbox/buyBtn.png">
+									</div>
+									<div class="inner w50 txC vMid">
+										<img class="w70 h70" ng-src="resources/images/sample/pickbox/pickBtn.png">
+									</div>
+								</div>
+							</div>
+						
+							<div class="wrap"> 
+								<div class="outer">
+									<div class="pickCnt inner w30 h100 vTop txC">
+										<span class="x-small green">95</span>
+									</div>
+								</div>
+							</div>
+						
+						</div>
+					</div>
+				</div>
+			</div>
 		</div>
-		pickBtn
-		<div class="hrap-50 w50 txC">
-			<img class="w100" ng-src="resources/images/sample/pickbox/pickBtn.png">
-			<span class="">95</span>
+	</div>	
+	<div class="wrapper w31" style="margin:0.5% 0% 0.5% 1.7%;">
+		<div class="hrap-200" ng-click="goPage('cmnItemDetail/pid')">
+			<div class="wrap">
+				<div class="outer">
+					<div class="inner vTop bgWht b">
+						<div class="hrap-25 bBot vTop">
+							<span class="glyphicon glyphicon-folder-close x-small gray classIcon"></span>								
+							<span class="x-small txC">분류 영역 입니다.</span>								
+						</div>
+						<div class="hrap-90">
+							<div class="wrap">
+								<div class="outer">
+									<div class="inner txC vMid">
+										<div class="w93 h93 gridItemImg">
+											<img class="w100" ng-src="resources/images/sample/shoes.png">
+										</div>	
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="hrap-20">
+							<div class="wrap">
+								<div class="outer">
+									<div class="inner txC vTop">
+										<span class="small">상품 이름 구역 입니다.</span>	
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="hrap-20">
+							<div class="wrap">
+								<div class="outer">
+									<div class="inner txR vTop">
+										<span class="icon-priceicon small" style="color:#408080; "></span>
+										<span class="small">82,000원</span>		
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="hrap-45">
+							<div class="wrap">
+								<div class="outer">
+									<div class="inner w50 txC vMid">
+										<img class="w70 h70" ng-src="resources/images/sample/pickbox/buyBtn.png">
+									</div>
+									<div class="inner w50 txC vMid">
+										<img class="w70 h70" ng-src="resources/images/sample/pickbox/pickBtn.png">
+									</div>
+								</div>
+							</div>
+						
+							<div class="wrap"> 
+								<div class="outer">
+									<div class="pickCnt inner w30 h100 vTop txC">
+										<span class="x-small green">95</span>
+									</div>
+								</div>
+							</div>
+						
+						</div>
+					</div>
+				</div>
+			</div>
 		</div>
-					
-	</div> -->
+	</div>	
+	<div class="wrapper w31" style="margin:0.5% 0% 0.5% 1.7%;">
+		<div class="hrap-200" ng-click="goPage('cmnItemDetail/pid')">
+			<div class="wrap">
+				<div class="outer">
+					<div class="inner vTop bgWht b">
+						<div class="hrap-25 bBot vTop">
+							<span class="glyphicon glyphicon-folder-close x-small gray classIcon"></span>								
+							<span class="x-small txC">분류 영역 입니다.</span>								
+						</div>
+						<div class="hrap-90">
+							<div class="wrap">
+								<div class="outer">
+									<div class="inner txC vMid">
+										<div class="w93 h93 gridItemImg">
+											<img class="w100" ng-src="resources/images/sample/coat.png">
+										</div>	
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="hrap-20">
+							<div class="wrap">
+								<div class="outer">
+									<div class="inner txC vTop">
+										<span class="small">상품 이름 구역 입니다.</span>	
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="hrap-20">
+							<div class="wrap">
+								<div class="outer">
+									<div class="inner txR vTop">
+										<span class="icon-priceicon small" style="color:#408080; "></span>
+										<span class="small">82,000원</span>		
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="hrap-45">
+							<div class="wrap">
+								<div class="outer">
+									<div class="inner w50 txC vMid">
+										<img class="w70 h70" ng-src="resources/images/sample/pickbox/buyBtn.png">
+									</div>
+									<div class="inner w50 txC vMid">
+										<img class="w70 h70" ng-src="resources/images/sample/pickbox/pickBtn.png">
+									</div>
+								</div>
+							</div>
+						
+							<div class="wrap"> 
+								<div class="outer">
+									<div class="pickCnt inner w30 h100 vTop txC">
+										<span class="x-small green">95</span>
+									</div>
+								</div>
+							</div>
+						
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>		
  </div>
