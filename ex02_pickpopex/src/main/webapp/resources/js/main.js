@@ -31,7 +31,8 @@ requirejs.config({
 		'jquery': '../lib/jquery/jquery-1.12.0.min',
 		'jquery-ui': '../lib/jquery/jquery-ui-1.10.2.min',
 		'angular': '../lib/angular/angular',
-		'library': '../lib'
+		'library': '../lib',
+		'bxslider': '../lib/jquery/jquery.bxslider'
 	},
 	
 /*

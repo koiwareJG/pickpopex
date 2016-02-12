@@ -10,14 +10,14 @@
 
 console.log("cmn_item_detail.js : loading start");
 
-define([], function () {
+define(['bxslider'], function () {
 	console.log("cmn_item_detail.js / define() : start");
 	
 	//컨트롤러 선언
 	function _controller($scope, $http, $routeParams) {
 		console.log("cmn_item_detail.js / define() / _contoller() : start");
 		//CSS 설정
-		$scope.$emit('updateCSS', ['resources/css/partials-css/marketplace/marketplace_list.css', 'resources/css/partials-css/cmn/cmn_item_detail.css']);
+		$scope.$emit('updateCSS', ['resources/css/bxslider/jquery.bxslider.css','resources/css/partials-css/marketplace/marketplace_list.css', 'resources/css/partials-css/cmn/cmn_item_detail.css']);
 		
 //		alert($routeParams.productName);
 		
@@ -29,6 +29,12 @@ define([], function () {
 		$scope.modalPopup = function(){
 			$("#myModal").modal()
 		}
+		
+		$('.bxslider').bxSlider({
+			  mode: 'horizontal',
+			  pager: true,
+			  captions: false
+			});
 		
 		console.log("cmn_item_detail.js / define() / _contoller() : end");
 	}
