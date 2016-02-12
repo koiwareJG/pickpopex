@@ -3,3 +3,6 @@
 .gridContents{margin: 1% 0 0 1%;}
 .gridContents .classification{border-bottom:thin #adadad solid; }
 .gridContents .groupIcon{ }
+
+.itemGrid{margin: 3%;}
+.pickCnt{position: absolute; left: 60%; top:50%; }
