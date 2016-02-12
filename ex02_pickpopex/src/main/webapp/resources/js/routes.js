@@ -64,111 +64,39 @@ define([
 				services: [], 
 				filters: []
 			}));
-<<<<<<< HEAD
-			
 			//픽박스 > 스타일 > 관심 스타일 목록 -> 요약보기 
 			$routeProvider.when('/pickboxStyleGrid', routeConfig.config('../partials/pickbox/pickbox_style_grid.html', 'controllers/pickbox/pickbox_style_list', {
 				directives: [], 
 				services: [], 
 				filters: []
 			}));
+			//픽박스 > 스타일 > 스타일등록
+			$routeProvider.when('/pickboxStyleRegist', routeConfig.config('../partials/pickbox/pickbox_style_regist.html', 'controllers/pickbox/pickbox_style_regist', {
+				directives: [], 
+				services: [], 
+				filters: []
+			}));
+			
+			
+			
 
-=======
->>>>>>> branch 'master' of https://github.com/koiwareJG/pickpopex.git
-			
-			//픽박스 > 스타일 > 관심 스타일 목록 -> 요약보기 
-			$routeProvider.when('/pickboxStyleGrid', routeConfig.config('../partials/pickbox/pickbox_style_grid.html', 'controllers/pickbox/pickbox_style_list', {
-				directives: [], 
-				services: [], 
-				filters: []
-			}));
-<<<<<<< HEAD
-			
-/***********************************************동주 끝*******************************************************************/
-			//==========================================================================================
-			
-			
-			
-			//==========================================================================================
-			//[M003] 체크아웃 메뉴 경로 설정
-			//------------------------------------------------------------------------------------------------------------------------------------------------------------------
-			//체크아웃 > 메인
-/***********************************************동주 시작*******************************************************************/			
-
-			$routeProvider.when('/checkout_list', routeConfig.config('../partials/checkout/checkout_list.html', 'controllers/checkout/checkout_list', {
-				directives: [], 
-				services: [], 
-				filters: []
-			}));
-			//체크아웃 > 체크아웃 목록
-			$routeProvider.when('/checkout_purchase', routeConfig.config('../partials/checkout/checkout_purchase.html', 'controllers/checkout/checkout_purchase', {
-				directives: [], 
-				services: [], 
-				filters: []
-			}));
-			//체크아웃 > 구매내역 상세
-			$routeProvider.when('/checkout_purchase_detail', routeConfig.config('../partials/checkout/checkout_purchase_detail.html', 'controllers/checkout/checkout_purchase_detail', {
-				directives: [], 
-				services: [], 
-				filters: []
-			}));
-			//==========================================================================================
-
-/***********************************************동주 끝*******************************************************************/			
-			
-			
-			//==========================================================================================
-			//[M000] 공통 메뉴 경로 설정
-			//------------------------------------------------------------------------------------------------------------------------------------------------------------------
-			//아이템 상세
-			$routeProvider.when('/itemDetail/:productName', routeConfig.config('../partials/cmn/cmn_item_detail.html', 'controllers/cmn/cmn_item_detail', {
-				directives: [], 
-				services: [], 
-				filters: []
-			}));
-			$routeProvider.when('/styleDetail/:contentName', routeConfig.config('../partials/cmn/cmn_style_detail.html', 'controllers/cmn/cmn_style_detail', {
-				directives: [], 
-				services: [], 
-				filters: []
-			}));
-			//common 경로 설정 E
-			
-/***********************************************동주 시작*******************************************************************/			
-			$routeProvider.when('/orderConfirm', routeConfig.config('../partials/cmn/cmn_orderConfirm.html', 'controllers/cmn/cmn_orderConfirm', {
-				directives: [], 
-				services: [], 
-				filters: []
-			}));
-/***********************************************동주 끝*********************************************************************/			
-
-=======
->>>>>>> branch 'master' of https://github.com/koiwareJG/pickpopex.git
-			//==========================================================================================
-			
-			
-			
-			//==========================================================================================
-			//[M003] 체크아웃 메뉴 경로 설정
-			//------------------------------------------------------------------------------------------------------------------------------------------------------------------
-			//체크아웃 > 메인
-			$routeProvider.when('/checkout', routeConfig.config('../partials/checkout/checkout_list.html', 'controllers/checkout/checkout_list', {
-				directives: [], 
-				services: [], 
-				filters: []
-			}));
-			//체크아웃 > 체크아웃 목록
 			$routeProvider.when('/checkoutList', routeConfig.config('../partials/checkout/checkout_list.html', 'controllers/checkout/checkout_list', {
 				directives: [], 
 				services: [], 
 				filters: []
 			}));
-			//체크아웃 > 구매내역 목록
-			$routeProvider.when('/purchaseList', routeConfig.config('../partials/checkout/purchase_list.html', 'controllers/checkout/purchase_list', {
+			//체크아웃 > 체크아웃 목록
+			$routeProvider.when('/checkoutPurchase', routeConfig.config('../partials/checkout/checkout_purchase.html', 'controllers/checkout/checkout_purchase', {
 				directives: [], 
 				services: [], 
 				filters: []
 			}));
-			//==========================================================================================
+			//체크아웃 > 구매내역 상세
+			$routeProvider.when('/checkoutPurchaseDetail', routeConfig.config('../partials/checkout/checkout_purchase_detail.html', 'controllers/checkout/checkout_purchase_detail', {
+				directives: [], 
+				services: [], 
+				filters: []
+			}));
 
 			
 			
@@ -186,18 +114,29 @@ define([
 				services: [], 
 				filters: []
 			}));
+			//common 경로 설정 E
 			
-			
-			$routeProvider.when('/popmode', routeConfig.config('../partials/cmn/cmn_popmode.html', 'controllers/cmn/cmn_popmode', {
+			$routeProvider.when('/cmnOrderConfirm', routeConfig.config('../partials/cmn/cmn_orderConfirm.html', 'controllers/cmn/cmn_orderConfirm', {
 				directives: [], 
 				services: [], 
 				filters: []
 			}));
 			
-			//common 경로 설정 E
+			$routeProvider.when('/cmnPopupInventory', routeConfig.config('../partials/cmn/cmn_popup_inventory.html', 'controllers/cmn/cmn_popup_inventory', {
+				directives: [], 
+				services: [], 
+				filters: []
+			}));
+			
+			$routeProvider.when('/cmnPopmode', routeConfig.config('../partials/cmn/cmn_popmode.html', 'controllers/cmn/cmn_popmode', {
+				directives: [], 
+				services: [], 
+				filters: []
+			}));
 
+			
+			
 			//기본 경로 설정
 			$routeProvider.otherwise({redirectTo:'/marketplace'});
-			//==========================================================================================
 		});
 });

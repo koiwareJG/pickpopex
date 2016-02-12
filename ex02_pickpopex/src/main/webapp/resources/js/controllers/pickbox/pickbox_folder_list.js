@@ -20,7 +20,6 @@ define([], function () {
 		$http.get("http://localhost:8090/controller/sample/sendList").then(function(response) {
 		        //$scope.myData = response.data.records;
 		        $scope.myData = response.data.folder;		        
-		        alert()
 		});
 		//데이터 세팅 E
 		
