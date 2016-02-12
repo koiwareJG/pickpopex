@@ -69,6 +69,7 @@ define([
 				services: [], 
 				filters: []
 			}));
+
 			//픽박스 > 스타일 > 스타일등록
 			$routeProvider.when('/pickboxStyleRegist', routeConfig.config('../partials/pickbox/pickbox_style_regist.html', 'controllers/pickbox/pickbox_style_regist', {
 				directives: [], 
@@ -142,8 +143,6 @@ define([
 				filters: []
 			}));
 
-			
-			
 			//기본 경로 설정
 			$routeProvider.otherwise({redirectTo:'/marketplace'});
 		});
