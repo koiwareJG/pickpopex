@@ -65,8 +65,8 @@
 		<div class="hrap-20">
 			<div class="wrap">
 				<div class="outer pd-10px">
-					<div class="inner vMid txC buyBtn">
-						<span class="wht medium" data-toggle="modal" data-target="#myModal">옵션선택 및 바로구매</span>
+					<div class="inner vMid txC buyBtn" ng-click="modalPopup()">
+						<span class="wht medium" data-toggle="modal" >옵션선택 및 바로구매</span>
 					</div>
 				</div>
 			</div>
@@ -219,8 +219,8 @@
 	      </div>
 	      <div class="modal-footer txC">
 	        <button type="button" class="btn btn-default w30" data-dismiss="modal">닫 기</button>
-	        <button type="button" class="btn btn-default w30" id="test" data-dismiss="modal" ng-click="goPage($event, 'checkout')">계산대</button>
-	       	<button type="button" class="btn btn-default w30" data-dismiss="modal" ng-click="goPage($event, 'cmnOrderConfirm')">바로구매</button>
+	        <button type="button" class="btn btn-default w30" id="test" data-dismiss="modal" ng-click="goPage('checkout', $event)">계산대</button>
+	       	<button type="button" class="btn btn-default w30" data-dismiss="modal" ng-click="goPage('cmnOrderConfirm', $event)">바로구매</button>
 	      </div>
 	    </div>
 	    

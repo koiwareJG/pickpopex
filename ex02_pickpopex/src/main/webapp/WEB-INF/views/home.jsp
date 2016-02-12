@@ -28,7 +28,7 @@
 			<div class="col-xs-12 popModeBtnBg">
 				<div class="tbl">
 					<div class="tbl-tr">
-						<div class="tbl-td txCM">
+						<div class="tbl-td txCM" ng-click="goPage('cmnPopmode')">
 							<span class="icon-popmodeicon pt20 wht noPad"></span>
 						</div>
 					</div>

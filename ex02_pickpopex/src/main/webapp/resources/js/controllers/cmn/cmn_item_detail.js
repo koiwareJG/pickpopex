@@ -26,6 +26,9 @@ define([], function () {
 		        $scope.myData = response.data;
 		});
 		
+		$scope.modalPopup = function(){
+			$("#myModal").modal()
+		}		
 		console.log("cmn_item_detail.js / define() / _contoller() : end");
 	}
 	

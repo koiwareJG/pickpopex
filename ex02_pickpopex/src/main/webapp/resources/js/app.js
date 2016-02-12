@@ -45,12 +45,15 @@ define([
 				$scope.stylesheets = args;
 			}); 
 			 
-			 $scope.goPage = function (event, url){
+			 $scope.goPage = function (url, event){
 					window.location = '#/'+url;
-					if($(event.target).data('dismiss') == 'modal'){
-				    window.location.reload();
-				    alert('reload')
-					}
+					if(event != null){
+							if($(event.target).data('dismiss') == 'modal'){
+							    window.location.reload();
+							    alert('reload')
+							}
+						}
+					
 				}
 			 
 			 
