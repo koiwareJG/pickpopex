@@ -45,6 +45,15 @@ define([
 				$scope.stylesheets = args;
 			}); 
 			 
+			 $scope.goPage = function (event, url){
+					window.location = '#/'+url;
+					if($(event.target).data('dismiss') == 'modal'){
+				    window.location.reload();
+				    alert('reload')
+					}
+				}
+			 
+			 
 		});	
 			
 		return module; 

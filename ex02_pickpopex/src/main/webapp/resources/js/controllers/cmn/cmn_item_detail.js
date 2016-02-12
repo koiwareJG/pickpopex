@@ -26,11 +26,6 @@ define([], function () {
 		        $scope.myData = response.data;
 		});
 		
-		
-		
-		$scope.clickEvent = function (){
-		}
-		
 		console.log("cmn_item_detail.js / define() / _contoller() : end");
 	}
 	
