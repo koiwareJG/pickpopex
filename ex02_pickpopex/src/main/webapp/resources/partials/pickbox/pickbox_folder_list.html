@@ -34,11 +34,11 @@
 	<div class="wrapper w100 topNav">
 		<div class="hrap-10">
 			<div class="wrap">
-				<div class="outer w25 h100 x-small wht txC pt1">
+				<div class="outer w25 h100 x-small wht txC pt1"  ng-click="goPage($event,'pickboxFolderList')">
 					<span>16</span></br>
 					<span>아이템</span>
 				</div>
-				<div class="outer w25 h100 x-small wht txC pt1">
+				<div class="outer w25 h100 x-small wht txC pt1" ng-click="goPage($event,'pickboxStyleMine')">
 					<span>8</span></br>
 					<span>스타일</span>
 				</div>
@@ -55,27 +55,25 @@
 		</div>
 	</div>
 	<!-- 분류 영역(고정:전체,미분류,새로 만들기) -->
-	<a ng-href="#/pickboxItemList/">
-		<div class="wrapper w33">
-			<div class="hrap-150">
-				<div class="wrap">
-					<div class="outer">
-						<div class="inner txR vTop" style="padding-top: 10%;">
-							<img class="w90 h80" ng-src="resources/images/sample/pickbox/w_box.png" alt="...">
-							<div class="w15 x-small itemCnt">16</div>
-							<div class="w60 h40 folderContents">
-								<img class="w50 h50 fL" ng-src="resources/images/sample/top.png">
-								<img class="w50 h50 fL" ng-src="resources/images/sample/shoes.png">
-								<img class="w50 h50 fL" ng-src="resources/images/sample/coat.png">
-								<img class="w50 h50 fL" ng-src="resources/images/sample/top.png">
-							</div>
-							<div class="folderTitle w90 small txC">전 체</div>	
+	<div class="wrapper w33" ng-click="goPage($event,'pickboxItemList')">
+		<div class="hrap-150">
+			<div class="wrap">
+				<div class="outer">
+					<div class="inner txR vTop" style="padding-top: 10%;">
+						<img class="w90 h80" ng-src="resources/images/sample/pickbox/w_box.png" alt="...">
+						<div class="w15 x-small itemCnt">16</div>
+						<div class="w60 h40 folderContents">
+							<img class="w50 h50 fL" ng-src="resources/images/sample/top.png">
+							<img class="w50 h50 fL" ng-src="resources/images/sample/shoes.png">
+							<img class="w50 h50 fL" ng-src="resources/images/sample/coat.png">
+							<img class="w50 h50 fL" ng-src="resources/images/sample/top.png">
 						</div>
+						<div class="folderTitle w90 small txC">전 체</div>	
 					</div>
 				</div>
 			</div>
 		</div>
-	</a>	
+	</div>
 	<div class="wrapper w33">
 		<div class="hrap-150">
 			<div class="wrap">

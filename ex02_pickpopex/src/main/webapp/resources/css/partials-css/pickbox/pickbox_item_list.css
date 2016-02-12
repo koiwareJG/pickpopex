@@ -30,7 +30,7 @@
 .list_userItemInfor{border-bottom: thin #adadad solid; }
 .list_userItemImg{margin: 2% 1% 0.5% 2%;}
 .list_userItemName{margin-top: 3%;}
-.pickCnt{position: absolute; top: 70%; left: 88%;}
+.list_pickCnt{position: absolute; top: 70%; left: 88%;}
 .list_userImg{position:absolute; left: 34%; top: 65%;}
 .list_userId{position:absolute; left: 43%; top: 58%;}
 .list_userF{position:absolute; left: 43%; top: 78%;}

@@ -44,11 +44,11 @@
 	<div class="wrapper w100 topNav">
 		<div class="hrap-10">
 			<div class="wrap">
-				<div class="outer w25 h100 x-small wht txC pt1">
+				<div class="outer w25 h100 x-small wht txC pt1" ng-click="goPage($event,'pickboxFolderList')">
 					<span>16</span></br>
 					<span>아이템</span>
 				</div>
-				<div class="outer w25 h100 x-small wht txC pt1">
+				<div class="outer w25 h100 x-small wht txC pt1" ng-click="goPage($event,'pickboxStyleMine')">
 					<span>8</span></br>
 					<span>스타일</span>
 				</div>
@@ -65,23 +65,21 @@
 		</div>
 	</div>
 	<!-- 필터 구역 -->
-	<a ng-href="#/pickboxItemList/">
-		<div class="wrapper">
-			<div class="hrap-10">
-				<div class="wrap">
-					<div class="outer">
-						<div class="inner txC bgWht">
-							<div class="filterBar w70 h90 vMid fL">
-								<span class="icon-filtericon small">	전	체</span>
-							</div>
-							<div class="filterBtn w10 h95 fR"> 
-								<span class="icon-swapviewicon large" style="color: #75a08d"></span>
-							</div>					
+	<div class="wrapper">
+		<div class="hrap-10">
+			<div class="wrap">
+				<div class="outer">
+					<div class="inner txC bgWht">
+						<div class="filterBar w70 h90 vMid fL" ng-click="goPage($event,'pickboxItemList')">
+							<span class="icon-filtericon small" >	전	체</span>
 						</div>
+						<div class="filterBtn w10 h95 fR" ng-click="goPage($event,'pickboxItemListGrid')"> 
+							<span class="icon-swapviewicon large" style="color: #75a08d"></span>
+						</div>					
 					</div>
 				</div>
 			</div>
-		</a>
+		</div>
 		
 	<!-- grid view 영역 -->
 	<div ng-repeat="x in myData" class="wrapper w31" style="margin:0.5% 0% 0.5% 1.7%;">
