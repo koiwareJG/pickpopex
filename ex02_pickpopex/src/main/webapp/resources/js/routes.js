@@ -113,13 +113,13 @@ define([
 			//[M000] 공통 메뉴 경로 설정
 			//------------------------------------------------------------------------------------------------------------------------------------------------------------------
 			//아이템 상세
-			$routeProvider.when('/itemDetail/:productName', routeConfig.config('../partials/cmn/cmn_item_detail.html', 'controllers/cmn/cmn_item_detail', {
+			$routeProvider.when('/cmnItemDetail/:productName', routeConfig.config('../partials/cmn/cmn_item_detail.html', 'controllers/cmn/cmn_item_detail', {
 				directives: [], 
 				services: [], 
 				filters: []
 			}));
 			//스타일 상세
-			$routeProvider.when('/styleDetail/:contentName', routeConfig.config('../partials/cmn/cmn_style_detail.html', 'controllers/cmn/cmn_style_detail', {
+			$routeProvider.when('/cmnStyleDetail/:contentName', routeConfig.config('../partials/cmn/cmn_style_detail.html', 'controllers/cmn/cmn_style_detail', {
 				directives: [], 
 				services: [], 
 				filters: []
