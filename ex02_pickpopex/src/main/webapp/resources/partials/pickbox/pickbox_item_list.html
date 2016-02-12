@@ -7,38 +7,127 @@
  * ==============================================================================
  */
  -->
- <div class="item_list">
-	<div class="col-xs-12 userInfor">
-		<div class="blur1"></div>
-		<div class="blur2"></div>
-		<div class="col-xs-6 large userId">꾸꾸까까</div>
-		<div class="col-xs-6 large userF"><span class="green icon-fllwicon"></span>172</div>
-		<div class="col-xs-12 x-small userMessage">안녕하세요. 현업 스타일리스트 꾸꾸까까입니다~ *^^*</div>
-		<img class="col-xs-12 bgImg" ng-src="resources/images/sample/sample_profile_user_woman_02_512x512.jpg">
-		<img class="col-xs-3 img-circle circleImg" ng-src="resources/images/sample/sample_profile_user_woman_02_512x512.jpg">
+ <div class="bgGrid"></div>
+ <div class="contents">
+	
+	<div class="wrapper w100">
+		<div class="hrap-35">
+			<div class="wrap">
+				<div class="backImgArea">
+					<div class="backImg"><img class="w100 h100 blur" ng-src="resources/images/sample/sample_profile_user_woman_02_512x512.jpg"></div>
+				</div>
+				<div class="blurBox"></div>
+				<div class="outer w20 h50 circle">
+					<img class="innner w100 h100 img-circle circle" ng-src="resources/images/sample/sample_profile_user_woman_02_512x512.jpg">
+				</div>
+				<div class="outer w50 h85">
+					<div class="inner vBot txR small userId">꾸꾸까까</div>
+				</div>
+				<div class="outer w50 h85">
+					<div class="inner vBot txL small follow"><span class="green icon-fllwicon"></span>172</div>
+				</div>
+				<div class="outer w100 h10">
+					<div class="inner vBot txC x-small message">안녕하세요. 현업 스타일 리스트 꾸꾸까까 입니다~*^^*</div>
+				</div>
+			</div>
+		</div>
 	</div>
 	
 	<!-- pickBox top navi -->
-	<div class="col-xs-12 pickBoxNav">
-		<div class="col-xs-3 item"><span class="itemCnt medium wht">16</span><br><span class="medium wht">아이템</span></div>
-		<a ng-href="#/pickboxStyleMine/">
-			<div class="col-xs-3 style"><span class="styleCnt medium wht">8</span><br><span class="medium wht">스타일</span></div>
-		</a>	
-		<div class="col-xs-3 filter"><span class="filterCnt medium wht">5</span><br><span class="medium wht">필터</span></div>
-		<div class="col-xs-3 follow"><span class="followCnt medium wht">5</span><br><span class="medium wht">팔로잉</span></div>
+	<div class="wrapper w100 topNav">
+		<div class="hrap-10">
+			<div class="wrap">
+				<div class="outer w25 h100 x-small wht txC pt1">
+					<span>16</span></br>
+					<span>아이템</span>
+				</div>
+				<div class="outer w25 h100 x-small wht txC pt1">
+					<span>8</span></br>
+					<span>스타일</span>
+				</div>
+				<div class="outer w25 h100 x-small wht txC pt1">
+					<span>5</span></br>
+					<span>필터</span>
+				</div>
+				<div class="outer w25 h100 x-small wht txC pt1">
+					<span>5</span></br>
+					<span>팔로잉</span>
+				</div>
+				
+			</div>
+		</div>
 	</div>
-	<div class="col-xs-12 topFilter bgWht">
-		<div class="col-xs-9 filterBar"><span class="icon-filtericon">	전	체</span></div>
-		
-		<a ng-href="#/pickboxItemListGrid/">
-			<div class="col-xs-2 filterBtn">
-				<span class="glyphicon glyphicon-th-large"></span>
+	<!-- 필터 구역 -->
+	<a ng-href="#/pickboxItemListGrid/">
+		<div class="wrapper bgWht">
+			<div class="hrap-10">
+				<div class="wrap">
+					<div class="outer">
+						<div class="inner txC">
+							<div class="filterBar w70 h90 vMid fL">
+								<span class="icon-filtericon small">	전	체</span>
+							</div>
+							<div class="filterBtn w10 h95 fR"> 
+								<span class="icon-swapviewicon large"></span>
+							</div>					
+						</div>
+					</div>
+				</div>
 			</div>
 		</a>
 		
+		<div class="wrapper w100" ng-repeat="x in myData" style="margin-top: 3%;">
+			<div class="hrap-10">
+				<div class="wrap">
+					<div class="outer">
+						<div class="inner h100 vMid b">
+							<span class="glyphicon glyphicon-folder-close groupIcon gray fL w10"></span>
+							<span class="classification small fL">미분류</span>
+						</div>
+					</div>
+				</div>
+			</div>	
+			<div class="hrap-35">
+				<div class="wrap">
+					<div class="outer">
+						<div class="inner h100 vMid list_userItemInfor">
+							<div class="w30 h90 list_userItemImg fL">
+								<img class="w100" ng-src="{{x.imgPath}}">
+							</div>
+							<div class="w60 h25 list_userItemName fL">
+								<span class="fL small">{{x.productName}}</span>
+							</div>
+							<div class="w30 h25 list_userItemPrice fL vBot">
+								<span class="icon-priceicon small fL green"></span>
+								<span class="fL small">{{x.price}}</span>
+							</div>
+							<div class="w18 h50 list_buyBtn fL vBot">
+								<img class="w100" ng-src="resources/images/sample/pickbox/buyBtn.png">
+							</div>
+							<div class="w18 h50 list_pickBtn fL vBot">
+								<img class="w100" ng-src="resources/images/sample/pickbox/pickBtn.png">
+								<span class="pickCnt small green">95</span>
+							</div>
+							<div class="w8 h23 list_userImg">
+								<img class="w100 h100 img-circle" ng-src="resources/images/sample/sample_profile_user_woman_02_512x512.jpg">
+							</div>
+							<div class="w20 h20 list_userId txL">
+								<span class="small vMid">koikoiko</span>
+							</div>
+							<div class="w20 h15 list_userF txL">
+								<span class="icon-fllwicon x-small green vTop"></span>
+								<span class=" x-small vTop">172</span>
+							</div>
+					
+							
+						</div>
+					</div>
+				</div>
+			</div>	
+		</div>
 	</div>
 	<!-- �좎� �꾩씠��紐⑸줉 -->
-		<div ng-repeat="x in myData">
+		<!-- <div ng-repeat="x in myData">
 			<div class="col-xs-12 userItemList">
 				<div class="col-xs-12 classification"><span class="glyphicon glyphicon-folder-close groupIcon"><span class="groupName blk"> {{x.conType}}</span></span></div>
 				<div class="col-xs-12">
@@ -56,7 +145,7 @@
 					</div>
 				</div>
 			</div>
-		</div>
+		</div> -->
 	
-</div>
+
  

@@ -106,6 +106,9 @@
 	}
 
 </script>
+
+
+
 <script>
 	var x = parseInt($("#slidebox").css("width"));
 	var slider = document.getElementById("slider");
@@ -158,6 +161,9 @@
 	}
 	setInterval(changeSlide, delayTime);
 </script>
+
+
+
 <script type="text/javascript">
 
 	var fade1 = document.getElementById("fade1");
@@ -178,12 +184,12 @@
 
 	for (i = 0; i <= fadeMax; i++) {
 		if (i == curfadeNo) {
-			changeOpacity(fadeArray1[i], 1);
-			changeOpacity(fadeArray2[i], 1);
+			changeOpacity(fadeArray1[0][i], 1);
+			changeOpacity(fadeArray2[0][i], 1);
 		}
 		else {
-			changeOpacity(fadeArray1[i], 0);
-			changeOpacity(fadeArray2[i], 0);
+			changeOpacity(fadeArray1[0][i], 0);
+			changeOpacity(fadeArray2[0][i], 0);
 		}
 	}
 
@@ -206,11 +212,11 @@
 			return;
 		}
 		fadeStart = true;
-		changeOpacity(fadeArray1[curfadeNo], curfadeLevel);
-		changeOpacity(fadeArray2[curfadeNo], curfadeLevel);
+		changeOpacity(fadeArray1[0][curfadeNo], curfadeLevel);
+		changeOpacity(fadeArray2[0][curfadeNo], curfadeLevel);
 		
-		changeOpacity(fadeArray1[nextfadeNo], nextfadeLevel);
-		changeOpacity(fadeArray2[nextfadeNo], nextfadeLevel);
+		changeOpacity(fadeArray1[0][nextfadeNo], nextfadeLevel);
+		changeOpacity(fadeArray2[0][nextfadeNo], nextfadeLevel);
 		fadeInOutAction(dir);
 	}
 
@@ -220,10 +226,16 @@
 		nextfadeLevel = nextfadeLevel + 0.1;
 		if( curfadeLevel <= 0 ) 
 		{
-			changeOpacity(fadeArray1[curfadeNo], 0);
-			changeOpacity(fadeArray2[curfadeNo], 0);
+			changeOpacity(fadeArray1[0][curfadeNo], 0);
+			changeOpacity(fadeArray1[1][curfadeNo], 0);
+			changeOpacity(fadeArray1[2][curfadeNo], 0);
 			
-			changeOpacity(fadeArray1[nextfadeNo], 1);
+			changeOpacity(fadeArray2[0][curfadeNo], 0);
+			
+			changeOpacity(fadeArray1[0][nextfadeNo], 1);
+			changeOpacity(fadeArray1[1][nextfadeNo], 1);
+			changeOpacity(fadeArray1[2][nextfadeNo], 1);
+			
 			changeOpacity(fadeArray2[nextfadeNo], 1);
 			
 			if(dir == "prev")
@@ -241,11 +253,15 @@
 			fadeStart = false;
 			return;
 		}
-		changeOpacity(fadeArray1[curfadeNo], curfadeLevel);
-		changeOpacity(fadeArray2[curfadeNo], curfadeLevel);
+		changeOpacity(fadeArray1[0][curfadeNo], curfadeLevel);
+		changeOpacity(fadeArray1[1][curfadeNo], curfadeLevel);
+		changeOpacity(fadeArray1[2][curfadeNo], curfadeLevel);
+		changeOpacity(fadeArray2[0][curfadeNo], curfadeLevel);
 		
-		changeOpacity(fadeArray1[nextfadeNo], nextfadeLevel);
-		changeOpacity(fadeArray2[nextfadeNo], nextfadeLevel);
+		changeOpacity(fadeArray1[0][nextfadeNo], nextfadeLevel);
+		changeOpacity(fadeArray1[1][nextfadeNo], nextfadeLevel);
+		changeOpacity(fadeArray1[2][nextfadeNo], nextfadeLevel);
+		changeOpacity(fadeArray2[0][nextfadeNo], nextfadeLevel);
 		
 		
 		setTimeout(function () {

@@ -14,14 +14,13 @@ define([], function () {
 		console.log("pickbox_item_list contorller loaded"); //파일명과 동일하게 맞출것
 		
 		//CSS 로딩 설정 S
-		$scope.$emit('updateCSS', ['resources/css/partials-css/pickbox/pickbox_list.css','resources/css/partials-css/pickbox/pickbox_item_list.css','resources/css/partials-css/pickbox/pickbox_item_grid.css']);//로드할 css파일 경로 설정(없으면 삭제)
+		$scope.$emit('updateCSS', ['resources/css/partials-css/pickbox/pickbox_list.css','resources/css/partials-css/pickbox/pickbox_item_list.css','resources/css/partials-css/pickbox/pickbox_item_grid.css','resources/css/partials-css/pickbox/pickbox_style_list.css']);//로드할 css파일 경로 설정(없으면 삭제)
 		//CSS 로딩 설정 E
 		
 		//데이터 세팅 S (받아올 데이터 없으면 삭제)
 		$http.get("http://localhost:8090/controller/sample/sendList").then(function(response) {
 		        $scope.myData = response.data.records;
 		        //$scope.myData = response.data.folder;		        
-		        alert()
 		});
 		//데이터 세팅 E
 		

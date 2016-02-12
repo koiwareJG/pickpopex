@@ -1,16 +1,16 @@
 @CHARSET "utf-8";
 
 .topFilter{height: 45px;}
-.filterBar{border: thin #adadad solid; height: 85%; top: 6%; left: 20px; border-radius:5px;  text-align: center; padding-top: 2%;}
+.filterBar{border: thin #adadad solid; position:absolute; left:10%; border-radius:5px; margin-top: 0.5%;}
 .filterBar span{color: #adadad;}
 
-.filterBtn{width:10%;  height: 85%; left: 30px; border: thin #adadad solid; border-radius:50%; top:6%; text-align: center; padding-top: 2%;}
-.filterBtn span{color: #adadad;}
+.filterBtn{position: absolute; right: 5%; margin-top: 0.2%;}
+.filterBtn span{color: #adadad; position: absolute; left: 5%; top: 0;}
 
 .userItemList{height: 120px; border: thin #dfe5e3 solid;}
 .userItemList .classification{height: 20%; top: 0; border-bottom: thin #408080 solid;}
 
-.userItemList div{height: 80%; top: 5%;	 }
+/* .userItemList div{height: 80%; top: 5%;	 }
 .userItemList div .itemImg{height: 90%; top: 3%; }
 .userItemList div .itemImg img{height: 100%; width: 95%; top:-5%; margin: 0 5% 0 3%; }
 .userItemList div .itemName{height: 25%; top: -5%;}
@@ -24,6 +24,15 @@
 .userItemList div .userInfor img {left: 3%; top:-16%;  height: 100%;}
 .userItemList div .userInfor .userId{margin-left: 20%; height: 50%; text-align: left; top: -15%; left: 3%;}
 .userItemList div .userInfor .followCnt{margin-left: 20%; height: 50%; top: -15%; left: 2%}
-.userItemList div .userInfor .followCnt span{color: #408080; top: -5%; left: 2%;}
+.userItemList div .userInfor .followCnt span{color: #408080; top: -5%; left: 2%;} */
 .groupIcon{left: 3%; color:#adadad ; }
+.classification{left: 20%; color:#adadad ; }
+.list_userItemInfor{border-bottom: thin #adadad solid; }
+.list_userItemImg{margin: 2% 1% 0.5% 2%;}
+.list_userItemName{margin-top: 3%;}
+.pickCnt{position: absolute; top: 70%; left: 88%;}
+.list_userImg{position:absolute; left: 34%; top: 65%;}
+.list_userId{position:absolute; left: 43%; top: 58%;}
+.list_userF{position:absolute; left: 43%; top: 78%;}
+.list_fllCnt{position: absolute; left: 22%; top: 70%;}
 .groupName{}
