@@ -58,3 +58,19 @@
 .mg-right-20px{
 	margin-right: 20px;
 }
+
+.bx-wrapper .bx-pager.bx-default-pager a:hover, .bx-wrapper .bx-pager.bx-default-pager a.active, .bx-wrapper .bx-pager.bx-default-pager a:focus {
+    background: green;
+    opacity: 1;
+}
+.bx-wrapper .bx-pager, .bx-wrapper .bx-controls-auto {
+    bottom: 10px;
+}
+.bx-wrapper .bx-pager.bx-default-pager a:hover, .bx-wrapper .bx-pager.bx-default-pager a.active, .bx-wrapper .bx-pager.bx-default-pager a:focus {
+    background: #408080;
+    opacity: 0.8;
+}
+.bx-wrapper .bx-pager.bx-default-pager a {
+    background: white;
+   	opacity: 0.5;
+}

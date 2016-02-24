@@ -9,7 +9,7 @@ define([], function () {
 	function _controller($scope, $http, $routeParams) {
 		console.log("cmn_popmode.js / define() / _contoller() : start");
 		//CSS 설정
-		$scope.$emit('updateCSS', ['resources/css/partials-css/cmn/cmn_popmode.css']);
+		$scope.$emit('updateCSS', ['resources/css/partials-css/cmn/cmn_popmode.css', 'resources/css/partials-css/checkout/checkout_common.css']);
 		
 		
 		//최초 뿌려질 데이터 받아오기

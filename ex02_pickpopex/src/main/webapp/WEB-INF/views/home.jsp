@@ -28,7 +28,7 @@
 			<div class="col-xs-12 popModeBtnBg">
 				<div class="tbl">
 					<div class="tbl-tr">
-						<div class="tbl-td txCM">
+						<div class="tbl-td txCM" ng-click="goPage('cmnPopmode')">
 							<span class="icon-popmodeicon pt20 wht noPad"></span>
 						</div>
 					</div>
@@ -47,14 +47,14 @@
 						<div class="tbl-td txCM">
 							<a href="javascript:history.back();"><span class="icon-previcon pt14 wht"></span></a>
 						</div>
-						<div class="tbl-td txCM">
-							<a href="#/marketplace"><span class="icon-homeicon pt14 wht"></span></a>
+						<div class="tbl-td txCM" ng-click="goPage('marketplace')">
+							<span class="icon-homeicon pt14 wht"></span>
 						</div>
-						<div class="tbl-td txCM">
-							<a href="#/pickbox"><span class="icon-pickboxicon pt14 wht"></span></a>
+						<div class="tbl-td txCM" ng-click="goPage('pickbox')">
+							<span class="icon-pickboxicon pt14 wht"></span>
 						</div>
-						<div class="tbl-td txCM">
-							<a href="#/checkout" ><span class="icon-checkouticon pt14 wht"></span></a>
+						<div class="tbl-td txCM" ng-click="goPage('checkout')">
+							<span class="icon-checkouticon pt14 wht"></span>
 						</div>
 						<div class="tbl-td txCM">
 							<a href="javascript:history.go(1);"><span class="icon-nexticon pt14 wht"></span></a>

@@ -35,7 +35,11 @@
 		<div class="hrap-100">
 			<div class="wrap">
 				<div class="outerB w100 h100">
-					<img class="itemImg" src="resources/images/sample/sample_product_woman_top_01_512x512.jpg" alt="...">
+					<ul class="bxslider w100 h100" style="height:auto;-webkit-padding-start: 0px;">
+					  <li><img class="itemImg" src="resources/images/sample/sample_product_woman_top_01_512x512.jpg" alt="..."></li>
+					  <li><img class="itemImg" src="resources/images/sample/sample_product_woman_top_01_512x512.jpg" alt="..."></li>
+					  <li><img class="itemImg" src="resources/images/sample/sample_product_woman_top_01_512x512.jpg" alt="..."></li>
+					</ul>					
 				</div>
 			</div>
 		</div><!-- Row2 E -->
@@ -65,8 +69,8 @@
 		<div class="hrap-20">
 			<div class="wrap">
 				<div class="outer pd-10px">
-					<div class="inner vMid txC buyBtn">
-						<span class="wht medium" data-toggle="modal" data-target="#myModal">옵션선택 및 바로구매</span>
+					<div class="inner vMid txC buyBtn" ng-click="modalPopup()">
+						<span class="wht medium" data-toggle="modal" >옵션선택 및 바로구매</span>
 					</div>
 				</div>
 			</div>
@@ -168,7 +172,7 @@
 		      				<img class="sizeMapImg" src="resources/images/sample/sample_sizemap_woman_coat_01_512x512.jpg" alt="...">
 						</div>
 		      		</div>
-		      	</div>
+		      	</div> 
 		      	<div class="hrap-80">
 		      		<div class="wrap">
 		      			<div class="outer w40 mg-left-20px">
@@ -219,8 +223,8 @@
 	      </div>
 	      <div class="modal-footer txC">
 	        <button type="button" class="btn btn-default w30" data-dismiss="modal">닫 기</button>
-	        <a href="#/checkout"><button type="button" class="btn btn-default w30" data-dismiss="modal">계산대</button></a>
-	       	<a href="#/cmnOrderConfirm"><button type="button" class="btn btn-default w30" data-dismiss="modal">바로구매</button></a>
+	        <button type="button" class="btn btn-default w30" id="test" data-dismiss="modal" ng-click="goPage('checkout', $event)">계산대</button>
+	       	<button type="button" class="btn btn-default w30" data-dismiss="modal" ng-click="goPage('cmnOrderConfirm', $event)">바로구매</button>
 	      </div>
 	    </div>
 	    

@@ -17,3 +17,7 @@
 .modal{position: inherit; top: -300px;}
 .pt1{padding-top: 1%;}
 #myModal{position: fixed; top: 10%;}
+.bBot{border-bottom: thin #adadad solid;}
+.bTop{border-top: thin #adadad solid;}
+.classIcon{padding: 1% 0% 1% 10%;}
+.gridItemImg{margin-left: 3.5%;}

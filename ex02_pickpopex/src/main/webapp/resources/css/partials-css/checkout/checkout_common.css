@@ -59,37 +59,19 @@
 
 /**************************** width/height ********************************/
 
-.w2 	{width: 2%;}
-.w4 	{width: 4%;}
-.w5 	{width: 5%;}
-.w6 	{width: 6%;}
-.w8 	{width: 8%;}
-.w10 	{width: 10%;}
 .w10_25 {width: 10.25%;}
-.w15 	{width: 15%;}
-.w20 	{width: 20%;}
+.w10_75 {width: 10.75%;}
 .w20_5 	{width: 20.5%;}
-.w21 	{width: 21%;}
-.w21_5 	{width: 21.5%;}
-.w25 	{width: 25%;}
-.w26 	{width: 26%;}
-.w30 	{width: 30%;}
-.w33 	{width: 33%;}
-.w35 	{width: 35%;}
-.w36 	{width: 36%;}
-.w40 	{width: 40%;}
-.w43 	{width: 43%;}
-.w45 	{width: 45%;}
-.w47 	{width: 47%;}
-.w48 	{width: 48%;}
-.w49 	{width: 49%;}
-.w50 	{width: 50%;}
-.w58 	{width: 58%;}
-.w76 	{width: 76%;}
-.w92 	{width: 92%;}
-.w94 	{width: 94%;}
-.w96 	{width: 96%;}
-.w100 	{width: 100%;}
+.w21_5	{width: 21.5%;}
+.w20_5	{width: 20.5%;}
+.w23_5	{width: 23.5%;}
+.w10_25 {width: 10.25%;}
+.w10_5 	{width: 10.5%;}
+.w18_4 	{width: 18.4%;}
+.w19_2 	{width: 19.2%;}
+.w48_5 	{width: 48.5%;}
+
+
 
 .h2 	{height: 2%;}
 .h3 	{height: 3%;}
@@ -117,116 +99,46 @@
 
 /****************************** position **********************************/
 
-.l1  {left: 1%;}
-.l2  {left: 2%;}
-.l3  {left: 3%;}
-.l4  {left: 4%;}
-.l5  {left: 5%;}
-.l6  {left: 6%;}
-.l7  {left: 7%;}
-.l8  {left: 8%;}
-.l9  {left: 9%;}
-.l10 {left: 10%;}
-.l11 {left: 11%;}
-.l12 {left: 12%;}
-.l13 {left: 13%;}
-.l14 {left: 14%;}
+
+.l3_5 {left: 3.5%;}
+.l12_75 {left: 12.75%;}
+.l13_5 {left: 13.5%;}
 .l14_25 {left: 14.25%;}
-.l15 {left: 15%;}
-.l16 {left: 16%;}
-.l17 {left: 17%;}
-.l18 {left: 18%;}
-.l19 {left: 19%;}
-.l20 {left: 20%;}
-.l21 {left: 21%;}
-.l22 {left: 22%;}
-.l23 {left: 23%;}
-.l24 {left: 24%;}
-.l25 {left: 25%;}
-.l26 {left: 26%;}
+.l20_2 {left: 20.2%;}
+.l20_4 {left: 20.4%;}
+.l22_5 {left: 22.5%;}
+.l25_5 {left: 25.5%;}
 .l26_5 {left: 26.5%;}
-.l27 {left: 27%;}
-.l28 {left: 28%;}
 .l28_5 {left: 28.5%;}
-.l29 {left: 29%;}
-.l30 {left: 30%;}
-.l31 {left: 31%;}
-.l32 {left: 32%;}
-.l33 {left: 33%;}
-.l34 {left: 34%;}
 .l34_5 {left: 34.5%;}
-.l35 {left: 35%;}
-.l36 {left: 36%;}
-.l37 {left: 37%;}
-.l38 {left: 38%;}
+.l38_25 {left: 38.25%;}
 .l38_75 {left: 38.75%;}
-.l39 {left: 39%;}
-.l40 {left: 40%;}
-.l41 {left: 41%;}
-.l42 {left: 42%;}
-.l43 {left: 43%;}
-.l44 {left: 44%;}
-.l45 {left: 45%;}
-.l46 {left: 46%;}
-.l47 {left: 47%;}
-.l48 {left: 48%;}
-.l49 {left: 49%;}
-.l50 {left: 50%;}
-.l51 {left: 51%;}
-.l52 {left: 52%;}
-.l53 {left: 53%;}
-.l54 {left: 54%;}
-.l55 {left: 55%;}
-.l56 {left: 56%;}
-.l57 {left: 57%;}
-.l58 {left: 58%;}
-.l59 {left: 59%;}
-.l60 {left: 60%;}
-.l61 {left: 61%;}
-.l62 {left: 62%;}
-.l63 {left: 63%;}
+.l38_5 {left: 38.5%;}
+.l40_4 {left: 40.4%;}
+.l40_8 {left: 40.8%;}
+.l41_5 {left: 41.5%;}
+.l50_5 {left: 50.5%;}
+.l51_5 {left: 51.5%;}
+.l60_5 {left: 60.5%;}
+.l60_6 {left: 60.6%;}
+.l61_2 {left: 61.2%;}
 .l63_25 {left: 63.25%;}
-.l64 {left: 64%;}
-.l65 {left: 65%;}
-.l66 {left: 66%;}
-.l67 {left: 67%;}
-.l68 {left: 68%;}
+.l63_75 {left: 63.75%;}
+.l63_5 {left: 63.5%;}
 .l68_25 {left: 68.25%;}
-.l69 {left: 69%;}
-.l70 {left: 70%;}
-.l71 {left: 71%;}
 .l71_5 {left: 71.5%;}
-.l72 {left: 72%;}
-.l73 {left: 73%;}
 .l73_5 {left: 73.5%;}
-.l74 {left: 74%;}
-.l75 {left: 75%;}
 .l75_5 {left: 75.5%;}
-.l76 {left: 76%;}
-.l77 {left: 77%;}
-.l78 {left: 78%;}
-.l79 {left: 79%;}
-.l80 {left: 80%;}
-.l81 {left: 81%;}
+.l76_5 {left: 76.5%;}
+.l79_5 {left: 79.5%;}
+.l80_8 {left: 80.8%;}
 .l81_5 {left: 81.5%;}
-.l82 {left: 82%;}
-.l83 {left: 83%;}
-.l84 {left: 84%;}
-.l85 {left: 85%;}
-.l86 {left: 86%;}
-.l87 {left: 87%;}
+.l81_6 {left: 81.6%;}
 .l87_75 {left: 87.75%;}
-.l88 {left: 88%;}
-.l90 {left: 90%;}
-.l91 {left: 91%;}
-.l92 {left: 92%;}
-.l93 {left: 93%;}
-.l94 {left: 94%;}
-.l95 {left: 95%;}
-.l96 {left: 96%;}
-.l97 {left: 97%;}
-.l98 {left: 98%;}
-.l99 {left: 99%;}
+.l88_5 {left: 88.5%;}
+.l89_25 {left: 89.25%;}
+
+.h7_5{height: 7.5%;}
 
 .t1  {top: 1%;}
 .t2  {top: 2%;}
@@ -348,9 +260,6 @@
 .borderBottom 	{border-bottom: 1px solid black;}
 .borderLeft 	{border-left: 1px solid black;}
 .borderRight 	{border-right: 1px solid black;}
-.borderRadius10	{border-radius: 10px;}
-.borderRadius20	{border-radius: 20px;}
-.borderRadius30	{border-radius: 30px;}
 
 .fontColorWhite {color: white;}
 .fontWeightBold {font-weight: bold;}
@@ -364,4 +273,86 @@
 .purple {background-color: purple;}
 .olive {background-color: olive;}
 
+.borderRadius5	{border-radius: 5px;}
+.borderRadius10	{border-radius: 10px;}
+.borderRadius20	{border-radius: 20px;}
+.borderRadius30	{border-radius: 30px;}
+.borderRadius40	{border-radius: 40px;}
+
+.borderTopLeftRadius5 {border-top-left-radius: 5px;}
+.borderTopLeftRadius10 {border-top-left-radius: 10px;}
+.borderTopLeftRadius20 {border-top-left-radius: 20px;}
+.borderTopLeftRadius30 {border-top-left-radius: 30px;}
+.borderTopLeftRadius40 {border-top-left-radius: 40px;}
+.borderTopRightRadius5 {border-top-right-radius: 5px;}
+.borderTopRightRadius10 {border-top-right-radius: 10px;}
+.borderTopRightRadius20 {border-top-right-radius: 20px;}
+.borderTopRightRadius30 {border-top-right-radius: 30px;}
+.borderTopRightRadius40 {border-top-right-radius: 40px;}
+.borderBottomLeftRadius5 {border-bottom-left-radius: 5px;}
+.borderBottomLeftRadius10 {border-bottom-left-radius: 10px;}
+.borderBottomLeftRadius20 {border-bottom-left-radius: 20px;}
+.borderBottomLeftRadius30 {border-bottom-left-radius: 30px;}
+.borderBottomLeftRadius40 {border-bottom-left-radius: 40px;}
+.borderBottomRightRadius5 {border-bottom-right-radius: 5px;}
+.borderBottomRightRadius10 {border-bottom-right-radius: 10px;}
+.borderBottomRightRadius20 {border-bottom-right-radius: 20px;}
+.borderBottomRightRadius30 {border-bottom-right-radius: 30px;}
+.borderBottomRightRadius40 {border-bottom-right-radius: 40px;}
+
+.borderRadius50p {border-radius: 50%;}
+
+.fontColorWhite {color: white;}
+.fontWeightBold {font-weight: bold;}
+
+.cursorDefault {cursor: default;}
+
+.red {background-color: red;}
+.orange {background-color: orange;}
+.yellow {background-color: yellow;}
+.lime {background-color: lime}
+.blue {background-color: blue;}
+.navy {background-color: navy;}
+.purple {background-color: purple;}
+.white {background-color: white;}
+.green {background-color: green;}
+.black {background-color: black;}
+.olive {background-color: olive;}
+
+.colorRed {background: rgb(240, 072, 072);}
+.colorOrange {background: rgb(242, 198, 065);}
+.colorYellow {background: rgb(250, 249, 071);}
+.colorGreen {background: rgb(063, 216, 133);}
+.colorBlue {background: rgb(078, 160, 220);}
+.colorNavy {background: rgb(073, 097, 143);}
+.colorPurple {background: rgb(191, 088, 180);}
+.colorWhite {background-color: rgb(255, 255, 255);}
+.colorGray {background-color: rgb(089, 089, 089);}
+.colorBlack {background-color: rgb(039, 039, 039);}
+.colorPink {background-color: rgb(255, 214, 232);}
+.colorEmerald {background-color: rgb(102, 254, 203);}
+.colorGold {background-color: rgb(220, 208, 136);}
+.colorBrown {background-color: rgb(107, 101, 069);}
+.colorOcher {background-color: rgb(192, 123, 068);}
+
+.fontSize1{font-size: 1vw;}
+.fontSize2{font-size: 2vw;}
+.fontSize3{font-size: 3vw;}
+.fontSize4{font-size: 4vw;}
+.fontSize5{font-size: 5vw;}
+.fontSize6{font-size: 6vw;}
+.fontSize7{font-size: 7vw;}
+.fontSize8{font-size: 8vw;}
+.fontSize9{font-size: 9vw;}
+.fontSize10{font-size: 10vw;}
+.fontSize11{font-size: 11vw;}
+.fontSize12{font-size: 12vw;}
+.fontSize13{font-size: 13vw;}
+.fontSize14{font-size: 14vw;}
+.fontSize15{font-size: 15vw;}
+.fontSize16{font-size: 16vw;}
+.fontSize17{font-size: 17vw;}
+.fontSize18{font-size: 18vw;}
+.fontSize19{font-size: 19vw;}
+.fontSize20{font-size: 20vw;}
 
