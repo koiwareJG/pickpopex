@@ -1,0 +1,6 @@
+@CHARSET "UTF-8";
+
+.colorLoginBack {background-color: rgb(245, 246, 248);}
+#error {display: none;}
+
+#input_id, #input_pw {border: none;}

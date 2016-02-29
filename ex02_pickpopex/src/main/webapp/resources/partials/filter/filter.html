@@ -423,13 +423,13 @@
 									<div class="w68 h100 ab l2">
 									<div class="outer">
 										<span class="inner vMid txL fontSize4 fontColorWhite">
-											선택안함
+											미리보기(선택한 필터 정보)
 										</span>
 									</div>
 									</div>
 									<div class="w20 h50 ab l78 t25 colorWhite borderDefault borderRadius5">
 									<div class="outer">
-										<span class="inner vMid txC fontSize4">
+										<span class="inner vMid txC fontSize4" id="filter_select_init">
 											초기화
 										</span>
 									</div>
@@ -450,7 +450,7 @@
 									<div class="w68 h100 ab l2">
 									<div class="outer">
 										<span class="inner vMid txL fontSize4" id="gender">
-											선택안함
+											
 										</span>
 									</div>
 									</div>
@@ -483,7 +483,7 @@
 									</div>
 									</div>
 									<div class="w20 h50 ab l78 t25 colorWhite borderDefault borderRadius5"
-											 data-toggle="modal"  data-target="#filter_select_style">
+											 data-dismiss="modal" data-toggle="modal"  data-target="#filter_select_style">
 									<div class="outer">
 										<span class="inner vMid txC fontSize4">
 											선&nbsp택
@@ -514,7 +514,7 @@
 									</div>
 									</div>
 									<div class="w20 h50 ab l78 t25 colorWhite borderDefault borderRadius5"
-											data-toggle="modal" data-target="#filter_select_all">
+											data-dismiss="modal" data-toggle="modal" data-target="#filter_select_all" id="all">
 									<div class="outer">
 										<span class="inner vMid txC fontSize4">
 											옵션선택
@@ -545,7 +545,7 @@
 									</div>
 									</div>
 									<div class="w20 h50 ab l78 t25 colorWhite borderDefault borderRadius5"
-										data-toggle="modal" data-target="#filter_select_cap">
+										data-toggle="modal" data-target="#filter_select_cap" id="cap">
 									<div class="outer">
 										<span class="inner vMid txC fontSize4">
 											옵션선택
@@ -576,7 +576,7 @@
 									</div>
 									</div>
 									<div class="w20 h50 ab l78 t25 colorWhite borderDefault borderRadius5"
-											data-toggle="modal" data-target="#filter_select_top">
+											data-toggle="modal" data-target="#filter_select_top" id="top">
 									<div class="outer">
 										<span class="inner vMid txC fontSize4">
 											옵션선택
@@ -607,7 +607,7 @@
 									</div>
 									</div>
 									<div class="w20 h50 ab l78 t25 colorWhite borderDefault borderRadius5"
-											data-toggle="modal" data-target="#filter_select_bottom">
+											data-toggle="modal" data-target="#filter_select_bottom" id="bottom">
 									<div class="outer">
 										<span class="inner vMid txC fontSize4">
 											옵션선택
@@ -638,7 +638,7 @@
 									</div>
 									</div>
 									<div class="w20 h50 ab l78 t25 colorWhite borderDefault borderRadius5"
-											data-toggle="modal" data-target="#filter_select_shoes">
+											data-toggle="modal" data-target="#filter_select_shoes" id="shoes">
 									<div class="outer">
 										<span class="inner vMid txC fontSize4">
 											옵션선택
@@ -669,7 +669,7 @@
 									</div>
 									</div>
 									<div class="w20 h50 ab l78 t25 colorWhite borderDefault borderRadius5"
-											data-toggle="modal" data-target="#filter_select_bag">
+											data-toggle="modal" data-target="#filter_select_bag" id="bag">
 									<div class="outer">
 										<span class="inner vMid txC fontSize4">
 											옵션선택
@@ -700,7 +700,7 @@
 									</div>
 									</div>
 									<div class="w20 h50 ab l78 t25 colorWhite borderDefault borderRadius5"
-											data-toggle="modal" data-target="#filter_select_miscellaneous">
+											data-toggle="modal" data-target="#filter_select_miscellaneous" id="miscellaneous">
 									<div class="outer">
 										<span class="inner vMid txC fontSize4">
 											옵션선택
@@ -731,7 +731,7 @@
 									</div>
 									</div>
 									<div class="w20 h50 ab l78 t25 colorWhite borderDefault borderRadius5"
-											data-toggle="modal" data-target="#filter_select_accessory">
+											data-toggle="modal" data-target="#filter_select_accessory" id="accessory">
 									<div class="outer">
 										<span class="inner vMid txC fontSize4">
 											옵션선택
@@ -762,7 +762,7 @@
 									</div>
 									</div>
 									<div class="w20 h50 ab l78 t25 colorWhite borderDefault borderRadius5"
-											data-toggle="modal" data-target="#filter_select_underwear">
+											data-toggle="modal" data-target="#filter_select_underwear" id="underwear">
 									<div class="outer">
 										<span class="inner vMid txC fontSize4">
 											옵션선택
@@ -858,7 +858,7 @@
 						<div class="w100 h40 rel">
 							<div class="w100 h70 ab t20">
 							<div class="outer">
-								<div class="inner vMid txC borderDefault borderRadius10 fontSize4" data-dismiss="modal">
+								<div class="inner vMid txC borderDefault borderRadius10 fontSize4" data-dismiss="modal" id="gender_complete">
 									선택완료
 								</div>
 							</div>
@@ -881,58 +881,89 @@
 	var genderFlag = null;
 	var genderLength = 0;
 
+	var genderFlag_temp = null;
+	var gender_complete = null;
 	
+	gender_dataLoad();
 	gender_init();
 	gender_initEvent();
 	
 	
-	function  gender_init() {
+	function  gender_dataLoad() {
 		genderNames = ["전체", "남성", "여성", "남녀공용"];	//서버에서 받아올 수 있도록 배열로 처리
 		genderId = ["#gender_1", "#gender_2", "#gender_3", "#gender_4"];
+		
 		genderLength = genderNames.length;
+		
 		genderFlag = new Array(genderLength);
+		genderFlag_temp = new Array(genderLength);
 		
 		for (var i=0; i<genderLength; i++) {
-			genderFlag[i] = false;
 			$(genderId[i] + "_text").text(genderNames[i]);
-			$("#gender").text("전체");
 		}
+	}
+	
+	function  gender_init() {
+		
+		gender_complete = false;
+		
+		for (var i=0; i<genderLength; i++) {
+			genderFlag[i] = genderFlag_temp[i] = false;
+		}
+		
+		$("#gender").text(genderNames[0]);
+		gender_change_flag(0);
+		gender_change_class();
 		
 	}
 	
 	function gender_initEvent() {
 
-		$(genderId[0]).click(function() {
-			gender_change_flag(0);
-			gender_change_class();
-		});
+		for (var i=0; i<genderLength; i++) {
+			
+			(function(gender, select) {
+			    $(gender).click(function(){
+			    	gender_change_flag(select);
+			    	gender_change_class();
+			    });
+			 })(genderId[i], i);
+		}
 		
-		$(genderId[1]).click(function() {
-			gender_change_flag(1);
-			gender_change_class();
-		});
+		$("#gender_complete").click(function() {
+			gender_complete = true;
+		});		
 		
-		$(genderId[2]).click(function() {
-			gender_change_flag(2);
-			gender_change_class();
-		});
-		
-		$(genderId[3]).click(function() {
-			gender_change_flag(3);
-			gender_change_class();
+		$('#filter_select_gender').on('shown.bs.modal', function(e) {
+			gender_copy_flag();
 		});
 		
 		$('#filter_select_gender').on('hidden.bs.modal', function(e) {
-			var i = 0;
-			for (; i<genderLength; i++) {
-				if (genderFlag[i] == true) {
-					$("#gender").html(genderNames[i]);
-					break;
+			
+			if (!gender_complete) {
+				for (var i=0; i<genderLength; i++) {
+					genderFlag[i] = genderFlag_temp[i];
+					gender_change_class(i);
 				}
 			}
 			
+			var i = 0;
+			for (; i<genderLength; i++) {
+				if (genderFlag[i] == true) {
+					$("#gender").text(genderNames[i]);
+					break;
+				}
+			}
+			gender_complete = false;
+			
 			$('#filter_select').modal('show');
 		});
+	}
+	
+	function gender_copy_flag() {
+		
+		for (var i=0; i<genderLength; i++) {
+			genderFlag_temp[i] = genderFlag[i];
+		}
 	}
 	
 	function gender_change_flag(index) {
@@ -983,98 +1014,98 @@
 								</div>								
 							</div>
 							</div>
-							<div class="w18_4 h26 ab l20_4 t8 borderRadius10 color1" id="style_2">
+							<div class="w18_4 h26 ab l20_4 t8 borderDefault borderRadius10 color1" id="style_2">
 							<div class="outer">
 								<div class="inner vMid txC fontSize3" id="style_2_text">
 									
 								</div>								
 							</div>
 							</div>
-							<div class="w18_4 h26 ab l40_8 t8 borderRadius10 color1" id="style_3">
+							<div class="w18_4 h26 ab l40_8 t8 borderDefault borderRadius10 color1" id="style_3">
 							<div class="outer">
 								<div class="inner vMid txC fontSize3" id="style_3_text">
 									
 								</div>								
 							</div>
 							</div>
-							<div class="w18_4 h26 ab l61_2 t8 borderRadius10 color1" id="style_4">
+							<div class="w18_4 h26 ab l61_2 t8 borderDefault borderRadius10 color1" id="style_4">
 							<div class="outer">
 								<div class="inner vMid txC fontSize3" id="style_4_text">
 									
 								</div>								
 							</div>
 							</div>
-							<div class="w18_4 h26 ab l81_6 t8 borderRadius10 color1" id="style_5">
+							<div class="w18_4 h26 ab l81_6 t8 borderDefault borderRadius10 color1" id="style_5">
 							<div class="outer">
 								<div class="inner vMid txC fontSize3" id="style_5_text">
 									
 								</div>								
 							</div>
 							</div>
-							<div class="w18_4 h26 ab t41 borderRadius10 color1" id="style_6">
+							<div class="w18_4 h26 ab t41 borderDefault borderRadius10 color1" id="style_6">
 							<div class="outer">
 								<div class="inner vMid txC fontSize3" id="style_6_text">
 									
 								</div>								
 							</div>
 							</div>
-							<div class="w18_4 h26 ab l20_4 t41 borderRadius10 color1" id="style_7">
+							<div class="w18_4 h26 ab l20_4 t41 borderDefault borderRadius10 color1" id="style_7">
 							<div class="outer">
 								<div class="inner vMid txC fontSize3" id="style_7_text">
 									
 								</div>								
 							</div>
 							</div>
-							<div class="w18_4 h26 ab l40_8 t41 borderRadius10 color1" id="style_8">
+							<div class="w18_4 h26 ab l40_8 t41 borderDefault borderRadius10 color1" id="style_8">
 							<div class="outer">
 								<div class="inner vMid txC fontSize3" id="style_8_text">
 									
 								</div>								
 							</div>
 							</div>
-							<div class="w18_4 h26 ab l61_2 t41 borderRadius10 color1" id="style_9">
+							<div class="w18_4 h26 ab l61_2 t41 borderDefault borderRadius10 color1" id="style_9">
 							<div class="outer">
 								<div class="inner vMid txC fontSize3" id="style_9_text">
 									
 								</div>								
 							</div>
 							</div>
-							<div class="w18_4 h26 ab l81_6 t41 borderRadius10 color1" id="style_10">
+							<div class="w18_4 h26 ab l81_6 t41 borderDefault borderRadius10 color1" id="style_10">
 							<div class="outer">
 								<div class="inner vMid txC fontSize3" id="style_10_text">
 									
 								</div>								
 							</div>
 							</div>
-							<div class="w18_4 h26 ab t74 borderRadius10 color1" id="style_11">
+							<div class="w18_4 h26 ab t74 borderDefault borderRadius10 color1" id="style_11">
 							<div class="outer">
 								<div class="inner vMid txC fontSize3" id="style_11_text">
 									
 								</div>								
 							</div>
 							</div>
-							<div class="w18_4 h26 ab l20_4 t74 borderRadius10 color1" id="style_12">
+							<div class="w18_4 h26 ab l20_4 t74 borderDefault borderRadius10 color1" id="style_12">
 							<div class="outer">
 								<div class="inner vMid txC fontSize3" id="style_12_text">
 									
 								</div>								
 							</div>
 							</div>
-							<div class="w18_4 h26 ab l40_8 t74 borderRadius10 color1" id="style_13">
+							<div class="w18_4 h26 ab l40_8 t74 borderDefault borderRadius10 color1" id="style_13">
 							<div class="outer">
 								<div class="inner vMid txC fontSize3" id="style_13_text">
 									
 								</div>								
 							</div>
 							</div>
-							<div class="w18_4 h26 ab l61_2 t74 borderRadius10 color1" id="style_14">
+							<div class="w18_4 h26 ab l61_2 t74 borderDefault borderRadius10 color1" id="style_14">
 							<div class="outer">
 								<div class="inner vMid txC fontSize3" id="style_14_text">
 									
 								</div>								
 							</div>
 							</div>
-							<div class="w18_4 h26 ab l81_6 t74 borderRadius10 color1" id="style_15">
+							<div class="w18_4 h26 ab l81_6 t74 borderDefault borderRadius10 color1" id="style_15">
 							<div class="outer">
 								<div class="inner vMid txC fontSize3" id="style_15_text">
 									
@@ -1086,7 +1117,7 @@
 						<div class="w100 h25 rel">
 							<div class="w100 h90 ab t10  borderDefault borderRadius10">
 							<div class="outer">
-								<div class="inner vMid txC fontSize3" data-dismiss="modal">
+								<div class="inner vMid txC fontSize3" data-dismiss="modal" id="style_complete">
 									선택완료
 								</div>
 							</div>
@@ -1108,12 +1139,15 @@
 	var styleId = null;
 	var styleFlag = null;
 	var styleLength = 0;
+	
+	var styleFlag_temp = null;
+	var style_complete = null;
 
+	style_dataLoad();
 	style_init();
 	style_initEvent();
 	
-	
-	function  style_init() {
+	function  style_dataLoad() {
 		styleNames = ["전체", "캐쥬얼", "댄디", "힙합", "스트릿",
 		              "러블리", "기타", "기타", "기타", "기타",
 		              "기타", "기타", "기타", "기타", "기타"];	//서버에서 받아올 수 있도록 배열로 처리
@@ -1121,118 +1155,101 @@
 		           "#style_6", "#style_7", "#style_8", "#style_9", "#style_10",
 		           "#style_11", "#style_12", "#style_13", "#style_14", "#style_15"];
 		styleLength = styleNames.length;
+		
 		styleFlag = new Array(styleLength);
+		styleFlag_temp = new Array(styleLength);
 		
 		for (var i=0; i<styleLength; i++) {
-			styleFlag[i] = false;
 			$(styleId[i] + "_text").text(styleNames[i]);
 		}
+	}
+	
+	
+	function style_init() {
+		
+		style_complete = false;
+		
+		for (var i=0; i<styleLength; i++) {
+			styleFlag[i] = styleFlag_temp[i] = false;
+			
+		}
+		style_change_flag(0);
+		
+		$("#style").text(styleNames[0]);
+
+		for (var i=0; i<styleLength; i++) {
+			style_change_class(i);
+		}		
 		
 	}
 	
 	function style_initEvent() {
-
-		$(styleId[0]).click(function() {
-			style_change_flag(0);
-			style_change_class(0);
-		});
 		
-		$(styleId[1]).click(function() {
-			style_change_flag(1);
-			style_change_class(1);
-		});
+		for (var i=0; i<styleLength; i++) {
+			
+			(function(style, select) {
+			    $(style).click(function(){
+			    	style_change_flag(select);
+			    	style_change_class(select);
+			    });
+			 })(styleId[i], i);
+		}
 		
-		$(styleId[2]).click(function() {
-			style_change_flag(2);
-			style_change_class(2);
-		});
+		$("#style_complete").click(function() {
+			style_complete = true;
+		});		
 		
-		$(styleId[3]).click(function() {
-			style_change_flag(3);
-			style_change_class(3);
-		});
-		
-		$(styleId[4]).click(function() {
-			style_change_flag(4);
-			style_change_class(4);
-		});
-		
-		$(styleId[5]).click(function() {
-			style_change_flag(5);
-			style_change_class(5);
-		});
-		
-		$(styleId[6]).click(function() {
-			style_change_flag(6);
-			style_change_class(6);
-		});
-		
-		$(styleId[7]).click(function() {
-			style_change_flag(7);
-			style_change_class(7);
-		});
-		
-		$(styleId[8]).click(function() {
-			style_change_flag(8);
-			style_change_class(8);
-		});
-		
-		$(styleId[9]).click(function() {
-			style_change_flag(9);
-			style_change_class(9);
-		});
-		
-		$(styleId[10]).click(function() {
-			style_change_flag(10);
-			style_change_class(10);
-		});
-		
-		$(styleId[11]).click(function() {
-			style_change_flag(11);
-			style_change_class(11);
-		});
-		
-		$(styleId[12]).click(function() {
-			style_change_flag(12);
-			style_change_class(12);
-		});
-		
-		$(styleId[13]).click(function() {
-			style_change_flag(13);
-			style_change_class(13);
-		});
-		
-		$(styleId[14]).click(function() {
-			style_change_flag(14);
-			style_change_class(14);
+		$('#filter_select_style').on('shown.bs.modal', function(e) {
+			style_copy_flag();
 		});
 		
 		$('#filter_select_style').on('hidden.bs.modal', function(e) {
 			
-			var str = "";
-			
-			for ( var i=0; i<styleLength; i++) {
-				if (styleFlag[i] == true) {
-					str += styleNames[i];
-					str += ", ";
+			if (!style_complete) {
+				for (var i=0; i<styleLength; i++) {
+					styleFlag[i] = styleFlag_temp[i];
+					style_change_class(i);
+				}
+			} else {
+				var str = "";
+				
+				for ( var i=0; i<styleLength; i++) {
+					if (styleFlag[i] == true) {
+						str += styleNames[i];
+						str += ", ";
+					}
+				}
+				
+				if (str.length != 0) {
+					str = str.substr(0, str.length-2);
+					$("#style").text(str);	
+				} else {
+					style_init();
 				}
 			}
 			
-			console.log(str);
-			console.log(str.length);
-			
-			str = str.substr(0, str.length)
+			style_complete = false;
 			
 			$('#filter_select').modal('show');
 		});
+		
 	}
 
+	function style_copy_flag() {
+		
+		console.log("style_copy_flag() 들어왔다.");
+		
+		for (var i=0; i<styleLength; i++) {
+			styleFlag_temp[i] = styleFlag[i];
+			console.log("styleFlag_temp[" + i + "] : " + styleFlag_temp[i]);
+		}
+	}
+	
 	function style_change_flag(index) {
 		styleFlag[index] = !styleFlag[index];
 	}
 
 	function style_change_class(index) {
-		console.log("들어왔다 " + index);
 		if (styleFlag[index] == true) {
 			$(styleId[index]).addClass("colorWhite");
 		} else { 
@@ -1259,57 +1276,125 @@
 							</div>
 							</div>
 							<div class="w100 h20 rel borderTop">
-								<div class="w10_75 h40 ab t10 colorWhite">
+								<div class="w10_75 h40 ab t10 colorWhite borderDefault borderRadius10" id="category_all_colorAll">
+								<div class="w100 h100 rel">
 								<div class="outer">
-									<div class="inner vMid txC fontSize3 borderDefault borderRadius10">
+									<span class="inner vMid txC fontSize3" id="category_all_colorAll_text">
 										전체
+									</span>
+	
+								</div>
+								<div class="outer ab">
+									<span class="inner vMid txC fontSize3" id="category_all_colorAll_text2">
+	
+									</span>							
+								</div>
+								</div>
+								</div>
+								<div class="w10_75 h40 ab l12_75 t10 colorRed borderDefault borderRadius10" id="category_all_color1">
+								<div class="outer">
+									<div class="inner vMid txC fontSize3" id="category_all_color1_text">
+										
 									</div>
 								</div>
 								</div>
-								<div class="w10_75 h40 ab l12_75 t10 colorRed borderDefault borderRadius10">
-								
+								<div class="w10_75 h40 ab l25_5 t10 colorOrange borderDefault borderRadius10" id="category_all_color2">
+								<div class="outer">
+									<div class="inner vMid txC fontSize3" id="category_all_color2_text">
+										
+									</div>
 								</div>
-								<div class="w10_75 h40 ab l25_5 t10 colorOrange borderDefault borderRadius10">
-								
 								</div>
-								<div class="w10_75 h40 ab l38_25 t10 colorYellow borderDefault borderRadius10">
-								
+								<div class="w10_75 h40 ab l38_25 t10 colorYellow borderDefault borderRadius10" id="category_all_color3">
+								<div class="outer">
+									<div class="inner vMid txC fontSize3" id="category_all_color3_text">
+										
+									</div>
 								</div>
-								<div class="w10_75 h40 ab l51 t10 colorGreen borderDefault borderRadius10">
-								
 								</div>
-								<div class="w10_75 h40 ab l63_75 t10 colorBlue borderDefault borderRadius10">
-								
+								<div class="w10_75 h40 ab l51 t10 colorGreen borderDefault borderRadius10" id="category_all_color4">
+								<div class="outer">
+									<div class="inner vMid txC fontSize3 fontColorWhite" id="category_all_color4_text">
+										
+									</div>
 								</div>
-								<div class="w10_75 h40 ab l76_5 t10 colorNavy borderDefault borderRadius10">
-								
 								</div>
-								<div class="w10_75 h40 ab l89_25 t10 colorPurple borderDefault borderRadius10">
-								
+								<div class="w10_75 h40 ab l63_75 t10 colorBlue borderDefault borderRadius10" id="category_all_color5">
+								<div class="outer">
+									<div class="inner vMid txC fontSize3 fontColorWhite" id="category_all_color5_text">
+										
+									</div>
 								</div>
-								<div class="w10_75 h40 ab t55 borderDefault colorWhite borderRadius10">
-			
 								</div>
-								<div class="w10_75 h40 ab l12_75 t55 borderDefault colorGray borderRadius10">
-								
+								<div class="w10_75 h40 ab l76_5 t10 colorNavy borderDefault borderRadius10" id="category_all_color6">
+								<div class="outer">
+									<div class="inner vMid txC fontSize3 fontColorWhite" id="category_all_color6_text">
+										
+									</div>
 								</div>
-								<div class="w10_75 h40 ab l25_5 t55 borderDefault colorBlack borderRadius10">
-								
 								</div>
-								<div class="w10_75 h40 ab l38_25 t55 borderDefault colorPink borderRadius10">
-								
+								<div class="w10_75 h40 ab l89_25 t10 colorPurple borderDefault borderRadius10" id="category_all_color7">
+								<div class="outer">
+									<div class="inner vMid txC fontSize3 fontColorWhite" id="category_all_color7_text">
+										
+									</div>
 								</div>
-								<div class="w10_75 h40 ab l51 t55 borderDefault colorEmerald borderRadius10">
-								
 								</div>
-								<div class="w10_75 h40 ab l63_75 t55 borderDefault colorGold borderRadius10">
-								
+								<div class="w10_75 h40 ab t55 borderDefault colorWhite borderRadius10" id="category_all_color8">
+								<div class="outer">
+									<div class="inner vMid txC fontSize3" id="category_all_color8_text">
+										
+									</div>
 								</div>
-								<div class="w10_75 h40 ab l76_5 t55 borderDefault colorBrown borderRadius10">
-								
 								</div>
-								<div class="w10_75 h40 ab l89_25 t55 borderDefault colorOcher borderRadius10">
-								
+								<div class="w10_75 h40 ab l12_75 t55 borderDefault colorGray borderRadius10" id="category_all_color9">
+								<div class="outer">
+									<div class="inner vMid txC fontSize3 fontColorWhite" id="category_all_color9_text">
+										
+									</div>
+								</div>
+								</div>
+								<div class="w10_75 h40 ab l25_5 t55 borderDefault colorBlack borderRadius10" id="category_all_color10">
+								<div class="outer">
+									<div class="inner vMid txC fontSize3 fontColorWhite" id="category_all_color10_text">
+										
+									</div>
+								</div>
+								</div>
+								<div class="w10_75 h40 ab l38_25 t55 borderDefault colorPink borderRadius10" id="category_all_color11">
+								<div class="outer">
+									<div class="inner vMid txC fontSize3" id="category_all_color11_text">
+										
+									</div>
+								</div>
+								</div>
+								<div class="w10_75 h40 ab l51 t55 borderDefault colorEmerald borderRadius10" id="category_all_color12">
+								<div class="outer">
+									<div class="inner vMid txC fontSize3" id="category_all_color12_text">
+										
+									</div>
+								</div>
+								</div>
+								<div class="w10_75 h40 ab l63_75 t55 borderDefault colorGold borderRadius10" id="category_all_color13">
+								<div class="outer">
+									<div class="inner vMid txC fontSize3 fontColorWhite" id="category_all_color13_text">
+										
+									</div>
+								</div>
+								</div>
+								<div class="w10_75 h40 ab l76_5 t55 borderDefault colorBrown borderRadius10" id="category_all_color14">
+								<div class="outer">
+									<div class="inner vMid txC fontSize3 fontColorWhite" id="category_all_color14_text">
+										
+									</div>
+								</div>
+								</div>
+								<div class="w10_75 h40 ab l89_25 t55 borderDefault colorOcher borderRadius10" id="category_all_color15">
+								<div class="outer">
+									<div class="inner vMid txC fontSize3 fontColorWhite" id="category_all_color15_text">
+										
+									</div>
+								</div>
 								</div>
 							</div>
 							<div class="w100 h7">
@@ -1320,72 +1405,72 @@
 							</div>
 							</div>
 							<div class="w100 h20 rel borderTop">
-								<div class="w19_2 h45 ab t5 borderDefault borderRadius10 colorWhite">
+								<div class="w19_2 h45 ab t5 borderDefault borderRadius10 color1" id="category_all_detailAll">
 								<div class="outer">
-									<div class="inner vMid txC fontSize3">
-										전체
+									<div class="inner vMid txC fontSize3" id="category_all_detailAll_text">
+										
 									</div>
 								</div>	
 								</div>
-								<div class="w19_2 h45 ab l20_2 t5 borderDefault borderRadius10 color1">
+								<div class="w19_2 h45 ab l20_2 t5 borderDefault borderRadius10 color1" id="category_all_detail1">
 								<div class="outer">
-									<div class="inner vMid txC fontSize3">
+									<div class="inner vMid txC fontSize3" id="category_all_detail1_text">
 										얼룩<br>패턴
 									</div>
 								</div>	
 								</div>
-								<div class="w19_2 h45 ab l40_4 t5 borderDefault borderRadius10 color1">
+								<div class="w19_2 h45 ab l40_4 t5 borderDefault borderRadius10 color1" id="category_all_detail2">
 								<div class="outer">
-									<div class="inner vMid txC fontSize3">
+									<div class="inner vMid txC fontSize3" id="category_all_detail2_text">
 										스트라이프<br>패턴
 									</div>
 								</div>	
 								</div>
-								<div class="w19_2 h45 ab l60_6 t5 borderDefault borderRadius10 color1">
+								<div class="w19_2 h45 ab l60_6 t5 borderDefault borderRadius10 color1" id="category_all_detail3">
 								<div class="outer">
-									<div class="inner vMid txC fontSize3">
+									<div class="inner vMid txC fontSize3" id="category_all_detail3_text">
 										체크패턴
 									</div>
 								</div>	
 								</div>
-								<div class="w19_2 h45 ab l80_8 t5 borderDefault borderRadius10 color1">
+								<div class="w19_2 h45 ab l80_8 t5 borderDefault borderRadius10 color1" id="category_all_detail4">
 								<div class="outer">
-									<div class="inner vMid txC fontSize3">
+									<div class="inner vMid txC fontSize3" id="category_all_detail4_text">
 										도트패턴
 									</div>
 								</div>	
 								</div>
-								<div class="w19_2 h45 ab t55 borderDefault borderRadius10 color1">
+								<div class="w19_2 h45 ab t55 borderDefault borderRadius10 color1" id="category_all_detail5">
 								<div class="outer">
-									<div class="inner vMid txC fontSize3">
+									<div class="inner vMid txC fontSize3" id="category_all_detail5_text">
 										기능성
 									</div>
 								</div>	
 								</div>
-								<div class="w19_2 h45 ab l20_2 t55 borderDefault borderRadius10 color1">
+								<div class="w19_2 h45 ab l20_2 t55 borderDefault borderRadius10 color1" id="category_all_detail6">
 								<div class="outer">
-									<div class="inner vMid txC fontSize3">
+									<div class="inner vMid txC fontSize3" id="category_all_detail6_text">
 										청재질
 									</div>
 								</div>	
 								</div>
-								<div class="w19_2 h45 ab l40_4 t55 borderDefault borderRadius10 color1">
+								<div class="w19_2 h45 ab l40_4 t55 borderDefault borderRadius10 color1" id="category_all_detail7">
 								<div class="outer">
-									<div class="inner vMid txC fontSize3">
+									<div class="inner vMid txC fontSize3" id="category_all_detail7_text">
 										가죽재질
 									</div>
 								</div>	
 								</div>
-								<div class="w19_2 h45 ab l60_6 t55 borderDefault borderRadius10 color1">
+								<div class="w19_2 h45 ab l60_6 t55 borderDefault borderRadius10 color1" id="category_all_detail8">
 								<div class="outer">
-									<div class="inner vMid txC fontSize3">
+									<div class="inner vMid txC fontSize3" id="category_all_detail8_text">
 										금속장식
 									</div>
 								</div>	
 								</div>
-								<div class="w19_2 h45 ab l80_8 t55 borderDefault borderRadius10 color1">
+								<div class="w19_2 h45 ab l80_8 t55 borderDefault borderRadius10 color1" id="category_all_detail9">
 								<div class="outer">
-									<div class="inner vMid txC fontSize3">
+									<div class="inner vMid txC fontSize3" id="category_all_detail9_text">
 										털장식
 									</div>
 								</div>	
@@ -1399,72 +1484,72 @@
 							</div>
 							</div>
 							<div class="w100 h20 rel borderTop">
-								<div class="w19_2 h45 ab t5 borderDefault borderRadius10 colorWhite">
+								<div class="w19_2 h45 ab t5 borderDefault borderRadius10 color1" id="category_all_categoryAll">
 								<div class="outer">
-									<div class="inner vMid txC fontSize3">
+									<div class="inner vMid txC fontSize3" id="category_all_categoryAll_text">
 										전체
 									</div>
 								</div>	
 								</div>
-								<div class="w19_2 h45 ab l20_2 t5 borderDefault borderRadius10 color1">
+								<div class="w19_2 h45 ab l20_2 t5 borderDefault borderRadius10 color1" id="category_all_category1">
 								<div class="outer">
-									<div class="inner vMid txC fontSize3">
+									<div class="inner vMid txC fontSize3" id="category_all_category1_text">
 										야구모자
 									</div>
 								</div>	
 								</div>
-								<div class="w19_2 h45 ab l40_4 t5 borderDefault borderRadius10 color1">
+								<div class="w19_2 h45 ab l40_4 t5 borderDefault borderRadius10 color1" id="category_all_category2">
 								<div class="outer">
-									<div class="inner vMid txC fontSize3">
+									<div class="inner vMid txC fontSize3" id="category_all_category2_text">
 										스냅백
 									</div>
 								</div>	
 								</div>
-								<div class="w19_2 h45 ab l60_6 t5 borderDefault borderRadius10 color1">
+								<div class="w19_2 h45 ab l60_6 t5 borderDefault borderRadius10 color1" id="category_all_category3">
 								<div class="outer">
-									<div class="inner vMid txC fontSize3">
+									<div class="inner vMid txC fontSize3" id="category_all_category3_text">
 										뉴에라
 									</div>
 								</div>	
 								</div>
-								<div class="w19_2 h45 ab l80_8 t5 borderDefault borderRadius10 color1">
+								<div class="w19_2 h45 ab l80_8 t5 borderDefault borderRadius10 color1" id="category_all_category4">
 								<div class="outer">
-									<div class="inner vMid txC fontSize3">
+									<div class="inner vMid txC fontSize3" id="category_all_category4_text">
 										헌팅캡
 									</div>
 								</div>	
 								</div>
-								<div class="w19_2 h45 ab t55 borderDefault borderRadius10 color1">
+								<div class="w19_2 h45 ab t55 borderDefault borderRadius10 color1" id="category_all_category5">
 								<div class="outer">
-									<div class="inner vMid txC fontSize3">
+									<div class="inner vMid txC fontSize3" id="category_all_category5_text">
 										아이캡
 									</div>
 								</div>	
 								</div>
-								<div class="w19_2 h45 ab l20_2 t55 borderDefault borderRadius10 color1">
+								<div class="w19_2 h45 ab l20_2 t55 borderDefault borderRadius10 color1" id="category_all_category6">
 								<div class="outer">
-									<div class="inner vMid txC fontSize3">
+									<div class="inner vMid txC fontSize3" id="category_all_category6_text">
 										페도라
 									</div>
 								</div>	
 								</div>
-								<div class="w19_2 h45 ab l40_4 t55 borderDefault borderRadius10 color1">
+								<div class="w19_2 h45 ab l40_4 t55 borderDefault borderRadius10 color1" id="category_all_category7">
 								<div class="outer">
-									<div class="inner vMid txC fontSize3">
+									<div class="inner vMid txC fontSize3" id="category_all_category7_text">
 										베레모
 									</div>
 								</div>	
 								</div>
-								<div class="w19_2 h45 ab l60_6 t55 borderDefault borderRadius10 color1">
+								<div class="w19_2 h45 ab l60_6 t55 borderDefault borderRadius10 color1" id="category_all_category8">
 								<div class="outer">
-									<div class="inner vMid txC fontSize3">
+									<div class="inner vMid txC fontSize3" id="category_all_category8_text">
 										바니/니트
 									</div>
 								</div>	
 								</div>
-								<div class="w19_2 h45 ab l80_8 t55 borderDefault borderRadius10 color1">
+								<div class="w19_2 h45 ab l80_8 t55 borderDefault borderRadius10 color1" id="category_all_category9">
 								<div class="outer">
-									<div class="inner vMid txC fontSize3">
+									<div class="inner vMid txC fontSize3" id="category_all_category9_text">
 										버킷햇
 									</div>
 								</div>	
@@ -1480,7 +1565,7 @@
 								</div>
 								<div class="w48_5 h70 ab l51_5 t20 borderDefault borderRadius10">
 								<div class="outer">
-									<div class="inner vMid txC fontSize4" data-dismiss="modal">
+									<div class="inner vMid txC fontSize4" data-dismiss="modal" id="category_all_complete">
 										선택완료
 									</div>
 								</div>
@@ -1496,6 +1581,250 @@
 	  </div>
 </div>
 
+<script>
+
+	var all_detailNames = null;
+	var all_categoryNames = null;
+	
+	var all_colorId = null;
+	var all_detailId = null;
+	var all_categoryId = null;
+	
+	var all_colorLength = 0;
+	var all_detailLength = 0;
+	var all_categoryLength = 0;
+	
+	var all_colorFlag = null;
+	var all_detailFlag = null;
+	var all_categoryFlag = null;
+	
+	var all_colorFlag_temp = null;
+	var all_detailFlag_temp = null;
+	var all_categoryFlag_temp = null;
+	
+	var all_complete = null;
+	
+	all_dataLoad();
+	all_init();
+	all_initEvent();
+	
+	
+	function all_dataLoad() {
+		all_detailNames = ["전체", "얼룩패턴", "스트라이프 패턴", "체크패턴", "도트패턴",
+		              		"기능성", "청재질", "가죽재질", "금속장식", "털장식"];	//서버에서 받아올 수 있도록 배열로 처리
+		all_categoryNames = ["전체", "야구모자", "스냅백", "뉴에라", "헌팅캡",
+		              		"아이캡", "페도라", "베레모", "바니/니트", "버킷햇"];	//서버에서 받아올 수 있도록 배열로 처리
+		              		
+		all_colorId = ["#category_all_colorAll", "#category_all_color1", "#category_all_color2", "#category_all_color3", "#category_all_color4",
+		           		"#category_all_color5", "#category_all_color6", "#category_all_color7",
+		           		"#category_all_color8", "#category_all_color9","#category_all_color10", "#category_all_color11", "#category_all_color12",
+		           		"#category_all_color13", "#category_all_color14", "#category_all_color15"];
+		all_detailId = ["#category_all_detailAll", "#category_all_detail1", "#category_all_detail2", "#category_all_detail3",
+		                "#category_all_detail4",
+		                "#category_all_detail5", "#category_all_detail6", "#category_all_detail7", "#category_all_detail8", 
+		                "#category_all_detail9"];
+		all_categoryId = ["#category_all_categoryAll", "#category_all_category1", "#category_all_category2", "#category_all_category3",
+		                "#category_all_category4",
+		                "#category_all_category5", "#category_all_category6", "#category_all_category7", "#category_all_category8", 
+		                "#category_all_category9"];
+		
+		all_colorLength = all_colorId.length;
+		
+		all_detailLength = all_detailId.length;
+		all_categoryLength = all_categoryId.length;
+		
+		all_colorFlag = new Array(all_colorLength);
+		all_detailFlag = new Array(all_detailLength);
+		all_categoryFlag = new Array(all_categoryLength);
+		
+		all_colorFlag_temp = new Array(all_colorLength);
+		all_detailFlag_temp = new Array(all_detailLength);
+		all_categoryFlag_temp = new Array(all_categoryLength);
+		
+		for (var i=0; i<all_detailLength; i++) {
+			$(all_detailId[i] + "_text").text(all_detailNames[i]);
+		}
+		
+		for (var i=0; i<all_categoryLength; i++) {
+			$(all_categoryId[i] + "_text").text(all_categoryNames[i]);
+		}
+	}
+	
+	function all_init() {
+		
+		all_complete = false;
+		
+		for (var i=0; i<all_colorLength; i++) {
+			all_colorFlag[i] = false;
+		}
+		for (var i=0; i<all_detailLength; i++) {
+			all_detailFlag[i] = false;
+		}
+		for (var i=0; i<all_categoryLength; i++) {
+			all_categoryFlag[i] = false;
+		}
+		
+		all_color_change_flag(0);
+    	all_color_change_class(0);
+		
+		all_detail_change_flag(0);
+    	all_detail_change_class(0);
+    	
+    	all_category_change_flag(0);
+    	all_category_change_class(0);
+	}
+	
+	function all_copy_flag() {
+		
+		for (var i=0; i<all_colorLength; i++) {
+			all_colorFlag_temp[i] = all_colorFlag[i];
+		}
+		for (var i=0; i<all_detailLength; i++) {
+			all_detailFlag_temp[i] = all_detailFlag[i];
+		}
+		for (var i=0; i<all_categoryLength; i++) {
+			all_categoryFlag_temp[i] = all_categoryFlag[i];
+		}
+	}
+	
+	function all_initEvent() {
+
+		for (var i=0; i<all_colorLength; i++) {
+					
+			(function(color, select) {
+			    $(color).click(function(){
+			    	all_color_change_flag(select);
+			    	all_color_change_class();
+			    });
+			 })(all_colorId[i], i);
+		}
+
+		for (var i=0; i<all_detailLength; i++) {
+			
+			(function(detail, select) {
+			    $(detail).click(function(){
+			    	all_detail_change_flag(select);
+			    	all_detail_change_class();
+			    });
+			 })(all_detailId[i], i);
+		}
+		
+		for (var i=0; i<all_categoryLength; i++) {
+			
+			(function(category, select) {
+			    $(category).click(function(){
+			    	all_category_change_flag(select);
+			    	all_category_change_class();
+			    });
+			 })(all_categoryId[i], i);
+		}
+		
+		$("#category_all_complete").click(function() {
+			all_complete = true;
+		});
+		
+		$('#filter_select_all').on('shown.bs.modal', function(e) {
+			all_copy_flag();
+		});
+		
+		$('#filter_select_all').on('hidden.bs.modal', function(e) {
+
+			if (!all_complete) {
+				for (var i=0; i<all_colorLength; i++) {
+					all_colorFlag[i] = all_colorFlag_temp[i];
+					all_color_change_class(i);
+				}
+				for (var i=0; i<all_detailLength; i++) {
+					all_detailFlag[i] = all_detailFlag_temp[i];
+					all_detail_change_class(i);
+				}
+				for (var i=0; i<all_categoryLength; i++) {
+					all_categoryFlag[i] = all_categoryFlag_temp[i];
+					all_category_change_class(i);
+				}
+			}
+
+			$('#filter_select').modal('show');
+			
+		});
+	}
+
+	function all_color_change_flag(index) {
+		/* all_colorFlag[index] = !all_colorFlag[index]; */
+		
+		for (var i=0; i<all_colorLength; i++) {
+			if (i == index) {
+				all_colorFlag[i] = true;
+			} else {
+				all_colorFlag[i] = false;
+			}
+		}
+	}
+
+	function all_color_change_class() {
+		for (var i=0; i<all_colorLength; i++) {	
+			if (all_colorFlag[i] == true) {
+				if (i == 0) {
+					$(all_colorId[i] + "_text2").text("√");
+				}
+				else {
+					$(all_colorId[i] + "_text").text("√");
+				}
+			} else {
+				if (i == 0) {
+					$(all_colorId[i] + "_text2").text("");
+				}
+				else {
+					$(all_colorId[i] + "_text").text("");
+				}
+			}
+		}
+	}
+	
+	
+	function all_detail_change_flag(index) {
+		for (var i=0; i<all_detailLength; i++) {
+			if (i == index) {
+				all_detailFlag[i] = true;
+			} else {
+				all_detailFlag[i] = false;
+			}
+		}
+	}
+
+	function all_detail_change_class() {
+		
+		for (var i=0; i<all_detailLength; i++) {
+			if (all_detailFlag[i] == true) {
+				$(all_detailId[i]).addClass("colorWhite");
+			} else { 
+				$(all_detailId[i]).removeClass("colorWhite");
+			}
+		}
+	}
+	
+	
+	function all_category_change_flag(index) {
+		for (var i=0; i<all_categoryLength; i++) {
+			if (i == index) {
+				all_categoryFlag[i] = true;
+			} else {
+				all_categoryFlag[i] = false;
+			}
+		}
+	}
+
+	function all_category_change_class() {
+		
+		for (var i=0; i<all_categoryLength; i++) {
+			if (all_categoryFlag[i] == true) {
+				$(all_categoryId[i]).addClass("colorWhite");
+			} else { 
+				$(all_categoryId[i]).removeClass("colorWhite");
+			}
+		}
+	}
+</script>
 
 <!----------------------------------------------------- Modal (filter_select_cap) ------------------------------------------------------------->
 <div class="modal fade" id="filter_select_cap">
@@ -1773,54 +2102,54 @@
 							<div class="w100 h20 rel borderTop">
 								<div class="w10_75 h40 ab t10 colorWhite">
 								<div class="outer">
-									<div class="inner vMid txC fontSize3 borderDefault borderRadius10">
+									<div class="inner vMid txC fontSize3 borderDefault borderRadius10" id="category_top_colorAll">
 										전체
 									</div>
 								</div>
 								</div>
-								<div class="w10_75 h40 ab l12_75 t10 colorRed borderDefault borderRadius10">
+								<div class="w10_75 h40 ab l12_75 t10 colorRed borderDefault borderRadius10" id="category_top_color1">
 								
 								</div>
-								<div class="w10_75 h40 ab l25_5 t10 colorOrange borderDefault borderRadius10">
+								<div class="w10_75 h40 ab l25_5 t10 colorOrange borderDefault borderRadius10" id="category_top_color2">
 								
 								</div>
-								<div class="w10_75 h40 ab l38_25 t10 colorYellow borderDefault borderRadius10">
+								<div class="w10_75 h40 ab l38_25 t10 colorYellow borderDefault borderRadius10" id="category_top_color3">
 								
 								</div>
-								<div class="w10_75 h40 ab l51 t10 colorGreen borderDefault borderRadius10">
+								<div class="w10_75 h40 ab l51 t10 colorGreen borderDefault borderRadius10" id="category_top_color4">
 								
 								</div>
-								<div class="w10_75 h40 ab l63_75 t10 colorBlue borderDefault borderRadius10">
+								<div class="w10_75 h40 ab l63_75 t10 colorBlue borderDefault borderRadius10" id="category_top_color5">
 								
 								</div>
-								<div class="w10_75 h40 ab l76_5 t10 colorNavy borderDefault borderRadius10">
+								<div class="w10_75 h40 ab l76_5 t10 colorNavy borderDefault borderRadius10" id="category_top_color6">
 								
 								</div>
-								<div class="w10_75 h40 ab l89_25 t10 colorPurple borderDefault borderRadius10">
+								<div class="w10_75 h40 ab l89_25 t10 colorPurple borderDefault borderRadius10" id="category_top_color7">
 								
 								</div>
-								<div class="w10_75 h40 ab t55 borderDefault colorWhite borderRadius10">
+								<div class="w10_75 h40 ab t55 borderDefault colorWhite borderRadius10" id="category_top_color8">
 			
 								</div>
-								<div class="w10_75 h40 ab l12_75 t55 borderDefault colorGray borderRadius10">
+								<div class="w10_75 h40 ab l12_75 t55 borderDefault colorGray borderRadius10" id="category_top_color9">
 								
 								</div>
-								<div class="w10_75 h40 ab l25_5 t55 borderDefault colorBlack borderRadius10">
+								<div class="w10_75 h40 ab l25_5 t55 borderDefault colorBlack borderRadius10" id="category_top_color10">
 								
 								</div>
-								<div class="w10_75 h40 ab l38_25 t55 borderDefault colorPink borderRadius10">
+								<div class="w10_75 h40 ab l38_25 t55 borderDefault colorPink borderRadius10" id="category_top_color11">
 								
 								</div>
-								<div class="w10_75 h40 ab l51 t55 borderDefault colorEmerald borderRadius10">
+								<div class="w10_75 h40 ab l51 t55 borderDefault colorEmerald borderRadius10" id="category_top_color12">
 								
 								</div>
-								<div class="w10_75 h40 ab l63_75 t55 borderDefault colorGold borderRadius10">
+								<div class="w10_75 h40 ab l63_75 t55 borderDefault colorGold borderRadius10" id="category_top_color13">
 								
 								</div>
-								<div class="w10_75 h40 ab l76_5 t55 borderDefault colorBrown borderRadius10">
+								<div class="w10_75 h40 ab l76_5 t55 borderDefault colorBrown borderRadius10" id="category_top_color14">
 								
 								</div>
-								<div class="w10_75 h40 ab l89_25 t55 borderDefault colorOcher borderRadius10">
+								<div class="w10_75 h40 ab l89_25 t55 borderDefault colorOcher borderRadius10" id="category_top_color15">
 								
 								</div>
 							</div>
@@ -1832,72 +2161,72 @@
 							</div>
 							</div>
 							<div class="w100 h20 rel borderTop">
-								<div class="w19_2 h45 ab t5 borderDefault borderRadius10 colorWhite">
+								<div class="w19_2 h45 ab t5 borderDefault borderRadius10 colorWhite" id="category_top_detailAll">
 								<div class="outer">
-									<div class="inner vMid txC fontSize3">
+									<div class="inner vMid txC fontSize3" id="category_top_detailAll_text">
 										전체
 									</div>
 								</div>	
 								</div>
-								<div class="w19_2 h45 ab l20_2 t5 borderDefault borderRadius10 color1">
+								<div class="w19_2 h45 ab l20_2 t5 borderDefault borderRadius10 color1" id="category_top_detail1">
 								<div class="outer">
-									<div class="inner vMid txC fontSize3">
+									<div class="inner vMid txC fontSize3" id="category_top_detail1_text">
 										얼룩<br>패턴
 									</div>
 								</div>	
 								</div>
-								<div class="w19_2 h45 ab l40_4 t5 borderDefault borderRadius10 color1">
+								<div class="w19_2 h45 ab l40_4 t5 borderDefault borderRadius10 color1" id="category_top_detail2">
 								<div class="outer">
-									<div class="inner vMid txC fontSize3">
+									<div class="inner vMid txC fontSize3" id="category_top_detail2_text">
 										스트라이프<br>패턴
 									</div>
 								</div>	
 								</div>
-								<div class="w19_2 h45 ab l60_6 t5 borderDefault borderRadius10 color1">
+								<div class="w19_2 h45 ab l60_6 t5 borderDefault borderRadius10 color1" id="category_top_detail3">
 								<div class="outer">
-									<div class="inner vMid txC fontSize3">
+									<div class="inner vMid txC fontSize3" id="category_top_detail3_text">
 										체크패턴
 									</div>
 								</div>	
 								</div>
-								<div class="w19_2 h45 ab l80_8 t5 borderDefault borderRadius10 color1">
+								<div class="w19_2 h45 ab l80_8 t5 borderDefault borderRadius10 color1" id="category_top_detail4">
 								<div class="outer">
-									<div class="inner vMid txC fontSize3">
+									<div class="inner vMid txC fontSize3" id="category_top_detail4_text">
 										도트패턴
 									</div>
 								</div>	
 								</div>
-								<div class="w19_2 h45 ab t55 borderDefault borderRadius10 color1">
+								<div class="w19_2 h45 ab t55 borderDefault borderRadius10 color1" id="category_top_detail5">
 								<div class="outer">
-									<div class="inner vMid txC fontSize3">
+									<div class="inner vMid txC fontSize3" id="category_top_detail5_text">
 										기능성
 									</div>
 								</div>	
 								</div>
-								<div class="w19_2 h45 ab l20_2 t55 borderDefault borderRadius10 color1">
+								<div class="w19_2 h45 ab l20_2 t55 borderDefault borderRadius10 color1" id="category_top_detail6">
 								<div class="outer">
-									<div class="inner vMid txC fontSize3">
+									<div class="inner vMid txC fontSize3" id="category_top_detail6_text">
 										청재질
 									</div>
 								</div>	
 								</div>
-								<div class="w19_2 h45 ab l40_4 t55 borderDefault borderRadius10 color1">
+								<div class="w19_2 h45 ab l40_4 t55 borderDefault borderRadius10 color1" id="category_top_detail7">
 								<div class="outer">
-									<div class="inner vMid txC fontSize3">
+									<div class="inner vMid txC fontSize3" id="category_top_detail7_text">
 										가죽재질
 									</div>
 								</div>	
 								</div>
-								<div class="w19_2 h45 ab l60_6 t55 borderDefault borderRadius10 color1">
+								<div class="w19_2 h45 ab l60_6 t55 borderDefault borderRadius10 color1" id="category_top_detail8">
 								<div class="outer">
-									<div class="inner vMid txC fontSize3">
+									<div class="inner vMid txC fontSize3" id="category_top_detail8_text">
 										금속장식
 									</div>
 								</div>	
 								</div>
-								<div class="w19_2 h45 ab l80_8 t55 borderDefault borderRadius10 color1">
+								<div class="w19_2 h45 ab l80_8 t55 borderDefault borderRadius10 color1" id="category_top_detail9">
 								<div class="outer">
-									<div class="inner vMid txC fontSize3">
+									<div class="inner vMid txC fontSize3" id="category_top_detail9_text">
 										털장식
 									</div>
 								</div>	
@@ -1911,72 +2240,72 @@
 							</div>
 							</div>
 							<div class="w100 h20 rel borderTop">
-								<div class="w19_2 h45 ab t5 borderDefault borderRadius10 colorWhite">
+								<div class="w19_2 h45 ab t5 borderDefault borderRadius10 colorWhite" id="category_top_categoryAll">
 								<div class="outer">
-									<div class="inner vMid txC fontSize3">
+									<div class="inner vMid txC fontSize3" id="category_top_categoryAll_text">
 										전체
 									</div>
 								</div>	
 								</div>
-								<div class="w19_2 h45 ab l20_2 t5 borderDefault borderRadius10 color1">
+								<div class="w19_2 h45 ab l20_2 t5 borderDefault borderRadius10 color1" id="category_top_category1">
 								<div class="outer">
-									<div class="inner vMid txC fontSize3">
+									<div class="inner vMid txC fontSize3" id="category_top_detail12" id="category_top_category1_text">
 										야구모자
 									</div>
 								</div>	
 								</div>
-								<div class="w19_2 h45 ab l40_4 t5 borderDefault borderRadius10 color1">
+								<div class="w19_2 h45 ab l40_4 t5 borderDefault borderRadius10 color1" id="category_top_category2">
 								<div class="outer">
-									<div class="inner vMid txC fontSize3">
+									<div class="inner vMid txC fontSize3" id="category_top_category2_text">
 										스냅백
 									</div>
 								</div>	
 								</div>
-								<div class="w19_2 h45 ab l60_6 t5 borderDefault borderRadius10 color1">
+								<div class="w19_2 h45 ab l60_6 t5 borderDefault borderRadius10 color1" id="category_top_category3">
 								<div class="outer">
-									<div class="inner vMid txC fontSize3">
+									<div class="inner vMid txC fontSize3" id="category_top_category3_text">
 										뉴에라
 									</div>
 								</div>	
 								</div>
-								<div class="w19_2 h45 ab l80_8 t5 borderDefault borderRadius10 color1">
+								<div class="w19_2 h45 ab l80_8 t5 borderDefault borderRadius10 color1" id="category_top_category4">
 								<div class="outer">
-									<div class="inner vMid txC fontSize3">
+									<div class="inner vMid txC fontSize3" id="category_top_category4_text">
 										헌팅캡
 									</div>
 								</div>	
 								</div>
-								<div class="w19_2 h45 ab t55 borderDefault borderRadius10 color1">
+								<div class="w19_2 h45 ab t55 borderDefault borderRadius10 color1" id="category_top_category5">
 								<div class="outer">
-									<div class="inner vMid txC fontSize3">
+									<div class="inner vMid txC fontSize3" id="category_top_category5_text">
 										아이캡
 									</div>
 								</div>	
 								</div>
-								<div class="w19_2 h45 ab l20_2 t55 borderDefault borderRadius10 color1">
+								<div class="w19_2 h45 ab l20_2 t55 borderDefault borderRadius10 color1" id="category_top_category6">
 								<div class="outer">
-									<div class="inner vMid txC fontSize3">
+									<div class="inner vMid txC fontSize3" id="category_top_category6_text">
 										페도라
 									</div>
 								</div>	
 								</div>
-								<div class="w19_2 h45 ab l40_4 t55 borderDefault borderRadius10 color1">
+								<div class="w19_2 h45 ab l40_4 t55 borderDefault borderRadius10 color1" id="category_top_category7">
 								<div class="outer">
-									<div class="inner vMid txC fontSize3">
+									<div class="inner vMid txC fontSize3" id="category_top_category7_text">
 										베레모
 									</div>
 								</div>	
 								</div>
-								<div class="w19_2 h45 ab l60_6 t55 borderDefault borderRadius10 color1">
+								<div class="w19_2 h45 ab l60_6 t55 borderDefault borderRadius10 color1" id="category_top_category8">
 								<div class="outer">
-									<div class="inner vMid txC fontSize3">
+									<div class="inner vMid txC fontSize3" id="category_top_category8_text">
 										바니/니트
 									</div>
 								</div>	
 								</div>
-								<div class="w19_2 h45 ab l80_8 t55 borderDefault borderRadius10 color1">
+								<div class="w19_2 h45 ab l80_8 t55 borderDefault borderRadius10 color1" id="category_top_category9">
 								<div class="outer">
-									<div class="inner vMid txC fontSize3">
+									<div class="inner vMid txC fontSize3" id="category_top_category9_text">
 										버킷햇
 									</div>
 								</div>	
@@ -2008,7 +2337,192 @@
 	  </div>
 </div>
 
+<!-- <script>
 
+	var all_detailNames = null;
+	var all_categoryNames = null;
+	
+	var all_colorId = null;
+	var all_detailId = null;
+	var all_categoryId = null;
+	
+	var all_colorLength = 0;
+	var all_detailLength = 0;
+	var all_categoryLength = 0;
+	
+	var all_colorFlag = null;
+	var all_detailFlag = null;
+	var all_categoryFlag = null;
+	
+
+	all_init();
+	all_initEvent();
+	
+	
+	function all_init() {
+		all_detailNames = ["전체", "얼룩패턴", "스트라이프 패턴", "체크패턴", "도트패턴",
+		              		"기능성", "청재질", "가죽재질", "금속장식", "털장식"];	//서버에서 받아올 수 있도록 배열로 처리
+		all_categoryNames = ["전체", "야구모자", "스냅백", "뉴에라", "헌팅캡",
+		              		"아이캡", "페도라", "베레모", "바니/니트", "버킷햇"];	//서버에서 받아올 수 있도록 배열로 처리
+		              		
+		all_colorId = ["#category_all_colorAll", "#category_all_color1", "#category_all_color2", "#category_all_color3", "#category_all_color4",
+		           		"#category_all_color5", "#category_all_color6", "#category_all_color7",
+		           		"#category_all_color8", "#category_all_color9","#category_all_color10", "#category_all_color11", "#category_all_color12",
+		           		"#category_all_color13", "#category_all_color14", "#category_all_color15"];
+		all_detailId = ["#category_all_detailAll", "#category_all_detail1", "#category_all_detail2", "#category_all_detail3",
+		                "#category_all_detail4",
+		                "#category_all_detail5", "#category_all_detail6", "#category_all_detail7", "#category_all_detail8", 
+		                "#category_all_detail9"];
+		all_categoryId = ["#category_all_categoryAll", "#category_all_category1", "#category_all_category2", "#category_all_category3",
+		                "#category_all_category4",
+		                "#category_all_category5", "#category_all_category6", "#category_all_category7", "#category_all_category8", 
+		                "#category_all_category9"];
+		
+		all_colorLength = all_colorId.length;
+		
+		all_detailLength = all_detailId.length;
+		all_categoryLength = all_categoryId.length;
+		
+		all_colorFlag = new Array(all_colorLength);
+		all_detailFlag = new Array(all_detailLength);
+		all_categoryFlag = new Array(all_categoryLength);
+		
+		for (var i=0; i<all_colorLength; i++) {
+			all_colorFlag[i] = false;
+		}
+		for (var i=0; i<all_detailLength; i++) {
+			
+			all_detailFlag[i] = false;
+			$(all_detailId[i] + "_text").text(all_detailNames[i]);
+		}
+		for (var i=0; i<all_categoryLength; i++) {
+			all_categoryFlag[i] = false;
+			$(all_categoryId[i] + "_text").text(all_categoryNames[i]);
+		}
+		
+		all_detail_change_flag(0);
+    	all_detail_change_class(0);
+    	
+    	all_category_change_flag(0);
+    	all_category_change_class(0);
+		
+		
+	}
+	
+	function all_initEvent() {
+		
+		
+		for (var i=0; i<all_colorLength; i++) {
+					
+			(function(color, select) {
+			    $(color).click(function(){
+			    	all_color_change_flag(select);
+			    	all_color_change_class(select);
+			    });
+			 })(all_colorId[i], i);
+		}
+
+		for (var i=0; i<all_detailLength; i++) {
+			
+			(function(detail, select) {
+			    $(detail).click(function(){
+			    	all_detail_change_flag(select);
+			    	all_detail_change_class(select);
+			    });
+			 })(all_detailId[i], i);
+		}
+		
+		for (var i=0; i<all_categoryLength; i++) {
+			
+			(function(category, select) {
+			    $(category).click(function(){
+			    	all_category_change_flag(select);
+			    	all_category_change_class(select);
+			    });
+			 })(all_categoryId[i], i);
+		}
+		
+		$('#filter_select_style').on('hidden.bs.modal', function(e) {
+			
+			var str = "";
+			
+			for ( var i=0; i<styleLength; i++) {
+				if (styleFlag[i] == true) {
+					str += styleNames[i];
+					str += ", ";
+				}
+			}
+			
+						
+			$('#filter_select').modal('show');
+		});
+	}
+
+	function all_color_change_flag(index) {
+		all_colorFlag[index] = !all_colorFlag[index];
+	}
+
+	function all_color_change_class(index) {
+		if (all_colorFlag[index] == true) {
+			if (index == 0) {
+				$(all_colorId[index] + "_text").text("전체√");		
+			} else {
+				$(all_colorId[index] + "_text").text("√");
+			}
+		} else {
+			if (index == 0) {
+				$(all_colorId[index] + "_text").text("전체");		
+			} else {
+				$(all_colorId[index] + "_text").text("");
+			}
+		}
+		
+	}
+	
+	
+	function all_detail_change_flag(index) {
+		for (var i=0; i<all_detailLength; i++) {
+			if (i == index) {
+				all_detailFlag[i] = true;
+			} else {
+				all_detailFlag[i] = false;
+			}
+		}
+	}
+
+	function all_detail_change_class() {
+		
+		for (var i=0; i<all_detailLength; i++) {
+			if (all_detailFlag[i] == true) {
+				$(all_detailId[i]).addClass("colorWhite");
+			} else { 
+				$(all_detailId[i]).removeClass("colorWhite");
+			}
+		}
+	}
+	
+	
+	function all_category_change_flag(index) {
+		for (var i=0; i<all_categoryLength; i++) {
+			if (i == index) {
+				all_categoryFlag[i] = true;
+			} else {
+				all_categoryFlag[i] = false;
+			}
+		}
+	}
+
+	function all_category_change_class() {
+		
+		for (var i=0; i<all_categoryLength; i++) {
+			if (all_categoryFlag[i] == true) {
+				$(all_categoryId[i]).addClass("colorWhite");
+			} else { 
+				$(all_categoryId[i]).removeClass("colorWhite");
+			}
+		}
+	}
+</script> -->
 
 <!----------------------------------------------------- Modal (filter_select_bottom) ------------------------------------------------------------->
 <div class="modal fade" id="filter_select_bottom">
@@ -3544,3 +4058,11 @@
 	    </div>
 	  </div>
 </div>
+
+<script>
+	$("#filter_select_init").click(function() {
+		gender_init();
+		style_init();
+		all_init();
+	});
+</script>

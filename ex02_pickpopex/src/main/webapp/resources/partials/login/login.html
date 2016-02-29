@@ -1,0 +1,118 @@
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<div class="content cursorDefault">
+	<div class="hrap-20">
+	<div class="wrap">
+	</div>
+	</div>
+	<div class="hrap-100">
+	<div class="wrap">
+	<div class="w100 h100 rel">
+		<div class="w50 h90 ab l25 t5">
+			<div class="w100 h25">
+				<img src="resources/images/sample/login/login_logo.png" class="w100 h100">
+			</div>
+			<div class="w100 h40 rel">		<!-- div태그나 form태그 -->
+					<div class="w96 h20 l2 ab t10 colorWhite">
+						<input type="text" class="w90 h80 ab l2 t10 fontSize3" placeholder="아이디" id="input_id">
+					</div>
+					<div class="w96 h20 l2 ab t40 colorWhite">
+						<input type="text" class="w90 h80 ab l2 t10 fontSize3" placeholder="비밀번호" id="input_pw">
+					</div>
+					<div class="w100 h70"></div>
+					<div class="w100 h20 rel" id="error">
+						<span class="w96 ab l2 fontSize3" id="error_message"></span>
+					</div>
+					<div class="w96 h30 l2 rel">
+						<input type="button" class="w100 h100 fontSize3" id="login" value="로그인">					<!-- type="button" or "submit" -->
+					</div>
+			</div>
+			<div class="w100 h20 rel">
+				<a href="#">회원가입</a>	<!------------------ 추후 처리 --------------------------->
+			</div>
+		</div>
+	</div>
+	</div>	
+	</div>
+</div>
+
+<div class="modal" id="login_success">
+	  <div class="modal-dialog w30 h10 mg-40 colorWhite borderDefault">
+	    <div class="modal-content">
+	    <div class="outer">
+			<span class="inner vMid txC fontSize3">
+				로그인 성공!!
+				<input type="button" class="w90 h90 l5 fontSize3" id="login_confirm" data-dismiss="modal" value="확인">
+			</span>
+		</div>
+		</div>
+	</div>
+</div>
+<script>
+
+	var user_id = null; 
+	var user_password = null;
+	var db_data = null;
+	
+	init();
+	initEvent();
+
+	function init() {
+		//서버에서 받아온 데이터라고 가정
+		db_data = [{id : 'aaaa', password : '1111'},
+		           {id : 'bbbb', password : '2222'}]
+	}
+	
+	function initEvent() {
+		$("#login").click(function () {
+			compare_data();	
+		});
+
+		$(document).ready(function() {
+			$("body").addClass("colorLoginBack");
+		});
+		
+		$(window).on("beforeunload", function(){
+			$("body").removeClass("colorLoginBack");
+		});
+		
+		$("#login_confirm").click(function () {
+			$(location).attr('href', '#/marketplace');
+		});
+	}
+	
+	function compare_data() {
+		
+ 		user_id = $("#input_id").val();
+		user_pw = $("#input_pw").val();
+
+		if (user_id.length == 0) {
+			$("#error").css('display', 'block');
+			$("#error_message").text("아이디를 입력하세요.");
+			return;
+		}
+		
+		if (user_pw.length == 0) {
+			$("#error").css('display', 'block');
+			$("#error_message").text("비밀번호를 입력하세요.");
+			return;
+		}
+		
+		for (var i = 0; i<db_data.length; i++) {
+			if (user_id == db_data[i]["id"]) {
+				if (user_pw == db_data[i]["password"]) {
+					$('#login_success').modal();
+					return;
+				} else {
+					$("#error").css('display', 'block');
+					$("#error_message").text("비밀번호를 확인하세요.");
+					return;
+				}
+			} 
+		}
+		
+		$("#error").css('display', 'block');
+		$("#error_message").text("아이디를 확인하세요.");
+		
+	}
+</script>	

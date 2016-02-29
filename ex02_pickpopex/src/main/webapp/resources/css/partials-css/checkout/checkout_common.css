@@ -59,9 +59,17 @@
 
 /**************************** width/height ********************************/
 
+.w2 	{width: 2%;}
+.w4 	{width: 4%;}
+.w5 	{width: 5%;}
+.w6 	{width: 6%;}
+.w8 	{width: 8%;}
+.w10 	{width: 10%;}
 .w10_25 {width: 10.25%;}
-.w10_75 {width: 10.75%;}
+.w15 	{width: 15%;}
+.w20 	{width: 20%;}
 .w20_5 	{width: 20.5%;}
+.w21 	{width: 21%;}
 .w21_5	{width: 21.5%;}
 .w20_5	{width: 20.5%;}
 .w23_5	{width: 23.5%;}
@@ -256,10 +264,13 @@
 
 
 .borderDefault 	{border: 1px solid black;}
+.backgroundTransparent {background-color: rgba( 255, 255, 255, 0);}
 .borderTop 		{border-top: 1px solid black;}
 .borderBottom 	{border-bottom: 1px solid black;}
 .borderLeft 	{border-left: 1px solid black;}
 .borderRight 	{border-right: 1px solid black;}
+
+
 
 .fontColorWhite {color: white;}
 .fontWeightBold {font-weight: bold;}
